@@ -13,7 +13,7 @@ import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
 
-const Course = () => {
+const Full_stack = () => {
   const { courseId } = useParams();
   return (
     <>
@@ -24,14 +24,14 @@ const Course = () => {
         id="course"
         className="container-fluid rounded-lg mx-auto  mt-3 bg-gray-100 shadow-lg "
       >
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-[#0057D3] p-3  text-center">
+        <h1 className="text-2xl lg:w-3xl lg:text-3xl font-semibold  text-[#0057D3] p-6  text-center">
           Course Overview
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4 " />
         <CourseOverview />
       </div>
       <div id="trainer" className="container-fluid rounded mx-auto px-4">
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-center text-[#0057D3] p-6">
+        <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Trainer Profile
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
@@ -40,8 +40,10 @@ const Course = () => {
 
       <div
         id="syllabus"
+        className="bg-blue-50"
+        
       >
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-[#0057D3] p-6  text-center">
+        <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
           Syllabus
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
@@ -53,27 +55,27 @@ const Course = () => {
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
       >
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-center text-[#0057D3] p-6">
+        <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Upcoming Batches
         </h1>
-        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
+        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
         <Batch />
       </div>
       <div
         id="certificate"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
       >
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-center text-[#0057D3] p-6">
+        <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Certificate
         </h1>
-        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
+        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
       </div>
       <div
         id="review"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
       >
-        <h1 className="text-2xl lg:text-3xl font-semibold  text-center text-[#0057D3] p-6">
+        <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Our learners Thought
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
@@ -83,4 +85,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default Full_stack;

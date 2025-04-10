@@ -13,7 +13,7 @@ import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
 
-const Course = () => {
+const Embedded_system = () => {
   const { courseId } = useParams();
   return (
     <>
@@ -83,4 +83,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default Embedded_system;
