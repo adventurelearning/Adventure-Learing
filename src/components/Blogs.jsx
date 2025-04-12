@@ -52,7 +52,7 @@ const Blogs = () => {
   const [selectedTopic, setSelectedTopic] = useState('fullstack'); // Default selected topic is IoT
 
   const BlogsAll = [{
-    blog: 'IOT', card: [
+    blog: 'softwaretesting', card: [
       {
         category: 'IOT EVOLUTION',
         title: 'The Future of IoT: Emerging Trends and Technologies...',
@@ -403,12 +403,12 @@ const Blogs = () => {
   ];
 
   const sidebarLinks = [
-    { label: 'Full Stack', onClick: () => setSelectedTopic('fullstack') },
-    { label: 'Internet of Things', onClick: () => setSelectedTopic('IOT') },   
+    { label: 'Full Stack', onClick: () => setSelectedTopic('fullstack') },       
     { label: 'Embedded System', onClick: () => setSelectedTopic('embeddedsystem') },
     { label: 'Data Science', onClick: () => setSelectedTopic('datascience') },
     { label: 'Cloud Computing', onClick: () => setSelectedTopic('cloudcomputing') },
     { label: 'Data Analytics', onClick: () => setSelectedTopic('dataanalytics') },
+    { label: 'Software Testing', onClick: () => setSelectedTopic('softwaretesting') },
   ];
 
   // Find the selected blog cards based on the selected topic

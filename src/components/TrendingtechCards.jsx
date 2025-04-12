@@ -23,7 +23,7 @@ const TrendingtechCards = () => {
   const navigate = useNavigate();
 
   const handleButtonClick=()=>{    
-    navigate('/contact');
+    navigate('/Register');
   };
 
   const handleNext = () => {

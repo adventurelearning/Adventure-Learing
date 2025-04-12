@@ -1,5 +1,5 @@
 import React from "react";
-import Ban from "../../../assets/Banner/Baner1.svg";
+import Ban from "../../../assets/Banner/mobbaner.svg";
 
 const Banner = () => {
   return (

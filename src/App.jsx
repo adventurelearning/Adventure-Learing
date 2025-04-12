@@ -12,23 +12,16 @@ import AllBlogs from "./pages/Resources/AllBlogs";
 import OnlineTrain from "./pages/OnlineTraining/OnlineTrain";
 import Corporate from "./pages/CorporateTrain/Corporate";
 import { SiConcourse } from "react-icons/si";
-import Full_stack from "./components/courses/fullstack/Full_stack";
-import Embedded_system from "./components/courses/EmbeddedSystem/Embedded_system";
-import Cloud_Computing from "./components/courses/CloudComputing/Cloud_Computing";
-import Data_science from "./components/courses/DataScience/Data_science";
-import Data_analytics from "./components/courses/DataAnalytics/Data_analytics";
-import SoftwareTesting from "./components/courses/SoftwareTesting/SoftwareTesting";
+import Full_stack from "./components/Courses/fullstack/Full_stack";
+import Embedded_system from "./components/Courses/EmbeddedSystem/Embedded_system";
+import Cloud_Computing from "./components/Courses/CloudComputing/Cloud_Computing";
+import Data_science from "./components/Courses/DataScience/Data_science";
+import Data_analytics from "./components/Courses/DataAnalytics/Data_analytics";
+import SoftwareTesting from "./components/Courses/SoftwareTesting/SoftwareTesting";
 import ArticlePage1 from "./components/ArticlePage1";
 import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
-
-
-
-
-
-
-
 
 function App() {
 

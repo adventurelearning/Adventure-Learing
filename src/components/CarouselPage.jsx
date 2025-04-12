@@ -29,6 +29,7 @@ const images = [
   {
     image:banner5
   },
+  
 ];
 
 export default function CarouselPage() {

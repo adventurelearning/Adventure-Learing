@@ -27,7 +27,7 @@ function Choosepath() {
                                 <p className="text-lg font-semibold text-black flex items-center justify-center">
                                     One-on-One Training
                                     <span className="ml-2 text-[#0057D3]">
-                                        <i className="bi bi-arrow-up-right-square"></i>
+                                        <i className="bi bi-arrow-up-right-square"></i> 
                                     </span>
                                 </p>
                             </div>
@@ -37,11 +37,10 @@ function Choosepath() {
                                 <p className="text-sm sm:text-base mb-6">
                                     Get personalized, flexible 1:1 online training tailored to your goals, pace, and learning style!
                                 </p>
-                                <button
-                                    type="submit"
+                                <button                                   
                                     className="bg-white text-[#0057D3] border font-semibold py-2 px-6 rounded-md text-sm transition-all duration-300 transform hover:scale-105 w-full sm:w-auto mx-auto"
                                 >
-                                    Enroll Now
+                                 <a href="/contact"> Enroll Now</a>  
                                 </button>
                             </div>
                         </div>
@@ -69,11 +68,9 @@ function Choosepath() {
                                 <p className="text-sm sm:text-base mb-6">
                                     Achieve your goals with flexible, personalized online training for your pace and learning style!
                                 </p>
-                                <button
-                                    type="submit"
-                                    className="bg-white text-[#0057D3] border font-semibold py-2 px-6 rounded-md text-sm transition-all duration-300 transform hover:scale-105 w-full sm:w-auto mx-auto"
-                                >
-                                    Enroll Now
+                                <button                                    
+                                    className="bg-white text-[#0057D3] border font-semibold py-2 px-6 rounded-md text-sm transition-all duration-300 transform hover:scale-105 w-full sm:w-auto mx-auto">
+                                    <a href="/contact"> Enroll Now</a>  
                                 </button>
                             </div>
                         </div>

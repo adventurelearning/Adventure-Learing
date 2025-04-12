@@ -82,19 +82,19 @@ const WhyChoose = () => {
               Let's Connect
             </h3>
 
-            <div className="flex flex-col gap-2 text-white max-w-80 mx-auto">
+            <div className="flex flex-col gap-2  max-w-80 mx-auto">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-3 "
+                  className="block text-sm font-medium mb-3 text-white"
                 >
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 block w-full rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-1 block w-full text-black rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   placeholder="Enter your name"
                 />
               </div>
@@ -103,14 +103,14 @@ const WhyChoose = () => {
               <div>
                 <label
                   htmlFor="mobile-number"
-                  className="block text-sm font-medium mb-3"
+                  className="block text-sm font-medium mb-3 text-white"
                 >
                   Mobile Number
                 </label>
                 <input
                   type="text"
                   id="mobile-number"
-                  className="mt-1 block w-full rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-1 block w-full text-black rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   placeholder="Enter your mobile number"
                 />
               </div>
@@ -119,14 +119,14 @@ const WhyChoose = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-3"
+                  className="block text-sm font-medium mb-3 text-white"
                 >
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 block w-full rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="mt-1 block w-full text-black rounded-lg border border-1 h-10 border-blue-900  shadow-sm px-5 py-4 bg-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   placeholder="Enter your email"
                 />
               </div>
@@ -135,7 +135,7 @@ const WhyChoose = () => {
               <div>
                 <label
                   htmlFor="select-course"
-                  className="block text-sm font-medium mb-3"
+                  className="block text-sm font-medium mb-3 text-white"
                 >
                   Select Course
                 </label>
