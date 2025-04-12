@@ -35,7 +35,7 @@ function Coursecard() {
     const goToNextPage = () => currentPage < totalPages && setCurrentPage(currentPage + 1);
 
     return (
-        <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8" >
             <div className="max-w-7xl mx-auto text-center mb-12">
                 <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-3">Explore Our Courses</h2>
                 <p className="text-lg font-normal text-gray-600 max-w-2xl mx-auto">

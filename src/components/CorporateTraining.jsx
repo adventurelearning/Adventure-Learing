@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate} from 'react-router-dom';
 import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
 import train4 from '../assets/train4.png';
+import UpskillForm from './UpskillForm';
 
 function CorporateTraining() {
+  const navigate=useNavigate()
   return (
     <>
       <div className="bg-gray-100">
@@ -17,8 +20,8 @@ function CorporateTraining() {
               Adventure Learning equips your team with essential skills through a customized curriculum, designed to meet your organization's specific needs.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-white text-gray-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
-                  Get Started
+                <button  className="bg-white text-gray-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
+                  <a >Get Started</a>
                 </button>
                 <button className="bg-transparent hover:bg-white/10 border-2 border-white font-semibold py-3 px-8 rounded-lg transition duration-300">
                   Request a Demo

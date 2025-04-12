@@ -24,10 +24,10 @@ function StudentTraining(){
           Adventure Learning helps you master in-demand skills quickly with a personalized curriculum designed to fit your unique learning needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-gray-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
+            <button onClick={()=>navigate('/Register')} className="bg-white text-gray-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
               Get Started
             </button>
-            <button className="bg-transparent hover:bg-white/10 border-2 border-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+            <button onClick={()=>navigate('/contact')} className="bg-transparent hover:bg-white/10 border-2 border-white font-semibold py-3 px-8 rounded-lg transition duration-300">
             Request a Demo
             </button>
           </div>

@@ -22,13 +22,14 @@ import ArticlePage1 from "./components/ArticlePage1";
 import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
+import ScrollToTop from "./components/ScrolltoTop";
 
 function App() {
 
 
   return (
     <>
-      
+      <ScrollToTop/>
         <Header />
         <Navbar />
         <Routes>

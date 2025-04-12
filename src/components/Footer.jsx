@@ -13,8 +13,8 @@ function Footer() {
                         <li><a href="/" className="hover:text-gray-300">Home</a></li>
                         <li><a href="/course/full-stack" className="hover:text-gray-300">Courses</a></li>
                         <li><a href="/onlinetraining" className="hover:text-gray-300">Online Training</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Hire From us</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Become an Instructor</a></li>
+                        <li><a href="/corporate" className="hover:text-gray-300">Corporate</a></li>
+                        <li><a href="/blogs" className="hover:text-gray-300">Resources</a></li>
                         <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
                     </ul>
                 </div>
