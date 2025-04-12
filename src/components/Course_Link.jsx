@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CourseLink() {
+function Course_Link() {
   return (
     <>
       {/* Container for the list of links */}
@@ -29,4 +29,4 @@ function CourseLink() {
   );
 }
 
-export default CourseLink;
+export default Course_Link;

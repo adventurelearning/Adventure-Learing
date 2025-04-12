@@ -7,7 +7,7 @@ import Logos from "../../components/Logos";
 import SelectCourse from "../../components/SelectCourse";
 // import { Form } from "react-router-dom";
 import Courses from "../../components/Courses";
-import CourseLink from "../../components/Courselink";
+import Course_Link from "../../components/Course_Link";
 import Coursecard from "../../components/Coursecard";
 import WhyAdventure from "../../components/WhyAdventure";
 import Enroll from "../../components/Enroll";
@@ -36,7 +36,7 @@ const Home = () => {
       <SelectCourse />
       <Form />
       <Courses />      
-      <CourseLink />     
+      <Course_Link />     
       <Coursecard />      
       <WhyAdventure />
       <Enroll />
