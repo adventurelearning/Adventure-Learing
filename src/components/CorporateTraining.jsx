@@ -4,16 +4,17 @@ import train1 from '../assets/train1.png';
 import train2 from '../assets/train2.png';
 import train3 from '../assets/train3.png';
 import train4 from '../assets/train4.png';
+import corporatetrain from '../assets/corporatetrain.svg'
 import UpskillForm from './UpskillForm';
 
 function CorporateTraining() {
   const navigate=useNavigate()
   return (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100" >
         {/* Hero Section */}
         <div className="bg-gray-100 ">
-          <section className="py-16 bg-gradient-to-r from-gray-600 to-gray-800 text-white">
+          {/* <section className="py-16 bg-gradient-to-r from-gray-600 to-gray-800 text-white">
             <div className="container mx-auto px-4 max-w-4xl text-center">
               <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Workforce?</h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -28,7 +29,8 @@ function CorporateTraining() {
                 </button>
               </div>
             </div>
-          </section>
+          </section> */}
+         <a href='#corpform'><img src={corporatetrain}/></a>
         </div>
 
         {/* Program Delivery Section */}

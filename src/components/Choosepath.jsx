@@ -18,11 +18,11 @@ function Choosepath() {
                     {/* One-on-One Training Card */}
                     <div className="w-full sm:w-96 md:w-80 lg:w-96 relative rounded-lg shadow-none lg:shadow-xl hover:shadow-2xl overflow-hidden group transition-all duration-300">
                         <div className="card w-full h-full">
-                            <img 
+                           <a href="/Register"> <img 
                                 src='https://img.freepik.com/free-vector/webinar-concept-illustration_114360-4764.jpg' 
                                 className="w-full h-48 sm:h-56 md:h-48 lg:h-56 object-cover"
                                 alt="One-on-One Training"
-                            />
+                            /></a>
                             <div className="p-4 sm:p-5 bg-white">
                                 <p className="text-lg font-semibold text-black flex items-center justify-center">
                                     One-on-One Training
@@ -49,11 +49,12 @@ function Choosepath() {
                     {/* Online-Live Training Card */}
                     <div className="w-full sm:w-96 md:w-80 lg:w-96 relative rounded-lg shadow-none lg:shadow-xl lg:hover:shadow-2xl overflow-hidden group transition-all duration-300">
                         <div className="card w-full h-full">
-                            <img 
+                        <a href="/Register"> <img 
                                 src='https://img.freepik.com/premium-vector/elearning-banner-online-education-home-schooling_572614-400.jpg' 
                                 className="w-full h-48 sm:h-56 md:h-48 lg:h-56 object-cover"
                                 alt="Online Live Training"
                             />
+                            </a>
                             <div className="p-4 sm:p-5 bg-white">
                                 <p className="text-lg font-semibold text-black flex items-center justify-center">
                                     Online-Live 

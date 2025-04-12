@@ -48,7 +48,7 @@ function UpskillForm() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-12 min-h-screen flex items-center justify-center">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-12 min-h-screen flex items-center justify-center" id='corpform'>
       <div className="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
         <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8 flex items-center">
           <div>

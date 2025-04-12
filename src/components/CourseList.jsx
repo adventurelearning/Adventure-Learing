@@ -6,6 +6,7 @@ import card4 from '../assets/card4.jpeg';
 import card5 from '../assets/card5.jpeg';
 import card6 from '../assets/card6.jpeg';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+import { useNavigate } from "react-router-dom";
 
 const itemsPerPage = 6;
 
@@ -24,6 +25,8 @@ function Coursecard() {
         { title: "Web Development Fundamentals: HTML, CSS, and JavaScript", image: card5, lesson: 6, students: 198, category: "Beginner" },
         { title: "Database Design and Management: SQL and NoSQL", image: card6, lesson: 15, students: 215, category: "Beginner" },
     ];
+
+    const navigate=useNavigate()
 
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(cards.length / itemsPerPage);
@@ -71,7 +74,7 @@ function Coursecard() {
                                 </div>
                             </div>
                             <div className="px-5 pb-5">
-                                <button className="w-1/2 lg:w-3/4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-2 rounded-lg transition-all duration-300 flex items-center justify-center">
+                                <button onClick={()=>navigate('/Register')} className="w-1/2 lg:w-3/4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-2 rounded-lg transition-all duration-300 flex items-center justify-center">
                                     Start Course
                                     <i className="bi bi-chevron-right ml-2"></i>
                                 </button>
