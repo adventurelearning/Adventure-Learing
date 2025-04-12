@@ -13,7 +13,7 @@ import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
 
-const Full_stack = () => {
+const Fullstack = () => {
   const { courseId } = useParams();
   return (
     <>
@@ -85,4 +85,4 @@ const Full_stack = () => {
   );
 };
 
-export default Full_stack;
+export default Fullstack;
