@@ -8,7 +8,6 @@ import { Pagination, Autoplay } from "swiper/modules"; // Import necessary modul
 
 import banner1 from '../assets/banner1.svg'
 import banner2 from '../assets/banner2.svg'
-import banner6 from '../assets/banner6.svg'
 import banner4 from '../assets/banner4.svg'
 import banner5 from '../assets/banner5.svg'
 
