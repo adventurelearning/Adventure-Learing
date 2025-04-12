@@ -13,7 +13,7 @@ import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
 
-const Data_analytics = () => {
+const Dataanalytics  = () => {
   const { courseId } = useParams();
   return (
     <>
@@ -83,4 +83,4 @@ const Data_analytics = () => {
   );
 };
 
-export default Data_analytics;
+export default Dataanalytics ;

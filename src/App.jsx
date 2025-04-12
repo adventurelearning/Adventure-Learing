@@ -13,11 +13,11 @@ import OnlineTrain from "./pages/OnlineTraining/OnlineTrain";
 import Corporate from "./pages/CorporateTrain/Corporate";
 import { SiConcourse } from "react-icons/si";
 import Fullstack from "./components/courses/fullstack/Fullstack";
-import Embedded_system from "./components/Courses/EmbeddedSystem/Embedded_system";
-import Cloud_Computing from "./components/Courses/CloudComputing/Cloud_Computing";
-import Data_science from "./components/Courses/DataScience/Data_science";
-import Data_analytics from "./components/Courses/DataAnalytics/Data_analytics";
-import SoftwareTesting from "./components/Courses/SoftwareTesting/SoftwareTesting";
+import Embeddedsystem from "./components/courses/EmbeddedSystem/Embeddedsystem";
+import CloudComputing from "./components/courses/CloudComputing/CloudComputing";
+import Datascience from "./components/courses/DataScience/Datascience ";
+import Dataanalytics from "./components/courses/DataAnalytics/Dataanalytics ";
+import Software_Testing from "./components/courses/SoftwareTesting/Software_Testing";
 import ArticlePage1 from "./components/ArticlePage1";
 import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
@@ -36,11 +36,11 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="course">  
             <Route path="full-stack" element={<Fullstack/>}/>
-            <Route path="software-testing" element={<SoftwareTesting/>}/>
-            <Route path="embedded-system" element={<Embedded_system/>}/>
-            <Route path="data-science" element={<Data_science/>}/>
-            <Route path="data-analytics" element={<Data_analytics/>}/>
-            <Route path="cloud-computing" element={<Cloud_Computing/>}/>              
+            <Route path="software-testing" element={<Software_Testing/>}/>
+            <Route path="embedded-system" element={<Embeddedsystem/>}/>
+            <Route path="data-science" element={<Datascience/>}/>
+            <Route path="data-analytics" element={<Dataanalytics/>}/>
+            <Route path="cloud-computing" element={<CloudComputing/>}/>              
           </Route>
           <Route path="/contact" element={<ContactAll/>}/>
           <Route path="/blogs" element={<AllBlogs/>}/>
