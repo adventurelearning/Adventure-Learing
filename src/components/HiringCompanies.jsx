@@ -36,7 +36,7 @@ const HiringCompanies = () => {
     ];
 
     return (
-        <div className="w-full text-center py-4 lg:py-8 bg-white ">
+        <div className="w-full text-center py-4 lg:py-8 bg-white" id='companies'>
           <h3
             className="font-bold inline-flex items-center justify-center rounded-[20px] text-center p-2 px-4 text-sm lg:text-base "
             style={{ backgroundColor: '#CDD9FF', color: "#0057D3" }}

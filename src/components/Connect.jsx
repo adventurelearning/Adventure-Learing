@@ -23,8 +23,7 @@ function Connect() {
         data-aos-delay="300"
         className="bg-[#0057D3] hover:bg-white text-white hover:text-[#0057D3] border hover:border-[#0057D3] font-semibold py-2 px-6 md:py-3 md:px-8 rounded-md text-sm transition-all duration-300 transform hover:scale-105"
     >
-        CONTACT US
-    </button>
+        <a href="#contact">CONTACT US</a></button>
 </div>
 
         </>

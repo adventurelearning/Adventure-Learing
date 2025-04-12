@@ -2,41 +2,72 @@ import { CgProfile } from "react-icons/cg";
 function TestimonialReview() {
   const reviews = [
     {
-      img: "https://via.placeholder.com/100",
-      name: "Mouriya",
-      position: "UX/UI Specialist",
-      review:
-        "I had a positive experience with the course. The content was well-structured and relevant.",
+        img: "https://via.placeholder.com/100",
+        name: "Jeevitha",
+        position: "UI/UX Designer",
+        review: "I joined for a UI/UX course. The experience has been great—the trainers explain concepts clearly, and the environment is pleasant."
     },
     {
-      img: "https://via.placeholder.com/100",
-      name: "Alex",
-      position: "Software Developer",
-      review:
-        "The course was good, but I felt it lacked depth in some areas. More practical examples would be helpful.",
+        img: "https://via.placeholder.com/100",
+        name: "Sri Ganth",
+        position: "Software Developer",
+        review: "The course gave a solid intro to datasets, supervised and unsupervised learning, along with hands-on practice using Python libraries like NumPy and scikit-learn."
     },
     {
-      img: "https://via.placeholder.com/100",
-      name: "Sophia",
-      position: "Web Developer",
-      review:
-        "I absolutely loved this course! The material was thorough and easy to follow. Highly recommend it!",
+        img: "https://via.placeholder.com/100",
+        name: "Nelson Joseph Raja",
+        position: "Software Developer",
+        review: "We learned a lot, especially about Git and GitHub. The course structure was clear and affordable. Thank you!"
     },
     {
-      img: "https://via.placeholder.com/100",
-      name: "John",
-      position: "Web Developer",
-      review:
-        "An average experience. Some parts of the course were helpful, but others felt rushed.",
+        img: "https://via.placeholder.com/100",
+        name: "Infant",
+        position: "Web Developer",
+        review: "Learned a lot at the Coimbatore branch. The Git and GitHub sessions were amazing and easy to understand. The trainer was excellent."
     },
     {
-      img: "https://via.placeholder.com/100",
-      name: "Emily",
-      position: "Web Developer",
-      review:
-        "Fantastic course! The content was clear and comprehensive. I loved the hands-on projects!",
+        img: "https://via.placeholder.com/100",
+        name: "Ranjith",
+        position: "Full Stack Developer",
+        review: "Great experience! The staff explained concepts very well. No negative feedback at all."
     },
-  ];
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Suresh",
+        position: "IOT Developer",
+        review: "The IoT course was hands-on and engaging. We built real-time projects using sensors and Raspberry Pi. Highly recommended!"
+    },
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Karthik",
+        position: "Embedded Systems Engineer",
+        review: "Loved the Embedded Systems course. We worked on ARM architecture and real-time OS. The instructors were very knowledgeable."
+    },
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Meera Thomas",
+        position: "Software Tester",       
+        review: "The Software Testing course covered both manual and automation testing tools like Selenium. Very practical and industry-focused."
+    },
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Sudha",
+        position: "Data Scientist",       
+        review: "I joined the Data Science course. The topics were well-structured—from Python to machine learning. It was very insightful."
+    },
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Subiksha",
+        position: "Data Analyst",
+        review: "The Data Analytics course helped me a lot. We used tools like Excel, Power BI, and Tableau for real-world analysis tasks."
+    },
+    {
+        img: "https://via.placeholder.com/100",
+        name: "Cloud Engineer",
+        review: "Cloud Computing training was amazing. We explored AWS and Azure platforms, and got hands-on with deployments and services."
+    }
+];
+  
 
   return (
     <>

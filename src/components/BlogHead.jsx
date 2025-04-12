@@ -2,7 +2,7 @@ function Bloghead() {
 
     return (
         <>
-            <div className="text-center py-8 sm:py-5 ">
+            <div className="text-center py-8 sm:py-5" id="new&blogs">
                 {/* Title */}
                 <h3 data-aos="fade-up"
                     className="font-bold inline-flex items-center justify-center rounded-full text-center p-2 px-4 sm:px-5 text-sm sm:text-base"
