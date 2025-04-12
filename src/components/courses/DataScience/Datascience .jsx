@@ -13,7 +13,7 @@ import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
 
-const Cloud_Computing = () => {
+const Datascience  = () => {
   const { courseId } = useParams();
   return (
     <>
@@ -39,8 +39,7 @@ const Cloud_Computing = () => {
       </div>
 
       <div
-        id="syllabus"
-        className="container-fluid rounded-lg mx-auto px-4 bg-white shadow-lg bg-img  "
+        id="syllabus"        
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
           Syllabus
@@ -67,7 +66,7 @@ const Cloud_Computing = () => {
         <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Certificate
         </h1>
-        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
+        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
       </div>
       <div
@@ -77,11 +76,11 @@ const Cloud_Computing = () => {
         <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Our learners Thought
         </h1>
-        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
+        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Review />
       </div>
     </>
   );
 };
 
-export default Cloud_Computing;
+export default Datascience ;
