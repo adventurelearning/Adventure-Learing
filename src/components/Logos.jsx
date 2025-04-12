@@ -27,7 +27,7 @@ function Logos() {
   ];
 
   return (
-    <div className="bg-blue-30">
+    <div className="bg-blue-30" id="logo">
       <div className="justify-center text-center items-center">
         <h1 data-aos="fade-down"  className="font-semibold text-2xl lg:text-3xl   mt-5 text-[#0057D3]">
           Our Technologies

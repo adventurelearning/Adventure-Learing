@@ -36,13 +36,13 @@ function Footer() {
                 <div>
                     <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">All Categories</h3>
                     <ul className="space-y-1 sm:space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-gray-300">Our Technology</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Our Top Class Courses</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Why Adventure</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Our Hiring Companies</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Our Webinar & Events</a></li>
-                        <li><a href="#" className="hover:text-gray-300">News & Blogs</a></li>
-                        <li><a href="#" className="hover:text-gray-300">Our Testimonials</a></li>
+                        <li><a href="#logo" className="hover:text-gray-300">Our Technology</a></li>
+                        <li><a href="#couses" className="hover:text-gray-300">Our Top Class Courses</a></li>
+                        <li><a href="#whyAvd" className="hover:text-gray-300">Why Adventure</a></li>
+                        <li><a href="#companies" className="hover:text-gray-300">Our Hiring Companies</a></li>
+                        <li><a href="#webinar" className="hover:text-gray-300">Our Webinar & Events</a></li>
+                        <li><a href="#new&blogs" className="hover:text-gray-300">News & Blogs</a></li>
+                        <li><a href="#review" className="hover:text-gray-300">Our Testimonials</a></li>
                     </ul>
                 </div>
 

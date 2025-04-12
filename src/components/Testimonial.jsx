@@ -1,7 +1,7 @@
 function Testimonial() {
     return (
         <>
-            <div className="bg-gray-100 items-center pt-5">
+            <div className="bg-gray-100 items-center pt-5" id="review">
                 <div className="flex justify-center items-center ">
                     <h3 data-aos="fade-down"
                         className="font-bold inline-flex items-center justify-center rounded-full text-center p-2 lg:px-4  text-sm sm:text-base"

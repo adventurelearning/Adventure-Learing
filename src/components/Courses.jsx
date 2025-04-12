@@ -2,7 +2,7 @@ import React from 'react';
 
 function Courses() {
   return (
-    <div className="bg-white py-2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div className="bg-white py-2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16" id='couses'>
       <div className="flex justify-center items-center mt-4 ">
         <h3
           data-aos-easing="linear"

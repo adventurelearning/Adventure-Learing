@@ -15,7 +15,7 @@ const features = [
 
 function WhyAdventure() {
     return (
-        <div className="text-center lg:py-8 bg-gray-100 ">
+        <div className="text-center lg:py-8 bg-gray-100" id='whyAvd'>
             {/* Title */}
             <h3 data-aos="fade-up"
                 className="font-bold inline-flex items-center justify-center rounded-full mt-4  p-2 px-4 text-sm  lg:text-base "

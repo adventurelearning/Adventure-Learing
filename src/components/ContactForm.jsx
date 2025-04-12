@@ -131,7 +131,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen py-12 px-4 lg:px-8 ">
+    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen py-12 px-4 lg:px-8" id='contact'>
     <div>
       {/* Form Section */}
       <motion.div 

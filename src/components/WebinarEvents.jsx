@@ -1,7 +1,7 @@
 function WebinarEvents() {
     return (
         <>
-            <div className="w-full text-center bg-white ">
+            <div className="w-full text-center bg-white" id="webinar">
                 <h3
                     className="font-bold inline-flex items-center justify-center rounded-full text-center p-2 px-4 sm:px-5 text-sm sm:text-base "
                     style={{ backgroundColor: '#CDD9FF', color: "#0057D3" }}
