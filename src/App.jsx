@@ -12,7 +12,7 @@ import AllBlogs from "./pages/Resources/AllBlogs";
 import OnlineTrain from "./pages/OnlineTraining/OnlineTrain";
 import Corporate from "./pages/CorporateTrain/Corporate";
 import { SiConcourse } from "react-icons/si";
-import Full_stack from "./components/Courses/fullstack/Full_stack";
+import Fullstack from "./components/courses/fullstack/Fullstack";
 import Embedded_system from "./components/Courses/EmbeddedSystem/Embedded_system";
 import Cloud_Computing from "./components/Courses/CloudComputing/Cloud_Computing";
 import Data_science from "./components/Courses/DataScience/Data_science";
@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="course">  
-            <Route path="full-stack" element={<Full_stack/>}/>
+            <Route path="full-stack" element={<Fullstack/>}/>
             <Route path="software-testing" element={<SoftwareTesting/>}/>
             <Route path="embedded-system" element={<Embedded_system/>}/>
             <Route path="data-science" element={<Data_science/>}/>
