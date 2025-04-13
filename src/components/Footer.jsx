@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../assets/logo-dark.svg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Footer() {
 
@@ -39,7 +39,7 @@ function Footer() {
                 <div>
                     <h3 className="font-bold text-base sm:text-lg text-white mb-2 sm:mb-4">All Categories</h3>
                     <ul className="space-y-1 sm:space-y-2 text-sm">
-                        <li><a href="#logo" className="hover:text-gray-300">Our Technology</a></li>
+                        <li><button onClick={()=>navigate('/#logo')} className="hover:text-gray-300">Our Technology</button></li>
                         <li><a href="#couses" className="hover:text-gray-300">Our Top Class Courses</a></li>
                         <li><a href="#whyAvd" className="hover:text-gray-300">Why Adventure</a></li>
                         <li><a href="#companies" className="hover:text-gray-300">Our Hiring Companies</a></li>
