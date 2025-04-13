@@ -1,21 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import course2 from '../assets/course2.png';
-import course3 from '../assets/course3.png';
-import course4 from '../assets/course4.png';
-import course5 from '../assets/course5.png';
-import course6 from '../assets/course6.png';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import course2 from "../assets/course2.png";
+import course3 from "../assets/course3.png";
+import course4 from "../assets/course4.png";
+import course5 from "../assets/course5.png";
+import course6 from "../assets/course6.png";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const TrendingtechCards = () => {
   const [loading, setLoading] = useState(true);
   const cardsData = [
-    { title: "FULL STACK", image: course4, desc: " Full Stack Mastery Starts Here" },
-    { title: "EMBEDDED SYSTEM", image: course2, desc: " From Sensors to Smart Solutions" },
-    { title: "DATA SCIENCE", image: course3, desc: "Unlock the Power of Big Data" },
-    { title: "DATA ANALYTICS", image: course5, desc: "From Data to Actionable Insights" },
-    { title: "CLOUD COMPUTING", image: course6, desc: "Elevate Your Tech with the Cloud" },
-    { title: "SOFTWARE TESTING", image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", desc: "Quality assurance, debugging, validation" },
+    {
+      title: "FULL STACK",
+      image: course4,
+      desc: " Full Stack Mastery Starts Here",
+    },
+    {
+      title: "EMBEDDED SYSTEM",
+      image: course2,
+      desc: " From Sensors to Smart Solutions",
+    },
+    {
+      title: "DATA SCIENCE",
+      image: course3,
+      desc: "Unlock the Power of Big Data",
+    },
+    {
+      title: "DATA ANALYTICS",
+      image: course5,
+      desc: "From Data to Actionable Insights",
+    },
+    {
+      title: "CLOUD COMPUTING",
+      image: course6,
+      desc: "Elevate Your Tech with the Cloud",
+    },
+    {
+      title: "SOFTWARE TESTING",
+      image:
+        "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060",
+      desc: "Quality assurance, debugging, validation",
+    },
   ];
 
   const [cards, setCards] = useState([]);
@@ -29,10 +54,6 @@ const TrendingtechCards = () => {
       setLoading(false);
     }, 500); // Simulate loading
   }, []);
-
-  const handleButtonClick = () => {
-    navigate('/Register');
-  };
 
   const handleNext = () => {
     if (currentIndex + cardsPerView < cards.length) {
@@ -80,15 +101,35 @@ const TrendingtechCards = () => {
                 className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
               >
                 <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
-                  <img src={card.image} alt={card.title} className="w-full object-cover rounded-lg" />
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full object-cover rounded-lg"
+                  />
                   <div className="p-4">
-                    <h3 className="text-base font-semibold mb-2">{card.title}</h3>
-                    <p className="font-medium text-sm text-[#0057D3]">{card.desc}</p>
+                    <h3 className="text-base font-semibold mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="font-medium text-sm text-[#0057D3]">
+                      {card.desc}
+                    </p>
                     <div className="flex flex-col-2 sm:flex-row gap-2 sm:gap-4 mt-3 items-center">
-                      <button className="bg-blue-600 border text-sm font-semibold border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick}>
+                      <button
+                        className="bg-blue-600 border text-sm font-semibold border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300"
+                        onClick={() => navigate("/Register")}
+                      >
                         Demo Class
                       </button>
-                      <button className="bg-gray-500 border text-sm font-semibold  border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick} >
+                      <button
+                        className="bg-gray-500 border text-sm font-semibold  border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300"
+                        onClick={() =>
+                          navigate(
+                            `/course/${card.title
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`
+                          )
+                        }
+                      >
                         Know More
                       </button>
                     </div>
@@ -101,14 +142,20 @@ const TrendingtechCards = () => {
       <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4">
         <button
           onClick={handlePrev}
-          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${
+            currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           disabled={currentIndex === 0}
         >
           <BsArrowLeft size={24} />
         </button>
         <button
           onClick={handleNext}
-          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${currentIndex + cardsPerView >= cards.length ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-full shadow-md transition-colors duration-300 ${
+            currentIndex + cardsPerView >= cards.length
+              ? "opacity-50 cursor-not-allowed"
+              : ""
+          }`}
           disabled={currentIndex + cardsPerView >= cards.length}
         >
           <BsArrowRight size={24} />
