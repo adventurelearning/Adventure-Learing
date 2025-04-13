@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/autoplay"; // Import the autoplay module
-import { Pagination, Autoplay } from "swiper/modules"; // Import necessary modules
+import "swiper/css/autoplay";
+import { Pagination, Autoplay } from "swiper/modules";
 
+// Import images
 import banner1 from '../assets/banner1.svg'
 import banner2 from '../assets/banner2.svg'
 import banner3 from '../assets/banner3.svg'
@@ -13,82 +13,93 @@ import banner4 from '../assets/banner4.svg'
 import banner5 from '../assets/banner5.svg'
 
 
-const images = [
-  {
-    image:banner1
-  },
-  {
-    image:banner2
-  },
-  {
-    image:banner3
-  },
-  {
-    image:banner4
-  },
-  {
-    image:banner5
-  },
+import mb1 from '../assets/mb1.svg'
+import mb2 from '../assets/mb2.svg'
+import mb3 from '../assets/mb3.svg'
+import mb4 from '../assets/mb4.svg'
+
+
+// You can prepare different banner versions here
+const desktopBanners = [
+  { image: banner1, link: '/contact' },
+  { image: banner2, link: '/Register' },
+  { image: banner3, link: '/onlinetraining' },
+  { image: banner4, link: '' },
+  // { image: banner5, link: '' },
+
+];
+
+const mobileBanners = [
+  { image: mb4, link: '/onlinetraining' },
+  { image: mb1, link: '/contact' },
+  { image: mb2, link: '/Register' },
+  { image: mb3, link: '/onlinetraining' },
+
   
+  // { image: mb5, link: '' },
+
 ];
 
 export default function CarouselPage() {
-  const swiperRef = useRef(null); // Reference to the Swiper instance
-
-  const goToNextSlide = () => {
-    swiperRef.current.swiper.slideNext();
-  };
-
-  const goToPrevSlide = () => {
-    swiperRef.current.swiper.slidePrev();
-  };
+  const desktopSwiperRef = useRef(null);
+  const mobileSwiperRef = useRef(null);
 
   return (
-    <div className="flex flex-col items-center justify-center  ">
-      <div className="relative w-full shadow">
+    <div className="flex flex-col items-center justify-center w-full">
+      {/* Desktop Carousel */}
+      <div className="w-full hidden lg:block">
         <Swiper
-          ref={swiperRef}
-          modules={[Pagination, Autoplay]} 
-          spaceBetween={10} 
-          slidesPerView={1} 
+          ref={desktopSwiperRef}
+          modules={[Pagination, Autoplay]}
+          spaceBetween={10}
+          slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 3000, 
-            disableOnInteraction: false, 
+            delay: 3000,
+            disableOnInteraction: false,
           }}
-          className="w-full "
+          className="w-full"
         >
-          {images.map((img, index) => (
+          {desktopBanners.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={img.image}
-                alt={`Slide ${index + 1}`}
-                className="w-full lg:w-full
-                 object-cover rounded"
-              />
+              <a href={img.link}>
+                <img
+                  src={img.image}
+                  alt={`Desktop Slide ${index + 1}`}
+                  className="w-full object-cover rounded"
+                />
+              </a>
             </SwiperSlide>
-            
           ))}
         </Swiper>
-        
+      </div>
 
-        {/* Custom Navigation Buttons */}
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-          {/* <button
-            onClick={goToPrevSlide}
-            className="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600"
-          >
-            &#8592;
-          </button> */}
-        </div>
-        <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-          {/* <button
-            onClick={goToNextSlide}
-            className="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600"
-          >
-            &#8594;
-          </button> */}
-        </div>
+      {/* Mobile Carousel */}
+      <div className="w-full block lg:hidden">
+        <Swiper
+          ref={mobileSwiperRef}
+          modules={[Pagination, Autoplay]}
+          spaceBetween={10}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          className="w-full"
+        >
+          {mobileBanners.map((img, index) => (
+            <SwiperSlide key={index}>
+              <a href={img.link}>
+                <img
+                  src={img.image}
+                  alt={`Mobile Slide ${index + 1}`}
+                  className="w-full object-cover rounded"
+                />
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ function LookingFor() {
                   I want to upskill in my current career
                 </button>
              
-              <span className="text-2xl text-blue-500 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">&rarr;</span>
+             
             </div>
           </div>
 
@@ -67,7 +67,7 @@ function LookingFor() {
                   onClick={handleButtonClick}
                   className="text-base sm:text-lg font-semibold hover:underline cursor-pointer transition duration-300 ease-in-out"
                 >Make an Enquiry</button>
-              <span className="text-2xl text-blue-500 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">&rarr;</span>
+              
             </div>
           </div>
 
@@ -90,7 +90,7 @@ function LookingFor() {
                 >
                   I want to find a new career
                 </button>            
-              <span className="text-2xl text-blue-500 group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-1">&rarr;</span>
+             
             </div>
           </div>
         </div>
