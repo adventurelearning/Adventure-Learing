@@ -1,0 +1,163 @@
+.whatsapp-button-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    width: 70px; /* Set a width to contain absolute children */
+    height: 70px; /* Set a height to contain absolute children */
+  }
+  
+  .wave-background {
+    position: absolute;
+    top: 0; /* Align to the top of the container */
+    left: 0; /* Align to the left of the container */
+    width: 100%; /* Take the full width of the container */
+    height: 100%; /* Take the full height of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wave-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: wave 3s infinite;
+  }
+  
+  .wave-circle-0 {
+    border: 3px solid rgba(37, 211, 102, 0.3);
+  }
+  
+  .wave-circle-1 {
+    border: 3px solid rgba(37, 211, 102, 0.2);
+    animation-delay: 0.5s;
+  }
+  
+  .wave-circle-2 {
+    border: 3px solid rgba(37, 211, 102, 0.1);
+    animation-delay: 1s;
+  }
+  
+  .whatsapp-button {
+    position: relative; /* To position particles and notification dot */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25D366 0%, #1EBEA5 100%);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    cursor: pointer;
+  }
+  
+  .floating-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 3s infinite;
+  }
+  
+  /* Dynamically set left and top for particles in the component */
+  .floating-particle-0 { animation-delay: 0s; }
+  .floating-particle-1 { animation-delay: 0.2s; }
+  .floating-particle-2 { animation-delay: 0.4s; }
+  .floating-particle-3 { animation-delay: 0.6s; animation-duration: 6s; }
+  .floating-particle-4 { animation-delay: 0.8s; animation-duration: 5s; }
+  .floating-particle-5 { animation-delay: 1s; animation-duration: 4s; }
+  
+  .whatsapp-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transform: translateY(-2px);
+  }
+  
+  .notification-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    background: #FF3B30;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    border: 2px solid white;
+  }
+  
+  .hover-tooltip {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .tooltip-arrow {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgba(0,0,0,0.9);
+  }
+  
+  .whatsapp-button-container:hover .hover-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(2px, -4px);
+    }
+    50% {
+      transform: translate(-3px, 2px);
+    }
+    75% {
+      transform: translate(4px, -2px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
