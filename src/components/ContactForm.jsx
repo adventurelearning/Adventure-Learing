@@ -218,7 +218,7 @@ const ContactForm = () => {
               <motion.div key="form">
                 <motion.div variants={itemVariants} className="mb-8">
                   <h2 className="text-3xl font-semibold text-[#0057D3] mb-2">
-                    Course Inquiry
+                    Course Enquiry
                   </h2>
                   <p className="text-gray-600">
                     Have questions about our courses? Our education specialists

@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import API from "../service/API";
 
 const Form = () => {
+  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success', 'error', null
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+
   const formik = useFormik({
     initialValues: {
       name: "",
       phone: "",
       email: "",
-      course: "",
+      sub: "",
       comments: "",
     },
     validationSchema: Yup.object({
@@ -19,10 +24,29 @@ const Form = () => {
       email: Yup.string()
         .email("Please enter a valid email.")
         .required("Email is required."),
-      course: Yup.string().required("Course selection is required."),
+      sub: Yup.string().required("Course selection is required."),
     }),
-    onSubmit: (values) => {
-      console.log("Form Data Submitted:", values);
+    onSubmit: async (values) => {
+      try {
+        setSubmissionStatus("loading");
+        setSubmissionMessage("Submitting...");
+        const response = await API.post("contacts/", values);
+
+        if (response.status === 200) {
+          setSubmissionStatus("success");
+          setSubmissionMessage("Enrollment successful! We will contact you soon.");
+          formik.resetForm(); // Clear the form after successful submission
+        } else {
+          setSubmissionStatus("error");
+          setSubmissionMessage(`Enrollment failed: ${response.data.message || "Something went wrong."}`);
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        setSubmissionStatus("error");
+        setSubmissionMessage(
+          `Enrollment failed: ${error.response?.data?.message || error.message || "Could not connect to the server."}`
+        );
+      }
     },
   });
 
@@ -84,6 +108,27 @@ const Form = () => {
           <h2 className="text-base md:text-lg font-bold text-[#0057D3] mb-4 md:mb-6">
             Enter Your Details to Learn more
           </h2>
+          {submissionStatus === "success" && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+              <strong className="font-bold">Success!</strong>
+              <span className="block sm:inline">{submissionMessage}</span>
+            </div>
+          )}
+
+          {submissionStatus === "error" && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+              <strong className="font-bold">Error!</strong>
+              <span className="block sm:inline">{submissionMessage}</span>
+            </div>
+          )}
+
+          {submissionStatus === "loading" && (
+            <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative mb-4" role="alert">
+              <strong className="font-semibold">Submitting...</strong>
+              <span className="block sm:inline">{submissionMessage}</span>
+            </div>
+          )}
+
           <form
             className="space-y-2 mt-2 md:mt-3"
             onSubmit={formik.handleSubmit}
@@ -172,8 +217,8 @@ const Form = () => {
                   Select Your Course
                 </label>
                 <select
-                  name="course"
-                  value={formik.values.course}
+                  name="sub"
+                  value={formik.values.sub}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   className="outline-none border-2 border-gray-300 rounded-lg p-2 w-full text-xs md:text-sm text-gray-700 focus:ring-blue-500 focus:border-blue-500 bg-gray-50 shadow-sm transition duration-300"
@@ -186,8 +231,8 @@ const Form = () => {
                   <option value="CloudComputing">Cloud Computing</option>
                   <option value="DataAnalytics">Data Analytics</option>
                 </select>
-                {formik.touched.course && formik.errors.course && (
-                  <p className="text-red-500 text-xs">{formik.errors.course}</p>
+                {formik.touched.sub && formik.errors.sub && (
+                  <p className="text-red-500 text-xs">{formik.errors.sub}</p>
                 )}
               </div>
             </div>
@@ -212,8 +257,9 @@ const Form = () => {
             <button
               type="submit"
               className="bg-[#0057D3] border border-white text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-white hover:text-blue-600 hover:border-[#0057D3] transition duration-300"
+              disabled={formik.isSubmitting}
             >
-              Enroll
+              {formik.isSubmitting ? "Enrolling..." : "Enroll"}
             </button>
           </form>
         </div>
