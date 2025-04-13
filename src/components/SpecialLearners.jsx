@@ -86,21 +86,21 @@ function SpecialLearners() {
                 <p className="text-gray-600 text-sm">
                   {category.description}
                 </p>
-                <button 
+                {/* <button 
                   className="mt-4 text-sm font-medium text-[#0057D3] hover:text-[#003d99] transition-colors"
                   aria-label={`Explore ${category.name} candidates`}
                 >
                   View Candidates →
-                </button>
+                </button> */}
               </div>
             </article>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-[#0057D3] hover:bg-[#0044b3] text-white font-medium py-3 px-8 rounded-md transition-colors duration-300">
+          {/* <button className="bg-[#0057D3] hover:bg-[#0044b3] text-white font-medium py-3 px-8 rounded-md transition-colors duration-300">
             Browse All Specializations
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

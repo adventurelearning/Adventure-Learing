@@ -13,7 +13,7 @@ function Corporate(){
      <WhyAdventureLearning/>
      <LearnerToExpert/>
      <Companies/>
-     <SpecialLearners/>
+     {/* <SpecialLearners/> */}
      <UpskillForm/>
      <CallToAction/>
         </>
