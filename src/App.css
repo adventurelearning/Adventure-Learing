@@ -1,4 +1,4 @@
-/* HTML: <div class="loader"></div> */
+
 .loader {
     display: inline-flex;
     gap: 10px;
@@ -55,3 +55,6 @@
     }
   }
   
+
+
+
