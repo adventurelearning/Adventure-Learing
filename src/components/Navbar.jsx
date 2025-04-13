@@ -41,7 +41,7 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
 
   return (
-    <nav className="bg-white text-black px-6 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+    <nav className="bg-white text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
       {/* Logo */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">
@@ -211,7 +211,7 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className="space-y-2 text-lg font-semibold px-6 text-gray-800">
+        <ul className="space-y-2 text-base px-6 text-gray-800 ">
           <li>
             <Link
               to="/"
@@ -236,7 +236,7 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.courses && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/course/full-stack"
@@ -319,7 +319,7 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.corporate && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/Corporate"
@@ -347,7 +347,7 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.resources && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/blogs"

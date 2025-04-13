@@ -1,13 +1,18 @@
 import React from "react";
-import CourseBaner3 from "../../../assets/CourseBaner3.svg"
+import BanDesktop5 from "../../../assets/cdbanner/BanDesktop5.svg";
+import BanMobile5 from "../../../assets/cmbanner/BanMobile5.svg";
 
 const Banner = () => {
   return (
-    <div className="mt-6 w-full h-[300px] bg-cover bg-center flex items-center justify-center text-white">
-      <div className=" rounded-xl text-center">
-        <img src={CourseBaner3} alt="" />
-      </div>
-    </div>
+    <div className="w-full h-auto bg-cover bg-center flex items-center justify-center text-white">
+  <div className="rounded-xl text-center w-full">
+    {/* Desktop Banner */}
+    <img src={BanDesktop5} alt="Desktop Banner" className="hidden md:block w-full h-auto" />
+
+    {/* Mobile Banner */}
+    <img src={BanMobile5} alt="Mobile Banner" className="block md:hidden w-full h-auto" />
+  </div>
+</div>
   );
 };
 
