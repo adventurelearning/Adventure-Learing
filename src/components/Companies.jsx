@@ -66,7 +66,7 @@ function Companies() {
 
         <div className="bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-5 md:grid-cols-5 gap-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className={`rounded-full ${stat.color} p-3`}>
