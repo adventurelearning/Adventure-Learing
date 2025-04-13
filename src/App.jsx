@@ -9,7 +9,7 @@ import Home from "./pages/Home/Home";
 import { SiConcourse } from "react-icons/si";
 // Static imports remain
 import ScrollToTop from "./components/ScrolltoTop";
-import Loading from "./components/Loading"; // Create a simple Loading component
+import Loading from "./components/Loading/Loading"; // Create a simple Loading component
 import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
 
@@ -61,7 +61,7 @@ function App() {
       <Header />
       {/* <Loading /> */}
       <Navbar />
-      <Suspense fallback={<InitialLoader />}>
+      <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}
         <Routes>
