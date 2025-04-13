@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const menuItems = [
   { id: "course", label: "Course Overview", href: "#course" },
@@ -6,11 +6,40 @@ const menuItems = [
   { id: "syllabus", label: "Syllabus", href: "#syllabus" },
   { id: "batches", label: "Upcoming Batch", href: "#batches" },
   { id: "certificate", label: "Certificate", href: "#certificate" },
-  { id: "learners-thought", label: "Our Learners Thought", href: "#review" }
+  { id: "review", label: "Our Learners Thought", href: "#review" },
 ];
 
 const Navbar = () => {
   const [selectedMenu, setSelectedMenu] = useState('course');
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px 0px -60% 0px", // Trigger earlier than full visibility
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          setSelectedMenu(id);
+        }
+      });
+    }, options);
+
+    // Observe each section
+    menuItems.forEach(item => {
+      const section = document.getElementById(item.id);
+      if (section) observer.observe(section);
+    });
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <nav className="bg-[#0057D3] text-white shadow-lg font-sans sticky top-0 z-50 overflow-x-auto">
