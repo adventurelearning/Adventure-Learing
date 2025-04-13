@@ -62,10 +62,19 @@ function Footer() {
                             </div>
                         </div>
                         <div className="flex items-start text-sm">
+                        <a
+                            href="https://www.google.com/maps?q=No:121/4,7th+Street,Tatabad,Gandhipuram,Coimbatore,Tamil+Nadu-641012"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start text-sm hover:text-gray-300 "
+                        >
                             <i className="bi bi-geo-alt text-xl sm:text-2xl"></i>
                             <p className="ml-3 sm:ml-5">
-                                No:121/4, 7th Street, <span className='block'>Tatabad, Gandhipuram,</span> Coimbatore, Tamil Nadu-641012.
+                                No:121/4, 7th Street,
+                                <span className='block'>Tatabad, Gandhipuram,</span>
+                                Coimbatore, Tamil Nadu-641012.
                             </p>
+                        </a>
                         </div>
                         <div className="flex items-center text-sm">
                             <i className="bi bi-envelope text-xl sm:text-2xl"></i>

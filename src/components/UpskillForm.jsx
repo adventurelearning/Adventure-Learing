@@ -50,7 +50,7 @@ function UpskillForm() {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-blue-100 py-12 min-h-screen flex items-center justify-center" id='corpform'>
       <div className="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
-        <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8 flex items-center">
+        <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8  items-center">
           <div>
             <h2 className="text-white text-2xl font-bold mb-4">Transform Your Workforce</h2>
             <p className="text-blue-100 mb-6">Let us help you build the skills your team needs to succeed in today's competitive landscape.</p>

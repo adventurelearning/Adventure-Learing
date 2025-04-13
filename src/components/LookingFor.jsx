@@ -1,12 +1,8 @@
 import enquiry1 from '../assets/enquiry1.png';
 import career4 from '../assets/career4.png';
 import career2 from '../assets/career2.png';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function LookingFor() {
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    navigate('/contact');
-  };
 
 
   return (
@@ -27,6 +23,7 @@ function LookingFor() {
         {/* Flex container with responsive behavior */}
         <div className="flex flex-col sm:flex-row md:flex-row justify-center items-center gap-6 p-6">
           {/* First card */}
+          <Link to="/Register">
           <div
             data-aos="zoom-in"
             className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
@@ -39,18 +36,15 @@ function LookingFor() {
 
             <img src={career2} alt="Upskill Illustration" className="w-14 h-14 mr-4 filter group-hover:brightness-0 group-hover:invert transition duration-300" />
             <div className="flex items-center justify-between w-full">              
-                <button
-                  onClick={handleButtonClick}
-                  className="text-base sm:text-lg font-semibold hover:underline cursor-pointer transition duration-300 ease-in-out"
-                >
+              
                   I want to upskill in my current career
-                </button>
              
              
             </div>
           </div>
-
+          </Link>
           {/* Second card */}
+          <Link to="/contact">
           <div
             data-aos="zoom-in"
             className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
@@ -64,14 +58,14 @@ function LookingFor() {
             <img src={enquiry1} alt="Enquiry Illustration" className="w-14 h-14 mr-4 filter group-hover:brightness-0 group-hover:invert transition duration-300" />
             <div className="flex items-center justify-between w-full">
             <button
-                  onClick={handleButtonClick}
                   className="text-base sm:text-lg font-semibold hover:underline cursor-pointer transition duration-300 ease-in-out"
                 >Make an Enquiry</button>
               
             </div>
           </div>
-
+          </Link>
           {/* Third card */}
+          <Link to="/Register">
           <div
             data-aos="zoom-in"
             className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
@@ -85,7 +79,6 @@ function LookingFor() {
             <img src={career4} alt="New Career Illustration" className="w-14 h-14 mr-4 filter group-hover:brightness-0 group-hover:invert transition duration-300" />
             <div className="flex items-center justify-between w-full">
             <button
-                  onClick={handleButtonClick}
                   className="text-base sm:text-lg font-semibold hover:underline cursor-pointer transition duration-300 ease-in-out"
                 >
                   I want to find a new career
@@ -93,6 +86,7 @@ function LookingFor() {
              
             </div>
           </div>
+          </Link>
         </div>
       </div>
     </>
