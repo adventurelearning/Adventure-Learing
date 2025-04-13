@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -23,6 +23,7 @@ import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
 import ScrollToTop from "./components/ScrolltoTop";
+import SubBlogs from "./components/SubBlogs";
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           </Route>
           <Route path="/contact" element={<ContactAll/>}/>
           <Route path="/blogs" element={<AllBlogs/>}/>
+          <Route path="/Blogs/subblogs/:id" element={<SubBlogs/>}/>
           <Route path="/onlinetraining" element={<OnlineTrain/>}/>
           <Route path="/corporate" element={<Corporate/>}/>
           <Route path="/article1" element={<ArticlePage1 />} />
