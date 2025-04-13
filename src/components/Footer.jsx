@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from "../assets/logo-dark.svg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function Footer() {
+
+    const navigate = useNavigate()
     return (
         <footer className="bg-[#0057D3] text-white py-4 mt-10 sm:mt-10">
             <div className="container mx-auto px-4 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-2">
@@ -53,8 +56,8 @@ function Footer() {
                         <div className="flex items-start">
                             <i className="bi bi-telephone text-xl sm:text-2xl"></i>
                             <div className="ml-3 sm:ml-5 text-sm">
+                                <p className='pt-1'>Coimbatore: +91-9884445571</p>
                                 <p className='pt-1'>Chennai: +91-8111005300</p>
-                                <p className='pt-1'>Coimbatore: +91-988445571</p>
                                 <p className='pt-1'>Hire from us: +91-9884220600</p>
                             </div>
                         </div>
@@ -66,7 +69,12 @@ function Footer() {
                         </div>
                         <div className="flex items-center text-sm">
                             <i className="bi bi-envelope text-xl sm:text-2xl"></i>
-                            <a href="mailto:info@adventurelearning.in" className="ml-3 sm:ml-5 hover:text-gray-300">info@adventurelearning.in</a>
+                            <a
+                                href="mailto:info@adventurelearning.in"
+                                className="ml-3 sm:ml-5 flex items-center gap-1 hover:text-gray-300"                               
+                            >
+                                info@adventurelearning.in
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -85,22 +93,13 @@ function Footer() {
                     <div>
                         <h3 className="font-bold text-base sm:text-lg text-white mb-2">Follow us</h3>
                         <div className="flex items-center space-x-4">
-                            <a href="#" className="bg-[#3275fc] text-white rounded-full p-2">
+                            <a href="https://www.facebook.com/profile.php?id=61570475203188&mibextid=ZbWKwL" className="bg-[#3275fc] text-white rounded-full p-2">
                                 <FaFacebookF size={20} />
                             </a>
-                            <a href="#" className="bg-gradient-to-r from-purple-500 to-yellow-700 text-white rounded-full p-2">
+                            <a href="https://www.instagram.com/adventure_learning_kovai/" className="bg-gradient-to-r from-purple-500 to-yellow-700 text-white rounded-full p-2">
                                 <FaInstagram size={20} />
-                            </a>
-                            <a href="#" className="bg-[#0077B5] text-white rounded-full p-2">
-                                <FaLinkedinIn size={20} />
-                            </a>
-                            {/* <a href="#" className="bg-black text-white rounded-full p-2">
-                                <FaXTwitter size={20} />
-                            </a> */}
-                            <a href="#" className="bg-[#0088CC] text-white rounded-full p-2">
-                                <FaTelegramPlane size={20} />
-                            </a>
-                            <a href="#" className="bg-[#FF0000] text-white rounded-full p-2">
+                            </a>                          
+                            <a href="https://www.youtube.com/@Adventure_Learning" className="bg-[#FF0000] text-white rounded-full p-2">
                                 <FaYoutube size={20} />
                             </a>
                         </div>
@@ -113,9 +112,9 @@ function Footer() {
             <div className="flex flex-col sm:flex-row mt-3 sm:mt-4 text-xs sm:text-sm justify-between w-full px-4">
                 <p className="mb-2 sm:mb-0">©2025 Adventure Technology Solutions Pvt Ltd.</p>
                 <div className='flex space-x-3 sm:space-x-4'>
-                    <a href="#" className="hover:text-gray-300 underline">Terms & Conditions</a>
+                    <button onClick={() => navigate('/TandC')} className="hover:text-gray-300 underline"> Terms & Conditions</button>
                     <span>|</span>
-                    <a href="#" className="hover:text-gray-300 underline">Privacy Policy</a>
+                    <a href="/PrivacyPolicy" className="hover:text-gray-300 underline">Privacy Policy</a>
                 </div>
             </div>
         </footer>

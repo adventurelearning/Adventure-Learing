@@ -22,9 +22,6 @@ const TrendingtechCards = () => {
   const cardsPerView = window.innerWidth < 640 ? 1 : 4; // Adjust based on screen size
   const navigate = useNavigate();
 
-  const handleButtonClick=()=>{    
-    navigate('/Register');
-  };
 
   const handleNext = () => {
     if (currentIndex + cardsPerView < cards.length) {
@@ -57,10 +54,10 @@ const TrendingtechCards = () => {
                 <h3 className="text-base font-semibold mb-2">{card.title}</h3>
                 <p className="font-medium text-sm text-[#0057D3]">{card.desc}</p>
                 <div className="flex flex-col-2 sm:flex-row gap-2 sm:gap-4 mt-3 items-center">
-                  <button className="bg-blue-600 border text-sm font-semibold border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick}>
+                  <button className="bg-blue-600 border text-sm font-semibold border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={()=>navigate('/Register')}>
                     Demo Class
                   </button>
-                  <button className="bg-gray-500 border text-sm font-semibold  border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300" onClick={handleButtonClick} >
+                  <button className="bg-gray-500 border text-sm font-semibold  border-white text-white px-3 py-2 rounded-md  hover:border-[#0057D3] hover:bg-white hover:text-blue-600 transition duration-300"  onClick={() => navigate(`/course/${card.title.toLowerCase().replace(/\s+/g, '-')}`)}>
                     Know More
                   </button>
                 </div>

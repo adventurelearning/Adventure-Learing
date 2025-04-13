@@ -36,7 +36,7 @@ const Home = () => {
       <SelectCourse />
       <Form />
       <Courses />      
-      <Course_Link />     
+      {/* <Course_Link />      */}
       <Coursecard />      
       <WhyAdventure />
       <Enroll />

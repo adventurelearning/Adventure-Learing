@@ -23,6 +23,8 @@ import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
 import ScrollToTop from "./components/ScrolltoTop";
+import TandC from "./components/TandC";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
 
@@ -50,6 +52,8 @@ function App() {
           <Route path="/Article2" element={<ArticlePage2/>}/>   
           <Route path="/Article3" element={<ArticlePage3/>}/>
           <Route path="/Register" element={<Register/>} />
+          <Route path="/TandC" element={<TandC/>}/>
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
         </Routes>
         <Footer />
     </>

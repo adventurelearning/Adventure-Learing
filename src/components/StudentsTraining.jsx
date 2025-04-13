@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
-function StudentTraining(){
-  const navigate=useNavigate()
-    return(
-        <>
-        <div className="bg-gray-100">
+import onlinetrain from '../assets/onlinetrain.svg'
+import onlinemob from '../assets/onlinemob.svg'
+function StudentTraining() {
+  const navigate = useNavigate()
+  return (
+    <>
         {/* Hero Section */}
         {/* <div className="bg-gradient-to-b from-gray-800 to-gray-700 text-white py-24 text-center">
           <div className="container mx-auto px-4">
@@ -16,7 +17,7 @@ function StudentTraining(){
             </button>
           </div>
         </div> */}
-        <div className="bg-gray-100 ">        
+        {/* <div className="bg-gray-100 ">        
       <section className="py-16 bg-gradient-to-r from-gray-600 to-gray-800 text-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Learning Journey?</h2>
@@ -33,11 +34,22 @@ function StudentTraining(){
           </div>
         </div>
       </section>
-    </div>
+    </div> */}
+        <div className="bg-gray-100">
+          {/* Desktop Banner */}
+          <a href="#courselist" className="hidden md:block">
+            <img src={onlinetrain} alt="Corporate Training Desktop Banner" className="w-full" />
+          </a>
 
+          {/* Mobile Banner */}
+          <a href="#courselist" className="block md:hidden">
+            <img src={onlinemob} alt="Corporate Training Mobile Banner" />
+          </a>
         </div>
-        
-        </>
-    )
+
+
+
+    </>
+  )
 }
 export default StudentTraining;

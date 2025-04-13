@@ -30,13 +30,13 @@ const Datascience  = () => {
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <CourseOverview />
       </div>
-      <div id="trainer" className="container-fluid rounded mx-auto px-4">
+      {/* <div id="trainer" className="container-fluid rounded mx-auto px-4">
         <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Trainer Profile
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
         <TrainerProfile />
-      </div>
+      </div> */}
 
       <div
         id="syllabus"        
