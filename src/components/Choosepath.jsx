@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import videoClass from "../assets/virtual-classroom.jpg";
-import close from '../assets/close-up.jpg';
+
 
 function Choosepath() {
     const [loading, setLoading] = useState(true);
@@ -47,7 +46,7 @@ function Choosepath() {
                             <div className="w-full sm:w-96 md:w-80 lg:w-96 relative rounded-lg shadow-none lg:shadow-xl hover:shadow-2xl overflow-hidden group transition-all duration-300">
                                 <div className="card w-full h-full">
                                     <a href="/Register"> <img
-                                        src={videoClass}
+                                        src='https://img.freepik.com/free-vector/webinar-concept-illustration_114360-4764.jpg' 
                                         className="w-full h-48 sm:h-56 md:h-48 lg:h-56 object-cover"
                                         alt="One-on-One Training"
                                     /></a>
@@ -80,7 +79,7 @@ function Choosepath() {
                             <div className="w-full sm:w-96 md:w-80 lg:w-96 relative rounded-lg shadow-none lg:shadow-xl lg:hover:shadow-2xl overflow-hidden group transition-all duration-300">
                                 <div className="card w-full h-full">
                                     <a href="/Register"> <img
-                                        src={close}
+                                        src='https://img.freepik.com/premium-vector/elearning-banner-online-education-home-schooling_572614-400.jpg' 
                                         className="w-full h-48 sm:h-56 md:h-48 lg:h-56 object-cover"
                                         alt="Online Live Training"
                                     />
