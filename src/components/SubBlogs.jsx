@@ -36,7 +36,7 @@ const SubBlogs = () => {
       return (
         <motion.h2
           key={index}
-          className="text-xl md:text-2xl font-semibold text-[#0057D3] mt-8 mb-4"
+          className="text-xl md:text-2xl font-semibold text-[#0057D3] mt-8 mb-4 text-justify"
           variants={itemVariants}
         >
           {headingText}
@@ -53,17 +53,18 @@ const SubBlogs = () => {
       return (
         <div key={index} className="mt-6">
           <motion.h3
-            className="text-lg font-medium text-gray-800 mb-2"
+            className="text-lg font-medium text-gray-800 mb-2 "
             variants={itemVariants}
           >
             {subtitle}
           </motion.h3>
           <motion.p
-            className="ml-8 leading-relaxed"
-            variants={itemVariants}
-          >
-            {content}
-          </motion.p>
+  className="ml-8 mr-8 leading-relaxed text-justify"
+  variants={itemVariants}
+>
+  {content}
+</motion.p>
+
         </div>
       );
     }
@@ -73,7 +74,7 @@ const SubBlogs = () => {
       return (
         <motion.li
           key={index}
-          className="list-disc list-inside text-gray-800 leading-relaxed mt-2"
+          className="list-disc list-inside text-gray-800 leading-relaxed mt-2 text-justify"
           variants={itemVariants}
         >
           {line.replace(/^\*\s*/, '')}
@@ -85,7 +86,7 @@ const SubBlogs = () => {
     return (
       <motion.p
         key={index}
-        className="text-gray-700 leading-relaxed mt-4"
+        className="text-gray-700 leading-relaxed mt-4 text-justify"
         variants={itemVariants}
       >
         {line}
@@ -124,7 +125,7 @@ const SubBlogs = () => {
           </motion.p>
 
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg space-y-4"
+            className="bg-white p-6 rounded-lg shadow-lg space-y-4 text-justify"
             variants={containerVariants}
           >
             {parsedContent && parsedContent.map((line, idx) => renderLine(line, idx))}
@@ -135,7 +136,7 @@ const SubBlogs = () => {
             variants={itemVariants}
           >
             <h3 className="text-2xl font-semibold text-[#0057D3] mb-2 ">Conclusion</h3>
-            <p className="ml-8 leading-relaxed">
+            <p className="ml-8 leading-relaxed text-justify">
               {blogContent.conclusion || 'No conclusion provided.'}
             </p>
           </motion.div>
