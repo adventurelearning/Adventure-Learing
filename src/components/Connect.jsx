@@ -18,6 +18,7 @@ function Connect() {
         <br className="hidden md:block" />
         feel free to reach out and get the clarity you need.
     </h4>
+
     {/* <button
         data-aos="fade-up"
         data-aos-delay="300"
@@ -25,6 +26,7 @@ function Connect() {
     >
         <a href="#contact">CONTACT US</a>
         </button> */}
+
 </div>
 
         </>

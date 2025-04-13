@@ -57,8 +57,8 @@ function Contact() {
                         <i className="bi bi-geo-alt text-3xl text-[#0057D3]"></i>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-700 mb-2">Office Location</h3>
-                    <p className="text-sm text-gray-600 text-center">Tambaram, Chennai</p>
                     <p className="text-sm text-gray-600 text-center">Gandhipuram, Coimbatore</p>
+                    <p className="text-sm text-gray-600 text-center">Tambaram, Chennai</p>
                 </div>
 
                 {/* Work Day */}
@@ -71,8 +71,8 @@ function Contact() {
                         <i className="bi bi-alarm text-3xl text-[#0057D3]"></i>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-700 mb-2">Work Day</h3>
-                    <p className="text-sm text-gray-600 text-center">Mon - Fri: 09:00 - 17:00</p>
-                    <p className="text-sm text-gray-600 text-center">Sat - Sun: 09:00 - 15:00</p>
+                    <p className="text-sm text-gray-600 text-center">Mon - Fri: 09:00AM - 7:00PM</p>
+                    <p className="text-sm text-gray-600 text-center">Sat - Sun: 09:00AM - 5:00PM</p>
                 </div>
             </div>
         </div>

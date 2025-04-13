@@ -9,9 +9,13 @@ import Home from "./pages/Home/Home";
 import { SiConcourse } from "react-icons/si";
 // Static imports remain
 import ScrollToTop from "./components/ScrolltoTop";
+
+import SubBlogs from "./components/SubBlogs";
+
 import Loading from "./components/Loading/Loading"; // Create a simple Loading component
 import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
+
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
@@ -74,10 +78,12 @@ function App() {
             <Route path="data-analytics" element={<Dataanalytics />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
           </Route>
-          <Route path="/contact" element={<ContactAll />} />
-          <Route path="/blogs" element={<AllBlogs />} />
-          <Route path="/onlinetraining" element={<OnlineTrain />} />
-          <Route path="/corporate" element={<Corporate />} />
+
+          <Route path="/contact" element={<ContactAll/>}/>
+          <Route path="/blogs" element={<AllBlogs/>}/>
+          <Route path="/Blogs/subblogs/:id" element={<SubBlogs/>}/>
+          <Route path="/onlinetraining" element={<OnlineTrain/>}/>
+          <Route path="/corporate" element={<Corporate/>}/>
           <Route path="/article1" element={<ArticlePage1 />} />
           <Route path="/Article2" element={<ArticlePage2 />} />
           <Route path="/Article3" element={<ArticlePage3 />} />
