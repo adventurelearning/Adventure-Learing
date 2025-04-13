@@ -313,7 +313,7 @@ const Register = () => {
                     whileFocus={{ scale: 1.01 }}
                   >
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <span className="text-gray-900">+91</span>
+                      <span className="text-gray-500">+91</span>
                     </div>
                     <input
                       type="tel"
