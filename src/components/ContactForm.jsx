@@ -65,6 +65,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
 
     if (!validateForm()) return;
 

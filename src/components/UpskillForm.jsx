@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import form2 from "../assets/form2.gif";
 import API from "../service/API";
 
 function UpskillForm() {
@@ -85,6 +84,7 @@ function UpskillForm() {
         message: "",
       });
       setErrors({});
+      setTimeout(() => setSubmitSuccess(false), 5000); // Hide success message after 5 seconds
     } catch (error) {
       console.log(error);
       // Optionally set an error state for the submission failure
@@ -99,7 +99,7 @@ function UpskillForm() {
       id="corpform"
     >
       <div className="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
-        <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8  items-center">
+        <div className="hidden md:block md:w-1/3 bg-[#0057D3] p-8 items-center">
           <div>
             <h2 className="text-white text-2xl font-bold mb-4">
               Transform Your Workforce
@@ -108,12 +108,6 @@ function UpskillForm() {
               Let us help you build the skills your team needs to succeed in
               today's competitive landscape.
             </p>
-            {/* <img
-              src={form2}
-              alt="Upskilling illustration"
-              className="w-full h-auto rounded-lg"
-              loading="lazy"
-            /> */}
           </div>
         </div>
 
@@ -131,7 +125,7 @@ function UpskillForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label
-                  htmlFor="fullName"
+                  htmlFor="name"
                   className="block text-gray-700 text-sm font-medium mb-1"
                 >
                   Full Name <span className="text-red-500">*</span>
@@ -197,7 +191,7 @@ function UpskillForm() {
               </div>
               <div>
                 <label
-                  htmlFor="contactNumber"
+                  htmlFor="phone_number"
                   className="block text-gray-700 text-sm font-medium mb-1"
                 >
                   Contact Number <span className="text-red-500">*</span>
@@ -210,19 +204,7 @@ function UpskillForm() {
                     type="tel"
                     id="phone_number"
                     value={formData.phone_number}
-                    onChange={(e) => {
-                      if (
-                        e.target.value.length <= 10 &&
-                        /^[0-9]*$/.test(e.target.value)
-                      ) {
-                        handleChange({
-                          target: {
-                            name: "phone_number",
-                            value: e.target.value,
-                          },
-                        });
-                      }
-                    }}
+                    onChange={handleChange}
                     className={`w-full pl-10 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition ${
                       errors.phone_number ? "border-red-500" : "border-gray-300"
                     }`}
@@ -239,7 +221,7 @@ function UpskillForm() {
 
             <div>
               <label
-                htmlFor="companyName"
+                htmlFor="company_name"
                 className="block text-gray-700 text-sm font-medium mb-1"
               >
                 Company Name <span className="text-red-500">*</span>
@@ -263,7 +245,7 @@ function UpskillForm() {
 
             <div>
               <label
-                htmlFor="requestMessage"
+                htmlFor="message"
                 className="block text-gray-700 text-sm font-medium mb-1"
               >
                 Request Message <span className="text-red-500">*</span>
