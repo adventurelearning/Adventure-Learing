@@ -422,8 +422,8 @@ const Register = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={isLoading}
-                  className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all ${
-                    isLoading ? "bg-blue-400" : "bg-[#0057D3] hover:bg-blue-700"
+                  className={`w-fit py-2 px-6 rounded-lg font-medium text-white transition-all ${
+                    isLoading ? "bg-[#0057D3] text-white" : "bg-[#0057D3] hover:bg-white hover:text-[#0057D3] border hover:border-[#0057D3]"
                   }`}
                 >
                   {isLoading ? (

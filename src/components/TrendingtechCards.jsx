@@ -39,7 +39,7 @@ const TrendingtechCards = () => {
       title: "SOFTWARE TESTING",
       image:
         "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060",
-      desc: "Quality assurance, debugging, validation",
+      desc: "Quality assurance and debugging",
     },
   ];
 
@@ -104,7 +104,7 @@ const TrendingtechCards = () => {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full object-cover rounded-lg"
+                    className="w-full h-40 object-cover rounded-lg"
                   />
                   <div className="p-4">
                     <h3 className="text-base font-semibold mb-2">

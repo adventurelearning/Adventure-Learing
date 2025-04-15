@@ -93,7 +93,7 @@ function App() {
           <Route path="/Register" element={<Register/>} />
           <Route path="/TandC" element={<TandC/>}/>
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
-
+          
         </Routes>
       </Suspense>
       <Footer />

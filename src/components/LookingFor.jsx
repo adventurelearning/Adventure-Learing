@@ -15,12 +15,9 @@ function LookingFor() {
     // Simulate loading delay - replace with your actual data fetching if needed
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Adjust the time as needed
+    }, 1500); // Adjust the time as needed
   }, []);
 
-  const handleButtonClick = () => {
-    navigate("/contact");
-  };
 
   return (
     <>

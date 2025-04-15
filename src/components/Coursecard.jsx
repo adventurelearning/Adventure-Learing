@@ -15,7 +15,7 @@ const Coursecard = () => {
     {id:"data-science", title: "Data Science: Mastering Data Analysis and Machine Learning", image: course3, lesson: 33, students: 64, category: "Beginner" },
     {id:"data-analytics", title: "Data Analytics: Unlocking Insights from Data", image: course5, lesson: 15, students: 215, category: "Beginner" },
     {id:"cloud-computing", title: "Cloud Computing: Building Scalable and Flexible Solutions", image: course6, lesson: 6, students: 198, category: "Beginner" },
-    {id:"software-testing", title: "Software Testing: Quality and Reliability in Software Development", image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", lesson: 15, students: 215, category: "Beginner" },
+    {id:"software-testing", title: "Software Testing: Quality and Reliability", image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", lesson: 15, students: 215, category: "Beginner" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +52,7 @@ const Coursecard = () => {
             className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
           >
             <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
-              <img src={card.image} alt={card.title} className="w-full object-cover rounded-lg" />
+              <img src={card.image} alt={card.title} className="w-full h-40 object-cover rounded-lg" />
               <div className="p-3">
                 <h3 className="text-base font-semibold mb-2">{card.title}</h3>
                 <div className="flex items-center  text-gray-500 font-semibold mb-3 space-x-2 text-xs">

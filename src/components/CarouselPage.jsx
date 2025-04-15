@@ -43,7 +43,7 @@ export default function CarouselPage() {
     // Simulate a loading delay (e.g., fetching data)
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Adjust the delay as needed
+    }, 1200); // Adjust the delay as needed
   }, []);
 
   return (
@@ -51,7 +51,7 @@ export default function CarouselPage() {
       {loading ? (
         // Placeholder Loading State
         <div className="w-full rounded bg-gray-100 animate-pulse">
-          <div className="h-48 lg:h-64 bg-gray-300 rounded"></div>
+          <div className="h-48 lg:h-auto bg-gray-300 rounded"></div>
         </div>
       ) : (
         <>

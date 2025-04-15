@@ -71,6 +71,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      console.log("hi")
       await toast.promise(API.post("contacts/", formData), {
         loading: "Sending your inquiry...",
         success: <b>Your message has been sent successfully!</b>,
@@ -207,10 +208,10 @@ const ContactForm = () => {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="/courses"
+                    href="/contact"
                     className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    Browse Our Courses
+                    Contact Another
                   </motion.a>
                 </div>
               </motion.div>
@@ -286,7 +287,7 @@ const ContactForm = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <motion.div variants={itemVariants}>
                       <label
-                        htmlFor="phone"
+                        htmlFor="phone_number"
                         className="block text-sm font-medium text-gray-700 mb-1"
                       >
                         Phone Number <span className="text-red-500">*</span>
@@ -301,23 +302,23 @@ const ContactForm = () => {
                         </div>
                         <input
                           type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
+                          id="phone_number"
+                          name="phone_number"
+                          value={formData.phone_number}
                           onChange={(e) => {
                             if (e.target.value.length <= 10) {
                               handleChange(e);
                             }
                           }}
                           className={`w-full pl-11 pr-4 py-3 border ${
-                            errors.phone ? "border-red-500" : "border-gray-300"
+                            errors.phone_number? "border-red-500" : "border-gray-300"
                           } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
                           placeholder="Enter your number"
                         />
                       </motion.div>
-                      {errors.phone && (
+                      {errors.phone_number && (
                         <p className="text-red-500 text-sm mt-1">
-                          {errors.phone}
+                          {errors.phone_number}
                         </p>
                       )}
                     </motion.div>
@@ -336,7 +337,7 @@ const ContactForm = () => {
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiYjMzk7IzZCN0I4OSYjMzk7IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+')] bg-no-repeat bg-[right_1rem_center] bg-[length:1.5rem] transition-all"
                         >
-                          <option value="">Select a course</option>
+                          <option value="">-- Select a course --</option>
                           {courses.map((course, index) => (
                             <option key={index} value={course}>
                               {course}
@@ -386,10 +387,8 @@ const ContactForm = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={isSubmitting}
-                      className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all ${
-                        isSubmitting
-                          ? "bg-blue-400"
-                          : "bg-[#0057D3] hover:bg-blue-700"
+                      className={`w-fit py-2 px-6 rounded-lg font-medium text-white transition-all ${
+                        isSubmitting ? "bg-[#0057D3] text-white" : "bg-[#0057D3] hover:bg-white hover:text-[#0057D3] border hover:border-[#0057D3]"
                       }`}
                     >
                       {isSubmitting ? (
