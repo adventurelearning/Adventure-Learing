@@ -351,7 +351,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/blogs"
-                    className={`block py-2 ${isActiveLink("/blogs")}`}
+                    className={`block py-2`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Blogs

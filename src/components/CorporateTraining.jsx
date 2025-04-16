@@ -16,7 +16,7 @@ function CorporateTraining() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Simulate loading
+    }, 1000); // Simulate loading
   }, []);
 
   const PlaceholderCard = () => (

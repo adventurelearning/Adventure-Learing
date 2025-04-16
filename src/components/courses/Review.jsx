@@ -63,7 +63,7 @@ function TestimonialReview() {
     },
     {
         img: "https://via.placeholder.com/100",
-        name: "Cloud Engineer",
+        name: "Siva",
         review: "Cloud Computing training was amazing. We explored AWS and Azure platforms, and got hands-on with deployments and services."
     }
 ];
