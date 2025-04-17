@@ -10,7 +10,7 @@ function StudentTraining() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Simulate loading
+    }, 1200); // Simulate loading
   }, []);
 
   return (

@@ -8,7 +8,7 @@ function Choosepath() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 500); // Simulate loading
+        }, 1500); // Simulate loading
     }, []);
 
     const PlaceholderCard = () => (
