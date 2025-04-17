@@ -54,7 +54,8 @@ const NewsandBlog = () => {
   };
 
   return (
-    <div className="lg:max-w-6xl mx-auto relative  p-5 ">
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom" className="lg:max-w-6xl mx-auto relative  p-5 ">
       {/* Single Card Container */}
       <div
         className="relative bg-white rounded-lg overflow-hidden flex flex-col md:flex-row transition-all duration-300"

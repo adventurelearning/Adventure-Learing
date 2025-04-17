@@ -39,7 +39,7 @@ const Coursecard = () => {
   };
 
   return (
-    <div className="relative overflow-hidden px-5">
+    <div data-aos="fade-right" data-aos-duration="1000" className="relative overflow-hidden px-5">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{
@@ -49,7 +49,7 @@ const Coursecard = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
+            className={`w-full lg:w-1/4 md:w-1/2 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
           >
             <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
               <img src={card.image} alt={card.title} className="w-full h-40 object-cover rounded-lg" />

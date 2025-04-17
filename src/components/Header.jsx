@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6';
-
 const Header = () => {
   return (
 <header className="hidden lg:flex text-white py-3 px-6 flex-col lg:flex-row justify-between items-center bg-[#0057D3]">
@@ -13,9 +11,6 @@ const Header = () => {
     <p className="whitespace-nowrap">Hire from us : +91 9884220600</p>
   </div>
 </header>
-
-
-
   );
 }
 

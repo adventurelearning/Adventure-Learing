@@ -2,7 +2,7 @@ import sub from '../assets/sub.svg';
 
 function Offers() {
   return (
-    <div className="flex justify-center items-center my-16 px-4 sm:px-6 lg:px-8">
+    <div  data-aos="fade-up" className="flex justify-center items-center my-16 px-4 sm:px-6 lg:px-8">
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-8 px-6 sm:px-10 w-full max-w-6xl rounded-xl relative overflow-hidden shadow-xl">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Image Section */}

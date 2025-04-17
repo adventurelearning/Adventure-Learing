@@ -43,7 +43,7 @@ export default function CarouselPage() {
     // Simulate a loading delay (e.g., fetching data)
     setTimeout(() => {
       setLoading(false);
-    }, 1200); // Adjust the delay as needed
+    }, 500); // Adjust the delay as needed
   }, []);
 
   return (

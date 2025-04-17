@@ -17,6 +17,8 @@ import SubBlogs from "./components/SubBlogs";
 import Loading from "./components/Loading/Loading"; // Create a simple Loading component
 import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
+import PopupForm from "./components/PopupForm";
+import PopupOffers from "./components/PopupOffers";
 
 
 // Lazy load components
@@ -62,6 +64,7 @@ function App() {
   if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
+  
       <ScrollToTop />
       <Whatsapp />
       <Header />
@@ -70,6 +73,8 @@ function App() {
       <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}
+        <PopupForm/>
+        {/* <PopupOffers/>        */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="course">
