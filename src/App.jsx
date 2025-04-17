@@ -17,6 +17,8 @@ import SubBlogs from "./components/SubBlogs";
 import Loading from "./components/Loading/Loading"; // Create a simple Loading component
 import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
+import ChatBox from "./components/chatbot/ChatBox";
+import ChatWidget from "./components/chatbot/ChatWidget";
 
 
 // Lazy load components
@@ -63,7 +65,13 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Whatsapp />
+
+    <Whatsapp />
+    <ChatWidget />
+  
+
+
+
       <Header />
       {/* <Loading /> */}
       <Navbar />
