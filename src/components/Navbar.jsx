@@ -41,7 +41,7 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
 
   return (
-    <nav className="bg-white text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full lg:z-10 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
       {/* Logo */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">
@@ -239,7 +239,7 @@ const Navbar = () => {
               <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
-                       to="/"
+                       to="/course/full-stack"
                     className={`block py-2 ${isActiveLink("/course/full-stack")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -248,7 +248,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                      to="/"
+                      to="/course/embedded-system"
                     className={`block py-2 ${isActiveLink("/course/embedded-system")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -257,7 +257,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/"
+                       to="/course/data-science"
                     className={`block py-2 ${isActiveLink("/course/data-science")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -266,7 +266,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/"
+                       to="/course/data-analytics"
                     className={`block py-2 ${isActiveLink("/course/data-analytics")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -275,7 +275,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/"
+                       to="/course/cloud-computing"
                     className={`block py-2 ${isActiveLink("/course/cloud-computing")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

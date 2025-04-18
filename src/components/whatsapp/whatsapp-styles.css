@@ -166,7 +166,7 @@
   .whatsapp-button-container {
     position: fixed;
     bottom: 30px;
-    left: 30px; /* ← This places the button on the right side */
+    right: 30px; /* ← This places the button on the right side */
     z-index: 1000;
   }
   

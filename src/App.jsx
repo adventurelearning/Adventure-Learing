@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense , useEffect } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -21,6 +21,7 @@ import PopupForm from "./components/PopupForm";
 import PopupOffers from "./components/PopupOffers";
 import ChatBox from "./components/chatbot/ChatBox";
 import ChatWidget from "./components/chatbot/ChatWidget";
+import SocialLinks from "./components/SocialLinks";
 
 
 
@@ -63,26 +64,23 @@ function App() {
   useEffect(() => {
     window.addEventListener("load", () => setLoading(false));
   }, []);
-  
+
   if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
-  
+
       <ScrollToTop />
-
-    <Whatsapp />
-    <ChatWidget />
-  
-
-
-
+     
+      {/* <Whatsapp /> */}
+      {/* <ChatWidget /> */}
       <Header />
       {/* <Loading /> */}
       <Navbar />
       <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}
-        <PopupForm/>
+        <PopupForm />
+        <SocialLinks/>
         {/* <PopupOffers/>        */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -95,19 +93,19 @@ function App() {
             <Route path="cloud-computing" element={<CloudComputing />} />
           </Route>
 
-          <Route path="/contact" element={<ContactAll/>}/>
-          <Route path="/blogs" element={<AllBlogs/>}/>
-          <Route path="/Blogs/subblogs/:id" element={<SubBlogs/>}/>
-          <Route path="/onlinetraining" element={<OnlineTrain/>}/>
-          <Route path="/corporate" element={<Corporate/>}/>
+          <Route path="/contact" element={<ContactAll />} />
+          <Route path="/blogs" element={<AllBlogs />} />
+          <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
+          <Route path="/onlinetraining" element={<OnlineTrain />} />
+          <Route path="/corporate" element={<Corporate />} />
           <Route path="/article1" element={<ArticlePage1 />} />
 
-          <Route path="/Article2" element={<ArticlePage2/>}/>   
-          <Route path="/Article3" element={<ArticlePage3/>}/>
-          <Route path="/Register" element={<Register/>} />
-          <Route path="/TandC" element={<TandC/>}/>
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
-          
+          <Route path="/Article2" element={<ArticlePage2 />} />
+          <Route path="/Article3" element={<ArticlePage3 />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/TandC" element={<TandC />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+
         </Routes>
       </Suspense>
       <Footer />
