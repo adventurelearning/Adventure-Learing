@@ -43,8 +43,8 @@ const Home = () => {
       <WhyAdventure />
       <Enroll />
       <HiringCompanies />
-      <WebinarEvents />
-      <WebinarImages />     
+      {/* <WebinarEvents />
+      <WebinarImages />      */}
       {/* <NewsandBlogs/> */}
       <Bloghead/>
       <NewsandBlog/>

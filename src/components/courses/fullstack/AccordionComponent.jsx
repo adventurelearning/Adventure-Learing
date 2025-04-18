@@ -173,13 +173,6 @@ const AccordionComponent = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Course Curriculum</h2>
           <AccordionList items={accordionItems}  />
         </div>
-        {/* <div className="flex justify-center lg:justify-end">
-          <img 
-            src={img1} 
-            alt="Full Stack Development" 
-            className="w-full max-w-md lg:max-w-lg " 
-          />
-        </div> */}
       </div>
     </div>
   );

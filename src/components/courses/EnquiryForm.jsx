@@ -92,9 +92,9 @@ const EnquiryForm = () => {
 
   return (
     <div>
-      <div className="bg-gradient-to-br max-h-90 from-blue-800 to-blue-600 border border-blue-800 text-white rounded-3xl shadow-2xl shadow-blue-800 p-6 overflow-hidden hover:shadow-4xl transition-shadow duration-300">
-        <h3 className="text-3xl font-semibold mb-8 text-center relative z-10">
-          Let's Connect
+      <div className="bg-gradient-to-br max-h-90 w-3/4 ml-12 from-blue-800 to-blue-600 border border-blue-800 text-white rounded-3xl shadow-lg shadow-blue-800 p-5 overflow-hidden hover:shadow-4xl transition-shadow duration-300">
+        <h3 className="text-2xl font-semibold mb-8 text-center relative z-10">
+        Have questions? Enquire now!
         </h3>
 
         <form
