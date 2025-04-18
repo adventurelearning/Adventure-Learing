@@ -41,7 +41,7 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
 
   return (
-    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full lg:z-10 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
       {/* Logo */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">

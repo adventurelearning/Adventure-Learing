@@ -87,7 +87,7 @@ function App() {
           <Route path="course">
             <Route path="full-stack" element={<Fullstack />} />
             <Route path="software-testing" element={<Software_Testing />} />
-            <Route path="embedded-system" element={<Embeddedsystem />} />
+            <Route path="embedded-system" element={<Embeddedsystem />} />                     
             <Route path="data-science" element={<Datascience />} />
             <Route path="data-analytics" element={<Dataanalytics />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
@@ -99,7 +99,6 @@ function App() {
           <Route path="/onlinetraining" element={<OnlineTrain />} />
           <Route path="/corporate" element={<Corporate />} />
           <Route path="/article1" element={<ArticlePage1 />} />
-
           <Route path="/Article2" element={<ArticlePage2 />} />
           <Route path="/Article3" element={<ArticlePage3 />} />
           <Route path="/Register" element={<Register />} />
