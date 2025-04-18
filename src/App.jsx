@@ -19,6 +19,9 @@ import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
 import PopupForm from "./components/PopupForm";
 import PopupOffers from "./components/PopupOffers";
+import ChatBox from "./components/chatbot/ChatBox";
+import ChatWidget from "./components/chatbot/ChatWidget";
+
 
 
 // Lazy load components
@@ -66,7 +69,13 @@ function App() {
     <>
   
       <ScrollToTop />
-      <Whatsapp />
+
+    <Whatsapp />
+    <ChatWidget />
+  
+
+
+
       <Header />
       {/* <Loading /> */}
       <Navbar />
