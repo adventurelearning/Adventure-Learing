@@ -19,9 +19,9 @@ import mb4 from '../assets/mb4.svg';
 
 // You can prepare different banner versions here
 const desktopBanners = [
-  { image: banner1, link: '/contact' },
-  { image: banner2, link: '/Register' },
   { image: banner3, link: '/onlinetraining' },
+  { image: banner1, link: '/contact' },
+  { image: banner2, link: '/Register' },  ,
   { image: banner4, link: '' },
   // { image: banner5, link: '' },
 ];
