@@ -54,7 +54,7 @@ function Youtubevdo() {
     };
 
     return (
-        <div className="relative overflow-hidden px-5 py-8">
+        <div data-aos="fade-right"  data-aos-duration="1000" className="relative overflow-hidden px-5 py-8">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
@@ -64,7 +64,7 @@ function Youtubevdo() {
                 {videos.map((video, index) => (
                     <div
                         key={index}
-                        className={`w-full ${cardsPerView === 1 ? 'sm:w-full' : 'sm:w-1/2'} lg:w-1/3 flex-shrink-0 p-2 sm:p-4`}
+                        className={`w-full ${cardsPerView === 1 ? 'sm:w-full' : 'sm:w-1/2'} lg:w-1/3  flex-shrink-0 p-2 sm:p-4`}
                     >
                         <div className="bg-white border border-gray-300 rounded-lg overflow-hidden text-left shadow-md h-full flex flex-col py-5 px-3">
                             <div className='flex p-4 justify-between items-center'>

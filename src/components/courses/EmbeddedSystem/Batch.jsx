@@ -2,12 +2,45 @@ import React from "react";
 import { CalendarIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
+// Helper functions
+// Helper: Get the next occurrence of a specific day of the week
+function getNextDayOfWeek(dayName) {
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const today = new Date();
+  const todayIndex = today.getDay();
+  const targetIndex = daysOfWeek.indexOf(dayName);
+  const diff = (targetIndex + 7 - todayIndex) % 7 || 7;
+  const nextDate = new Date(today);
+  nextDate.setDate(today.getDate() + diff);
+  return nextDate;
+}
+
+// Helper: Format date as "DD-MMM-YYYY" (e.g., "16-Apr-2025")
+function formatDate(date) {
+  return date.toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+// Helper: Get the full name of the day (e.g., "Monday")
+function getDayName(date) {
+  return date.toLocaleDateString("en-US", { weekday: "long" });
+}
+
+// Dates
+const today = new Date();
+const weekendDate = getNextDayOfWeek("Saturday");
+const weekdayDate = today; // Using today's date for weekday batch
+
+// Batch Data
 const batchesData = [
   {
     type: "WeekEnd",
     days: "Sat-Sun",
-    startDate: "12 Apr 2025",
-    startDay: "Sat",
+    startDate: formatDate(weekendDate),
+    startDay: getDayName(weekendDate),
     sessions: ["Session 1: 9:00 AM - 1:00 PM", "Session 2: 2:00 PM - 6:00 PM"],
     timeSlots: ["9:00 AM - 1:00 PM", "2:00 PM - 6:00 PM"],
     classHours: "4 Hours",
@@ -15,8 +48,8 @@ const batchesData = [
   {
     type: "WeekDay",
     days: "Mon-Fri",
-    startDate: "14 Apr 2025",
-    startDay: "Mon",
+    startDate: formatDate(weekdayDate),
+    startDay: getDayName(weekdayDate),
     sessions: [
       "Session 1: 9:00 AM - 11:00 AM",
       "Session 2: 11:00 AM - 1:00 PM",
@@ -37,11 +70,13 @@ const batchesData = [
 
 
 
+
+
+// Batch Component
 const BatchComponent = ({ batches }) => {
   const navigate = useNavigate(); 
   return (
     <div className="container mx-auto p-4 w-full lg:w-3/4">
-      {/* Desktop and Mobile View - Same Design */}
       <div className="space-y-4">
         {batches.map((batch, index) => (
           <div key={index} className="border-2 border-blue-200 rounded-lg shadow-md p-4 bg-white">
@@ -58,7 +93,7 @@ const BatchComponent = ({ batches }) => {
                 <p className="text-xs font-semibold text-gray-600">Start Date</p>
                 <div className="flex items-center">
                   <CalendarIcon className="h-3 w-3 text-blue-500 mr-1" />
-                  <p className="text-sm font-medium">{batch.startDate}</p>
+                  <p className="text-sm font-medium">{batch.startDate} ({batch.startDay})</p>
                 </div>
               </div>
               <div className="bg-blue-100 p-2 rounded">
@@ -93,7 +128,7 @@ const BatchComponent = ({ batches }) => {
             Can't Find the Batch You Are Looking For?
           </p>
         </div>
-        <button onClick={()=>navigate('/contact')} className="bg-[#0057D3] hover:bg-white hover:text-[#0057D3] border hover:border-[#0057D3] text-white font-semibold py-1.5 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-300 text-sm sm:text-base">
+        <button onClick={() => navigate('/contact')} className="bg-[#0057D3] hover:bg-white hover:text-[#0057D3] border hover:border-[#0057D3] text-white font-semibold py-1.5 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-300 text-sm sm:text-base">
           Request Batch
         </button>
       </div>
@@ -101,6 +136,7 @@ const BatchComponent = ({ batches }) => {
   );
 };
 
+// Main Component
 const Batch = () => {
   return (
     <div>

@@ -42,7 +42,7 @@ function WhyAdventureLearning() {
   ];
 
   return (
-    <div className="bg-white py-12 sm:py-16 lg:py-20">
+    <div data-aos="fade-down" className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-8 text-[#0057D3]">

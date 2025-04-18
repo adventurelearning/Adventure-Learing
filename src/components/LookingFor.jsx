@@ -15,7 +15,7 @@ function LookingFor() {
     // Simulate loading delay - replace with your actual data fetching if needed
     setTimeout(() => {
       setLoading(false);
-    }, 1500); // Adjust the time as needed
+    }, 1000); // Adjust the time as needed
   }, []);
 
 
@@ -70,13 +70,15 @@ function LookingFor() {
           </div>
 
           {/* Flex container with responsive behavior */}
-          <div className="flex flex-col sm:flex-row md:flex-row justify-center items-stretch gap-6 p-6">
+          <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 p-6">
+          {/* <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 p-6"> */}
+
             {/* First card */}
             <div>
               <Link to="/Register">
                 <div
                   data-aos="zoom-in"
-                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
+                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-full lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
                 >
                   {/* Hover effect element */}
                   <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
@@ -102,7 +104,7 @@ function LookingFor() {
               <Link to="/contact">
                 <div
                   data-aos="zoom-in"
-                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
+                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-full lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
                 >
                   {/* Hover effect element */}
                   <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
@@ -128,7 +130,7 @@ function LookingFor() {
               <Link to="/Register">
                 <div
                   data-aos="zoom-in"
-                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-72 lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
+                  className="relative flex items-center bg-white text-[#0057D3] hover:bg-gradient-to-br from-blue-500 to-blue-600 hover:text-white border border-gray-200 rounded-xl p-5 w-full sm:w-64 md:w-full lg:w-80 xl:w-96 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out overflow-hidden group"
                 >
                   {/* Hover effect element */}
                   <div className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>

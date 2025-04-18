@@ -167,7 +167,7 @@ const Navbar = () => {
       <div className="flex space-x-2  lg:flex">
         <Link
           to="/Register"
-          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
+          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
         >
           Register
         </Link>
@@ -239,7 +239,7 @@ const Navbar = () => {
               <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
-                    to="/course/full-stack"
+                       to="/"
                     className={`block py-2 ${isActiveLink("/course/full-stack")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -248,7 +248,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/embedded-system"
+                      to="/"
                     className={`block py-2 ${isActiveLink("/course/embedded-system")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -257,7 +257,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/data-science"
+                       to="/"
                     className={`block py-2 ${isActiveLink("/course/data-science")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -266,7 +266,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/data-analytics"
+                       to="/"
                     className={`block py-2 ${isActiveLink("/course/data-analytics")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -275,7 +275,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/cloud-computing"
+                       to="/"
                     className={`block py-2 ${isActiveLink("/course/cloud-computing")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

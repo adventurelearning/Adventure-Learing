@@ -208,7 +208,7 @@ const Form = () => {
   }
 
   return (
-    <div className="bg-gray-50 flex items-center justify-center py-6 px-4 md:px-6">
+    <div data-aos="zoom-in" data-aos-duration="1000" className="bg-gray-50 flex items-center justify-center py-6 px-4 md:px-6">
       <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
         {/* Left Section */}
         <div className="w-full md:w-1/2 p-6 md:p-8 bg-gradient-to-br from-blue-100 to-blue-50">

@@ -3,7 +3,8 @@ import subscribe from '../assets/subscribe.png';
 
 const Subscription = () => {
   return (
-    <div   className="flex justify-center items-center mt-10 px-4">
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"  className="flex justify-center items-center mt-10 px-4">
       <div className="bg-[#0057D3] text-white py-5 px-6 flex flex-col w-[85%] md:flex-row items-center justify-center gap-6 rounded-lg shadow-lg">
         <img
           src={subscribe}

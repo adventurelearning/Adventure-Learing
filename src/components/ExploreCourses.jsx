@@ -6,7 +6,7 @@ function ExploreCourses() {
 
     const navigate=useNavigate()
     return (
-        <div className="bg-blue-600 overflow-hidden shadow-md mt-10 mx-4 rounded-lg" >
+        <div data-aos="fade-right" className="bg-blue-600 overflow-hidden shadow-md mt-10 mx-4 rounded-lg" >
             <div className="relative flex flex-col md:flex-row items-center justify-between p-6 md:p-8">
                 {/* Image Section - Hidden on mobile, shown on md+ */}
                 <div className="hidden md:block absolute left-32 top-0 h-full  bg-cover bg-center rounded-l-lg">

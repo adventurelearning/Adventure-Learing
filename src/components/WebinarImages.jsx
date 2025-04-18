@@ -24,7 +24,7 @@ function WebinarImages() {
   return (
     <>
       <div 
-     data-aos-anchor-placement="top-center" className="mx-12 sm:mx-6">
+     data-aos="fade-right" data-aos-duration="1000" className="mx-12 sm:mx-6">
         <Swiper
           ref={swiperRef}
           slidesPerView={1}

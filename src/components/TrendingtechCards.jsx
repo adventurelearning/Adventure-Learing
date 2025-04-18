@@ -68,7 +68,7 @@ const TrendingtechCards = () => {
   };
 
   const PlaceholderCard = () => (
-    <div className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`}>
+    <div  className={`w-full md:1/2 lg:w-1/4 flex-shrink-0 p-2 sm:p-4`}>
       <div className="bg-gray-200 border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3 animate-pulse">
         <div className="w-full h-32 bg-gray-300 rounded-lg"></div>
         <div className="p-4">
@@ -84,7 +84,7 @@ const TrendingtechCards = () => {
   );
 
   return (
-    <div className="relative overflow-hidden px-5">
+    <div data-aos="fade-right"  data-aos-duration="1000"  className=" relative overflow-hidden px-5">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{
@@ -98,7 +98,7 @@ const TrendingtechCards = () => {
           : cards.map((card, index) => (
               <div
                 key={index}
-                className={`w-full lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
+                className={`w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2 sm:p-4`} // Adjust width for mobile
               >
                 <div className="bg-white border border-1 border-gray-300 rounded-lg items-center overflow-hidden text-left shadow-md p-3">
                   <img
