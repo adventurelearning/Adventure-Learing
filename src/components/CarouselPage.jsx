@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 
 // Import images
-import banner1 from '../assets/banner1.svg';
+// import banner1 from '../assets/banner1.svg';
 import banner2 from '../assets/banner2.svg';
 import banner3 from '../assets/banner3.svg';
 import banner4 from '../assets/banner4.svg';
@@ -20,7 +20,7 @@ import mb4 from '../assets/mb4.svg';
 // You can prepare different banner versions here
 const desktopBanners = [
   { image: banner3, link: '/onlinetraining' },
-  { image: banner1, link: '/contact' },
+  // { image: banner1, link: '/contact' },
   { image: banner2, link: '/Register' },  ,
   { image: banner4, link: '' },
   { image: banner5, link: '' },
