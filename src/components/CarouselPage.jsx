@@ -23,7 +23,7 @@ const desktopBanners = [
   { image: banner1, link: '/contact' },
   { image: banner2, link: '/Register' },  ,
   { image: banner4, link: '' },
-  // { image: banner5, link: '' },
+  { image: banner5, link: '' },
 ];
 
 const mobileBanners = [

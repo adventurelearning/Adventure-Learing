@@ -192,7 +192,7 @@ const PopupForm = () => {
                 <div className="space-y-4">
                   <div className="flex flex-col items-center text-center">
                     <img src={logo} alt="Logo" className="w-28 sm:w-36 object-contain logo-img" />
-                    <h4 className="text-sm text-gray-600 font-poppins mt-2">"Your future starts with one click"</h4>
+                    {/* <h4 className="text-sm text-gray-600 font-poppins mt-2">"Your future starts with one click"</h4> */}
                     <hr className="w-48 border-gray-300 rounded-full my-2" />
                     <h2 className="text-xl sm:text-2xl font-semibold text-gray-800">Register Now!</h2>
                     <div className="h-1 w-16 bg-blue-500 mx-auto rounded-full mt-1" />

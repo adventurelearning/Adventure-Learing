@@ -42,7 +42,7 @@ const Dataanalytics  = () => {
         id="syllabus"
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-          Syllabus
+       Data Analytics Course Syllabus
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
