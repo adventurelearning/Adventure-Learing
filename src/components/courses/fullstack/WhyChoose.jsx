@@ -8,9 +8,21 @@ import {
     LightBulbIcon,
   } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-
+import { Helmet } from 'react-helmet';
 const WhyChoose = () => {
   return (
+    <>
+   <Helmet>
+  <title>Full Stack Web Development Course | Adventure Learning</title>
+  <meta name="description" content="Learn full stack web development with hands-on projects, expert instructors, and flexible options. Start building real-world Software today - enroll now!" />
+  <meta property="og:title" content="Become a Full Stack Developer - Enroll Now" />
+  <meta property="og:description" content="Master Full-Stack development with real-world projects & expert guidance. Enroll today to start your developer journey!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adventurelearning.in/course/full-stack-development" />
+  <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+  <meta property="og:image:alt" content="Full Stack Web Development Course" />
+</Helmet>
+
     <div className="container-fluid mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="p-3 mx-auto">
         <h1 className="text-2xl lg:text-3xl  font-semibold text-[#0057D3] text-center mb-6 capitalize">
@@ -74,12 +86,14 @@ const WhyChoose = () => {
                 </div>
               ))}
             </div>
+           
           </div>
           {/* Modified Form Grid Layout */}
           <EnquiryForm />
         </div>
       </div>
     </div>
+    </>
   );
 };
 

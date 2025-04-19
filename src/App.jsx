@@ -85,7 +85,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="course">
-            <Route path="full-stack" element={<Fullstack />} />
+            <Route path="full-stack-development" element={<Fullstack />} />
             <Route path="software-testing" element={<Software_Testing />} />
             <Route path="embedded-system" element={<Embeddedsystem />} />                     
             <Route path="data-science" element={<Datascience />} />
