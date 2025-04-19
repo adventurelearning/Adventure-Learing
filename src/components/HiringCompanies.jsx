@@ -47,8 +47,8 @@ const HiringCompanies = () => {
           Explore Top Opportunities
           </h1>
           
-          <div className="w-full overflow-hidden  mt-4 sm:py-0 bg-[#F4F9FF]">
-            <div className="flex w-max animate-marquee space-x-3 sm:space-x-20 mb-4">
+          <div className="w-full overflow-hidden  mt-4  sm:py-0 bg-[#F4F9FF] ">
+            <div className="flex w-max animate-marquee space-x-3 sm:space-x-20  p-12">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
                   <img
@@ -59,10 +59,10 @@ const HiringCompanies = () => {
                 </div>
               ))}
             </div>
-            <div className="flex w-max animate-marquee-reverse space-x-3 sm:space-x-20 ">
+            <div className="flex w-max animate-marquee-reverse space-x-3 sm:space-x-20 pb-12">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="transition-transform hover:scale-110">
-                  <img src={company.logo} className="w-32 p-2 lg:w-44 lg:p-2" alt={`${company.name} logo`} />
+                  <img src={company.logo} className="w-32 p-2 lg:w-44 lg:p-2 " alt={`${company.name} logo`} />
                 </div>
               ))}
             </div>

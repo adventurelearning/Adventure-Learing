@@ -52,7 +52,7 @@ const SocialLinks = () => {
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`group w-[45px] h-[45px] flex items-center justify-start rounded-full shadow-md overflow-hidden transition-all duration-300 cursor-pointer relative ${social.color} hover:w-[120px] hover:rounded-[40px] active:translate-x-[2px] active:translate-y-[2px]`}
+          className={`group w-[35px] h-[35px] flex items-center justify-start rounded-full shadow-md overflow-hidden transition-all duration-300 cursor-pointer relative ${social.color} hover:w-[120px] hover:rounded-[40px] active:translate-x-[2px] active:translate-y-[2px]`}
           style={{ backgroundColor: social.defaultBg }}
         >
           <div className="flex items-center justify-center w-full group-hover:w-[30%] transition-all duration-300 group-hover:pr-2 group-hover:pl-2">

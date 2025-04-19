@@ -10,8 +10,8 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
 import WhyChoose from "./WhyChoose";
+import FaQ from "./FaQ";
 
 const Fullstack = () => {
   const { courseId } = useParams();
@@ -70,6 +70,9 @@ const Fullstack = () => {
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
+      </div>
+      <div>        
+        <FaQ/>
       </div>
       <div
         id="review"
