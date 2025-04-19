@@ -8,9 +8,22 @@ import {
     LightBulbIcon,
   } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
+import { Helmet } from 'react-helmet';
+
 
 const WhyChoose = () => {
   return (
+    <>
+    <Helmet>
+    <title>Advanced Embedded Systems Course | Adventure Learning</title>
+    <meta name="description" content="Learn embedded systems with hands-on projects and expert instructors. Start building real-world applications today – enroll now!" />
+    <meta property="og:title" content="Become an Embedded Systems Expert" />
+    <meta property="og:description" content="Master embedded systems with practical projects and expert guidance. Enroll today and start your journey!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.adventurelearning.in/course/embedded-system" />
+    <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+    <meta property="og:image:alt" content="Embedded Systems Course" />
+  </Helmet>
     <div className="container-fluid mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="p-3 mx-auto">
         <h1 className="text-3xl font-semibold text-[#0057D3] text-center mb-6 capitalize">
@@ -80,6 +93,7 @@ const WhyChoose = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

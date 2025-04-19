@@ -73,7 +73,7 @@ const Navbar = () => {
             </button>
             <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
               <li>
-                <Link to="/course/full-stack" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
+                <Link to="/course/full-stack-development" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
                 >
                   Full Stack
                 </Link>
