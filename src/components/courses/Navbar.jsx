@@ -6,6 +6,7 @@ const menuItems = [
   { id: "syllabus", label: "Syllabus", href: "#syllabus" },
   { id: "batches", label: "Upcoming Batch", href: "#batches" },
   { id: "certificate", label: "Certificate", href: "#certificate" },
+  { id: "FAQ", label: "FAQ", href: "#FAQ" },
   { id: "review", label: "Our Learners Thought", href: "#review" },
 ];
 

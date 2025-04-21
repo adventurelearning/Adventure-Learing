@@ -12,6 +12,7 @@ import Certificate from "../Certificate";
 import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
+import Faq from "./Faq";
 
 const Datascience  = () => {
   const { courseId } = useParams();
@@ -68,6 +69,9 @@ const Datascience  = () => {
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
+      </div>
+      <div id="Faq" >
+        <Faq/>
       </div>
       <div
         id="review"

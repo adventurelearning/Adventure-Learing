@@ -12,6 +12,7 @@ import Certificate from "../Certificate";
 import Review from "../Review";
 
 import WhyChoose from "./WhyChoose";
+import Faq from "./Faq";
 
 const CloudComputing = () => {
   const { courseId } = useParams();
@@ -40,7 +41,7 @@ const CloudComputing = () => {
 
       <div
         id="syllabus"
-        className="container-fluid rounded-lg mx-auto px-4 bg-white shadow-lg bg-img  "
+        className="container-fluid rounded-lg mx-auto px-4 bg-white shadow-lg   "
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
         Cloud Computing  Syllabus
@@ -69,6 +70,9 @@ const CloudComputing = () => {
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
         <Certificate />
+      </div>
+      <div id="Faq" >
+        <Faq/>
       </div>
       <div
         id="review"

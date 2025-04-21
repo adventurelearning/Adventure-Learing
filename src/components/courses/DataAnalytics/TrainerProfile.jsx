@@ -11,22 +11,21 @@ import {
 
 const Trainer = ({ trainer }) => {
   const iconMap = {
-    'Over 8 years of experience in Cloud Computing development.': BriefcaseIcon,
-    'Expertise in cloud platforms like AWS, Azure, and Google Cloud.': CodeBracketIcon,
-    'Proficient in cloud architecture, deployment, and infrastructure management.': PresentationChartLineIcon,
-    'Strong understanding of containerization tools like Docker and Kubernetes.': AcademicCapIcon,
-    'Passionate about teaching best practices in cloud computing and architecture.': LightBulbIcon,
-    'Focus on hands-on learning with real-world cloud computing projects.': AcademicCapIcon,
-    'Provides career guidance and interview preparation for aspiring cloud engineers.': UserCircleIcon,
-    'Keeps up-to-date with the latest cloud computing trends and technologies.': UserCircleIcon,
+    'Over 8 years of experience in MERN stack development.': BriefcaseIcon,
+    'Expertise in creating scalable RESTful APIs using Node.js and Express.': CodeBracketIcon,
+    'Proficient in building dynamic front-end applications with React.': PresentationChartLineIcon,
+    'Strong understanding of MongoDB schema design and database management.':AcademicCapIcon,
+    'Passionate about teaching best practices in full stack development.': LightBulbIcon,
+    'Focus on hands-on learning with real-world MERN stack projects.': AcademicCapIcon,
+    'Provides career guidance and interview preparation for aspiring MERN developers.': UserCircleIcon,
+    'Keeps up-to-date with the latest MERN stack trends and technologies.': UserCircleIcon,
   };
-  
-  
+
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">
+      {/* <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">
         Trainer Profile: {trainer.name}
-      </h2>
+      </h2> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {trainer.highlights.map((highlight, index) => {
           const Icon = iconMap[highlight] || null; // Use mapped icon, or null if not found
@@ -51,15 +50,17 @@ const TrainerProfile = () => {
   const trainerData = {
     name: 'Alex Johnson',
     highlights: [
-      'Over 8 years of experience in MERN stack development.',
-      'Expertise in creating scalable RESTful APIs using Node.js and Express.',
-      'Proficient in building dynamic front-end applications with React.',
-      'Strong understanding of MongoDB schema design and database management.',
-      'Passionate about teaching best practices in full stack development.',
-      'Focus on hands-on learning with real-world MERN stack projects.',
-      'Provides career guidance and interview preparation for aspiring MERN developers.',
-      'Keeps up-to-date with the latest MERN stack trends and technologies.',
+      'Over 8 years of experience in Data Analytics development.',
+      'Expertise in data wrangling, statistical analysis, and business intelligence.',
+      'Proficient in programming languages like Python, SQL, and Excel.',
+      'Strong understanding of data visualization tools like Tableau and Power BI.',
+      'Passionate about teaching best practices in data analytics and data visualization.',
+      'Focus on hands-on learning with real-world data analytics projects.',
+      'Provides career guidance and interview preparation for aspiring data analysts.',
+      'Keeps up-to-date with the latest data analytics trends, tools, and technologies.',
     ],
+    
+    
   };
 
   return (
