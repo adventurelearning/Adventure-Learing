@@ -1,6 +1,6 @@
 import React from "react";
-import BanDesktop2 from "../../../assets/cdbanner/EMBEDDED SYSTEM.svg";
-import BanMobile2 from "../../../assets/cdbanner/EMBEDDED SYSTEM.svg";
+import BanDesktop2 from "../../../assets/cdbanner/BanDesktop2.svg";
+import BanMobile2 from "../../../assets/cmbanner/BanMobile2.svg";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {

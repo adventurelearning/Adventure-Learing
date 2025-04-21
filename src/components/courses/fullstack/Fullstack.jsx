@@ -11,7 +11,7 @@ import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
 import WhyChoose from "./WhyChoose";
-import FaQ from "./FaQ";
+import Faq from "./Faq";
 
 const Fullstack = () => {
   const { courseId } = useParams();
@@ -41,16 +41,16 @@ const Fullstack = () => {
       <div
         id="syllabus"
         className="bg-blue-50"
-        
+
       >
         <h3 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-        Full Stack Web Development Course Syllabus
+          Full Stack Web Development Course Syllabus
         </h3>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
       </div>
-     
+
       <div
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
@@ -58,7 +58,7 @@ const Fullstack = () => {
         <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
           Upcoming Batches
         </h1>
-        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
+        <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4" />
         <Batch />
       </div>
       <div
@@ -71,14 +71,17 @@ const Fullstack = () => {
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
       </div>
-      <div>        
-        <FaQ/>
+      <div
+        id="FAQ"
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
+  
+        <Faq />
       </div>
       <div
         id="review"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
       >
-        <h1 className="text-2xl lg:w-3xl font-semibold  text-center text-[#0057D3] p-6">
+        <h1 className="text-2xl lg:text-3xl font-semibold  text-center text-[#0057D3] p-6">
           Our learners Thought
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />

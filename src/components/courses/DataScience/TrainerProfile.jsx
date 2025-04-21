@@ -6,29 +6,25 @@ import {
   LightBulbIcon,
   AcademicCapIcon,
   UserCircleIcon,
-  
 } from '@heroicons/react/24/outline';
 
 const Trainer = ({ trainer }) => {
   const iconMap = {
-    'Over 8 years of experience in MERN stack development.': BriefcaseIcon,
-    'Expertise in creating scalable RESTful APIs using Node.js and Express.': CodeBracketIcon,
-    'Proficient in building dynamic front-end applications with React.': PresentationChartLineIcon,
-    'Strong understanding of MongoDB schema design and database management.':AcademicCapIcon,
-    'Passionate about teaching best practices in full stack development.': LightBulbIcon,
-    'Focus on hands-on learning with real-world MERN stack projects.': AcademicCapIcon,
-    'Provides career guidance and interview preparation for aspiring MERN developers.': UserCircleIcon,
-    'Keeps up-to-date with the latest MERN stack trends and technologies.': UserCircleIcon,
+    'Over 4 years of experience in Data Science and Machine Learning.': BriefcaseIcon,
+    'Expert in Python, R, SQL, and working with large datasets.': CodeBracketIcon,
+    'Experienced in building and deploying machine learning models.': PresentationChartLineIcon,
+    'Strong foundation in statistics, probability, and data modeling.': AcademicCapIcon,
+    'Passionate about teaching practical data science skills and real-world applications.': LightBulbIcon,
+    'Focus on hands-on learning with end-to-end data science projects.': PresentationChartLineIcon,
+    'Provides career mentorship and interview prep for aspiring data scientists.': UserCircleIcon,
+    'Keeps current with the latest tools like TensorFlow, PyTorch, and cloud ML services.': CodeBracketIcon,
   };
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
-      {/* <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">
-        Trainer Profile: {trainer.name}
-      </h2> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {trainer.highlights.map((highlight, index) => {
-          const Icon = iconMap[highlight] || null; // Use mapped icon, or null if not found
+          const Icon = iconMap[highlight] || null;
           return (
             <div
               key={index}
@@ -47,20 +43,17 @@ const Trainer = ({ trainer }) => {
 };
 
 const TrainerProfile = () => {
-  const trainerData = {
-    name: 'Alex Johnson',
+  const trainerData = {   
     highlights: [
-      'Over 8 years of experience in Data Analytics development.',
-      'Expertise in data wrangling, statistical analysis, and business intelligence.',
-      'Proficient in programming languages like Python, SQL, and Excel.',
-      'Strong understanding of data visualization tools like Tableau and Power BI.',
-      'Passionate about teaching best practices in data analytics and data visualization.',
-      'Focus on hands-on learning with real-world data analytics projects.',
-      'Provides career guidance and interview preparation for aspiring data analysts.',
-      'Keeps up-to-date with the latest data analytics trends, tools, and technologies.',
+      'Over 4 years of experience in Data Science and Machine Learning.',
+      'Expert in Python, R, SQL, and working with large datasets.',
+      'Experienced in building and deploying machine learning models.',
+      'Strong foundation in statistics, probability, and data modeling.',
+      'Passionate about teaching practical data science skills and real-world applications.',
+      'Focus on hands-on learning with end-to-end data science projects.',
+      'Provides career mentorship and interview prep for aspiring data scientists.',
+      'Keeps current with the latest tools like TensorFlow, PyTorch, and cloud ML services.',
     ],
-    
-    
   };
 
   return (

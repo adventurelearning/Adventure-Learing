@@ -11,16 +11,17 @@ import banner2 from '../assets/banner2.svg';
 import banner3 from '../assets/banner3.svg';
 import banner4 from '../assets/banner4.svg';
 import banner5 from '../assets/banner5.svg';
+import banner1 from '../assets/banner1.svg';
 
 import mb1 from '../assets/mb1.svg';
-import mb2 from '../assets/mb2.svg';
+import mb5 from '../assets/mb5.svg';
 import mb3 from '../assets/mb3.svg';
 import mb4 from '../assets/mb4.svg';
 
 // You can prepare different banner versions here
 const desktopBanners = [
   { image: banner3, link: '/onlinetraining' },
-  // { image: banner1, link: '/contact' },
+  { image: banner1, link: '/contact' },
   { image: banner2, link: '/Register' },  ,
   { image: banner4, link: '' },
   { image: banner5, link: '' },
@@ -29,7 +30,7 @@ const desktopBanners = [
 const mobileBanners = [
   { image: mb4, link: '/onlinetraining' },
   { image: mb1, link: '/contact' },
-  { image: mb2, link: '/Register' },
+  { image: mb5, link: '/Register' },
   { image: mb3, link: '/onlinetraining' },
   // { image: mb5, link: '' },
 ];
@@ -50,8 +51,8 @@ export default function CarouselPage() {
     <div className="flex flex-col items-center justify-center w-full">
       {loading ? (
         // Placeholder Loading State
-        <div className="w-full rounded bg-gray-100 animate-pulse">
-          <div className="h-48 lg:h-auto bg-gray-300 rounded"></div>
+        <div className="w-full rounded  animate-pulse">
+          <div className=" h-48 lg:h-auto  rounded"></div>
         </div>
       ) : (
         <>
