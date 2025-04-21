@@ -43,9 +43,9 @@ const Fullstack = () => {
         className="bg-blue-50"
         
       >
-        <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-          Syllabus
-        </h1>
+        <h3 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
+        Full Stack Web Development Course Syllabus
+        </h3>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}

@@ -240,7 +240,7 @@ const Navbar = () => {
                 <li>
                   <Link
                        to="/course/full-stack"
-                    className={`block py-2 ${isActiveLink("/course/full-stack")}`}
+                    className={`block py-2 ${isActiveLink("/course/full-stack-development")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Full Stack
