@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import offerpopup from "../assets/offerpopup.png"; // Use your image here
+import offer from "../assets/offer.svg"; // Replace with your image path
 
 const PopupOffers = ({ onClose }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -31,14 +31,18 @@ const PopupOffers = ({ onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70"
-        >
+          className="fixed inset-0  flex items-center justify-center p-4 bg-black bg-opacity-70 overflow-y-auto"   style={{
+            position: 'fixed', // Removed redundant fixed positioning
+            right: '0px', // Adjusted to Tailwind classes
+            zIndex: '1200', // Adjusted to Tailwind classes
+          }}>
+        
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden"
+            className="relative w-[190%] max-w-xl md:w-[800px] max-h-screen overflow-auto bg-white rounded-xl shadow-2xl"
           >
             {/* Close Button */}
             <button
@@ -64,11 +68,11 @@ const PopupOffers = ({ onClose }) => {
               </svg>
             </button>
 
-            {/* Image Only */}
+            {/* Offer Image */}
             <img
-              src={offerpopup}
-              alt="College students"
-              className="w-full  h-auto opacity-90"
+              src={offer}
+              alt="Offer Banner"
+              className="w-full h-auto object-cover opacity-90"
             />
           </motion.div>
         </motion.div>

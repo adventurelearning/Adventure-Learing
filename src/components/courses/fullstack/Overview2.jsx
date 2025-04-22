@@ -59,7 +59,7 @@ const Overview2 = () => {
   ];
 
   return (
-    <section className="py-16 px-6 sm:px-6 lg:px-12 bg-gray-50">
+    <section className="py-16 px-6 sm:px-6 lg:px-12 bg-gray-50 mt-10 rounded-lg">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl  font-semibold text-[#0057D3] lg:text-3xl">

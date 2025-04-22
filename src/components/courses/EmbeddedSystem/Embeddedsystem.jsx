@@ -70,9 +70,11 @@ const Embeddedsystem = () => {
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4   " />
         <Certificate />
       </div>
-      <div id="Faq" >
-        <Faq/>
-      </div> 
+      <div
+        id="FAQ"
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        <Faq />
+      </div>
       <div
         id="review"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"

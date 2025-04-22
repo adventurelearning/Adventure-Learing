@@ -22,7 +22,7 @@ const Fullstack = () => {
       <Navbar />
       <div
         id="course"
-        className="container-fluid rounded-lg mx-auto  mt-3 bg-gray-100 shadow-lg "
+        className="container-fluid rounded-lg mx-auto  bg-gray-100 shadow-lg "
       >
         <h1 className="text-2xl lg:w-3xl lg:text-3xl font-semibold  text-[#0057D3] p-6  text-center">
           Course Overview

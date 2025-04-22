@@ -10,12 +10,12 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 const Coursecard = () => {
   const cards = [
-    {id:"full-stack", title: "Full Stack Development: Art of Building Web Applications", image: course4, lesson: 6, students: 198, category: "Beginner" },
+    {id:"full-stack", title: "Full Stack Development: Art of Building Web Applications", image: course4, lesson: 6, students: 198, category: "Advanced" },
     {id:"embedded-system", title: "Embedded Systems: From Basics to Advanced Applications", image: course2, lesson: 21, students: 99, category: "Advanced" },
-    {id:"data-science", title: "Data Science: Mastering Data Analysis and Machine Learning", image: course3, lesson: 33, students: 64, category: "Beginner" },
-    {id:"data-analytics", title: "Data Analytics: Unlocking Insights from Data", image: course5, lesson: 15, students: 215, category: "Beginner" },
-    {id:"cloud-computing", title: "Cloud Computing: Building Scalable and Flexible Solutions", image: course6, lesson: 6, students: 198, category: "Beginner" },
-    {id:"software-testing", title: "Software Testing: Quality and Reliability", image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", lesson: 15, students: 215, category: "Beginner" },
+    {id:"data-science", title: "Data Science: Mastering Data Analysis and Machine Learning", image: course3, lesson: 33, students: 64, category: "Advanced" },
+    {id:"data-analytics", title: "Data Analytics: Unlocking Insights from Data", image: course5, lesson: 15, students: 215, category: "Advanced" },
+    {id:"cloud-computing", title: "Cloud Computing: Building Scalable and Flexible Solutions", image: course6, lesson: 6, students: 198, category: "Advanced" },
+    {id:"software-testing", title: "Software Testing: Quality and Reliability", image: "https://img.freepik.com/premium-photo/concept-testing-technology-internet-networking_220873-12407.jpg?w=1060", lesson: 15, students: 215, category: "Advanced" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
