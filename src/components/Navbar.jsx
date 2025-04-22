@@ -75,7 +75,7 @@ const Navbar = () => {
               <li>
                 <Link to="/course/full-stack-development" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
                 >
-                  Full Stack
+                  Full Stack Development
                 </Link>
               </li>
               <li>
@@ -243,7 +243,7 @@ const Navbar = () => {
                     className={`block py-2 ${isActiveLink("/course/full-stack-development")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Full Stack
+                    Full Stack Development
                   </Link>
                 </li>
                 <li>

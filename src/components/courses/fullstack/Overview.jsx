@@ -32,7 +32,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, index }) => {
     return (
         <div className="border border-blue-200 rounded-lg overflow-hidden transition-all duration-300 mb-4">
             <div
-                className="flex items-center justify-between p-4 cursor-pointer bg-blue-50 hover:bg-blue-100 transition-colors duration-200"
+                className="flex items-center text-start justify-between p-4 cursor-pointer bg-blue-50 hover:bg-blue-100 transition-colors duration-200"
                 onClick={onClick}
                 aria-expanded={isOpen}
                 aria-controls={`faq-content-${index}`}
@@ -64,7 +64,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, index }) => {
                         }}
                     >
                         <div className="py-4">
-                            <p className="text-gray-800 text-base font-medium">{answer}</p>
+                            <p className="text-gray-800 text-base text-justify font-medium">{answer}</p>
                         </div>
                     </motion.div>
                 )}
@@ -110,14 +110,14 @@ const Overview = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                    <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-2">Full Stack Development Program</h2>
+                    <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-2">Full Stack Development Certification Course</h2>
             <h4 className="font-normal text-lg text-gray-600 text-center pb-8">
                 Kickstart your tech career with our Complete Web Development Program
             </h4>
                     <FAQ faqs={FAQ_ITEMS} />
                 </motion.div>
                 <motion.div
-                    className="w-full lg:max-w-lg"
+                    className="w-full lg:max-w-lg "
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }}

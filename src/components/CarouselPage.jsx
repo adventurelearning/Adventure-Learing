@@ -7,32 +7,35 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 // Import images
 // import banner1 from '../assets/banner1.svg';
-import banner2 from '../assets/banner2.svg';
-import banner3 from '../assets/banner3.svg';
-import banner4 from '../assets/banner4.svg';
-import banner5 from '../assets/banner5.svg';
-import banner1 from '../assets/banner1.svg';
+// import banner2 from '../assets/banner2.svg';
+// import banner3 from '../assets/banner3.svg';
+// import banner4 from '../assets/banner4.svg';
+// import banner5 from '../assets/banner5.svg';
+// import banner1 from '../assets/banner1.svg';
 
-import mb1 from '../assets/mb1.svg';
-import mb5 from '../assets/mb5.svg';
-import mb3 from '../assets/mb3.svg';
-import mb4 from '../assets/mb4.svg';
+import banner1 from '../assets/HDbanner/banner1.svg'
+import banner2 from '../assets/HDbanner/banner2.svg'
+import banner3 from '../assets/HDbanner/banner3.svg'
+import banner4 from '../assets/HDbanner/banner4.svg'
+
+import hmb1 from '../assets/HMbanner/hmb1.svg';
+import hmb2 from '../assets/HMbanner/hmb2.svg';
+import hmb3 from '../assets/HMbanner/hmb3.svg';
+import hmb4 from '../assets/HMbanner/hmb4.svg';
 
 // You can prepare different banner versions here
 const desktopBanners = [
-  { image: banner3, link: '/onlinetraining' },
-  { image: banner1, link: '/contact' },
-  { image: banner2, link: '/Register' },  ,
-  { image: banner4, link: '' },
-  { image: banner5, link: '' },
+  { image: banner1, link: '/Register' },
+  { image: banner2, link: '/Register' },
+  { image: banner3, link: '/Register'},
+  { image: banner4, link: '/Register' }
 ];
 
 const mobileBanners = [
-  { image: mb4, link: '/onlinetraining' },
-  { image: mb1, link: '/contact' },
-  { image: mb5, link: '/Register' },
-  { image: mb3, link: '/onlinetraining' },
-  // { image: mb5, link: '' },
+  { image: hmb1, link: '/Register' },
+  { image: hmb2, link: '/Register' },
+  { image: hmb3, link: '/Register' },
+  { image: hmb4, link: '/Register' },
 ];
 
 export default function CarouselPage() {

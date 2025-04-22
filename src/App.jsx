@@ -76,12 +76,13 @@ function App() {
       <Header />
       {/* <Loading /> */}
       <Navbar />
+      
       <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}
+        <PopupOffers/>  
         <PopupForm />
-        <SocialLinks/>
-        {/* <PopupOffers/>        */}
+        <SocialLinks/>      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="course">

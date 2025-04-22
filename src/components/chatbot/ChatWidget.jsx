@@ -1,7 +1,7 @@
 // ChatWidget.jsx
 import { useState } from "react";
 import ChatBox from "./ChatBox";
-import vid from '../../assets/Anim.gif'
+
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function ChatWidget() {
   
     {!isOpen && (
       <button onClick={toggleChat}>
-        <img src={vid} alt="chatbot" />
+        {/* <img src={vid} alt="chatbot" /> */}
       </button>
     )}
   </div>

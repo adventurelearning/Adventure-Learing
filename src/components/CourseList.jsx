@@ -12,18 +12,18 @@ const itemsPerPage = 6;
 
 function Coursecard() {
     const cards = [
-        { title: "Full Stack Development: Master the Art of Building Web Applications", image: card1, lesson: 6, students: 198, category: "Beginner" },
+        { title: "Full Stack Development: Master the Art of Building Web Applications", image: card1, lesson: 6, students: 198, category: "Advanced" },
         { title: "Embedded Systems: From Basics to Advanced Applications", image: card2, lesson: 21, students: 99, category: "Advanced" },
-        { title: "Data Science: Mastering Data Analysis and Machine Learning", image: card3, lesson: 33, students: 64, category: "Beginner" },
-        { title: "Data Analytics: Unlocking Insights from Data", image: card4, lesson: 15, students: 215, category: "Beginner" },
-        { title: "Cloud Computing: Building Scalable and Flexible Solutions", image: card5, lesson: 6, students: 198, category: "Beginner" },
-        { title: "Software Testing: Ensuring Quality and Reliability in Software Development", image: card6, lesson: 15, students: 215, category: "Beginner" },
-        { title: "Python Programming: From Fundamentals to Advanced Concepts", image: card1, lesson: 6, students: 198, category: "Beginner" },
+        { title: "Data Science: Mastering Data Analysis and Machine Learning", image: card3, lesson: 33, students: 64, category: "Advanced" },
+        { title: "Data Analytics: Unlocking Insights from Data", image: card4, lesson: 15, students: 215, category: "Advanced" },
+        { title: "Cloud Computing: Building Scalable and Flexible Solutions", image: card5, lesson: 6, students: 198, category: "Advanced" },
+        { title: "Software Testing: Ensuring Quality and Reliability in Software Development", image: card6, lesson: 15, students: 215, category: "Advanced" },
+        { title: "Python Programming: From Fundamentals to Advanced Concepts", image: card1, lesson: 6, students: 198, category: "Advanced" },
         { title: "Java Development: Object-Oriented Programming Mastery", image: card2, lesson: 21, students: 99, category: "Advanced" },
-        { title: "MERN Stack: Full Stack JavaScript Development", image: card3, lesson: 33, students: 64, category: "Beginner" },
-        { title: "MEAN Stack: Building Modern Web Applications", image: card4, lesson: 15, students: 215, category: "Beginner" },
-        { title: "Web Development Fundamentals: HTML, CSS, and JavaScript", image: card5, lesson: 6, students: 198, category: "Beginner" },
-        { title: "Database Design and Management: SQL and NoSQL", image: card6, lesson: 15, students: 215, category: "Beginner" },
+        { title: "MERN Stack: Full Stack JavaScript Development", image: card3, lesson: 33, students: 64, category: "Advanced" },
+        { title: "MEAN Stack: Building Modern Web Applications", image: card4, lesson: 15, students: 215, category: "Advanced" },
+        { title: "Web Development Fundamentals: HTML, CSS, and JavaScript", image: card5, lesson: 6, students: 198, category: "Advanced" },
+        { title: "Database Design and Management: SQL and NoSQL", image: card6, lesson: 15, students: 215, category: "Advanced" },
     ];
 
     const navigate=useNavigate()

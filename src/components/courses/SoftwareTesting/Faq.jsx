@@ -113,24 +113,26 @@ const Faq = () => {
           Find answers to common questions about our courses.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row items-start justify-end gap-2 ">
+      <div className="flex flex-col items-center justify-center gap-6 mt-6">
         <motion.div
-          className="bg-white rounded-xl shadow-lg p-6 w-full lg:max-w-2xl  mt-6"
+          className="bg-white rounded-xl shadow-lg p-6 w-full lg:max-w-5xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
           <FAQ faqs={faqItems} />
         </motion.div>
+
         <motion.div
           className="w-full lg:max-w-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }}
         >
-          <EnquiryForm />
+          {/* Second card content here */}
         </motion.div>
       </div>
+
     </section>
   );
 };

@@ -12,6 +12,10 @@ import { Helmet } from "react-helmet";
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
+import LiveCourse from "./LiveCourse";
+import LearningPath from "./LearningPath";
+
+
 
 const WhyChoose = () => {
   return (
@@ -43,17 +47,17 @@ const WhyChoose = () => {
       </Helmet>
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
-        <div className="p-3 mx-auto text-center">
+        <div className="p-3 flex flex-col items-center text-center mx-auto">
           <Overview />
           <div className="mt-12">
-            <h2 className="text-3xl lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
-              Career Opportunities After Completing the Full Stack Developer Training
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
+              Career Opportunities After Completing the Full Stack Development Training
             </h2>
-            <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-8">
+            </div>
+            <p className="text-base text-justify lg:text-center px-8 lg:text-lg max-w-4xl text-gray-700 leading-relaxed mb-8">
               After completing your Full Stack Developer training with us, you’ll be ready to dive into a range of exciting roles in the tech world. The demand for full-stack developers is booming, and your skills will open doors to opportunities that offer great career growth and stability.
             </p>
-          </div>
-
+       
           <div className="bg-gray-50 rounded-xl">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] py-8">
               Why Choose Us?
@@ -115,22 +119,19 @@ const WhyChoose = () => {
             </div>
           </div>
           <div>
-          <Overview1 />
+      
           </div>
           <div>
-          <h3 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] my-6">
-            Full Stack Web Development Course Live Projects
-            <span className="relative inline-flex h-3 w-3 align-middle ml-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
-            </span>
-          </h3>
-          <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-8" >
-            In this course, you'll work on real-world projects that teach both front-end and back-end skills. These projects help you build a strong portfolio and gain hands-on experience. You'll also learn to collaborate and manage projects effectively, just like in the industry.
-          </p>
+            <Overview1 />
           </div>
           <div>
-          <Overview2 />
+            <LearningPath/>
+            </div>
+          <div>
+          <LiveCourse/>
+          </div> 
+          <div>
+            <Overview2 />
           </div>
 
 
