@@ -11,7 +11,8 @@ import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
 import WhyChoose from "./WhyChoose";
-import Faq from "./Faq";
+import Faq1 from "./Faq1";
+
 
 const Fullstack = () => {
   const { courseId } = useParams();
@@ -75,7 +76,7 @@ const Fullstack = () => {
         id="FAQ"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
   
-        <Faq />
+        <Faq1/>
       </div>
       <div
         id="review"
