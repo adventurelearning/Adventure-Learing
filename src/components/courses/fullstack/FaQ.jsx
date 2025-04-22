@@ -69,7 +69,7 @@ const FAQ = ({ faqs }) => {
 };
 
 // Full Section Component
-const FAQSection = () => {
+const Faq = () => {
   const faqItems = [
     {
       question: 'Do I need coding experience to join?',
@@ -137,4 +137,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default Faq;
