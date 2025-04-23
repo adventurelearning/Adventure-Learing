@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import card1 from '../assets/card1.jpeg';
+import card1 from '../assets/card1.avif';
 import { useNavigate } from 'react-router-dom';
 
 

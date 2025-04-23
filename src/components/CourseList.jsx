@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import card1 from '../assets/card1.jpeg';
-import card2 from '../assets/card2.jpeg';
-import card3 from '../assets/card3.jpeg';
-import card4 from '../assets/card4.jpeg';
-import card5 from '../assets/card5.jpeg';
-import card6 from '../assets/card6.jpeg';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { useNavigate } from "react-router-dom";
 
@@ -12,22 +6,21 @@ const itemsPerPage = 6;
 
 function Coursecard() {
     const cards = [
-        { title: "Full Stack Development: Master the Art of Building Web Applications", image: card1, lesson: 6, students: 198, category: "Advanced" },
-        { title: "Embedded Systems: From Basics to Advanced Applications", image: card2, lesson: 21, students: 99, category: "Advanced" },
-        { title: "Data Science: Mastering Data Analysis and Machine Learning", image: card3, lesson: 33, students: 64, category: "Advanced" },
-        { title: "Data Analytics: Unlocking Insights from Data", image: card4, lesson: 15, students: 215, category: "Advanced" },
-        { title: "Cloud Computing: Building Scalable and Flexible Solutions", image: card5, lesson: 6, students: 198, category: "Advanced" },
-        { title: "Software Testing: Ensuring Quality and Reliability in Software Development", image: card6, lesson: 15, students: 215, category: "Advanced" },
-        { title: "Python Programming: From Fundamentals to Advanced Concepts", image: card1, lesson: 6, students: 198, category: "Advanced" },
-        { title: "Java Development: Object-Oriented Programming Mastery", image: card2, lesson: 21, students: 99, category: "Advanced" },
-        { title: "MERN Stack: Full Stack JavaScript Development", image: card3, lesson: 33, students: 64, category: "Advanced" },
-        { title: "MEAN Stack: Building Modern Web Applications", image: card4, lesson: 15, students: 215, category: "Advanced" },
-        { title: "Web Development Fundamentals: HTML, CSS, and JavaScript", image: card5, lesson: 6, students: 198, category: "Advanced" },
-        { title: "Database Design and Management: SQL and NoSQL", image: card6, lesson: 15, students: 215, category: "Advanced" },
+        { title: "Full Stack Development: Master the Art of Building Web Applications", image: "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010130.jpg?t=st=1745383886~exp=1745387486~hmac=c6118a26228cf64c5315b23d73c202b12136a6ad2558f5de1276df513c1eb0f6&w=996", lesson: 6, students: 198, category: "Advanced" },
+        { title: "Embedded Systems: From Basics to Advanced Applications", image: "https://img.freepik.com/free-photo/close-up-researcher-holding-chip_23-2148925507.jpg?t=st=1745383930~exp=1745387530~hmac=f2a4672a4752137f26b1064f565575ad1e4d11a8d66446f8215df49cfb5a6265&w=996", lesson: 21, students: 99, category: "Advanced" },
+        { title: "Data Science: Mastering Data Analysis and Machine Learning", image: "https://media.istockphoto.com/id/2153308796/photo/scientist-working-with-business-data-finance-marketing-report-big-data-analytics-technology.jpg?s=612x612&w=0&k=20&c=wPF8Cm01hb2BLkYJ7hFLFvmPs96zGXPKYkZBzWnlXJo=", lesson: 33, students: 64, category: "Advanced" },
+        { title: "Data Analytics: Unlocking Insights from Data", image: "https://img.freepik.com/premium-photo/auditor-accountant-audit-financial-data-accounting-record-documents-online-computer-report-company-taxation-planning-profitable-cash-flow-finance-analysis-account-management_562859-5602.jpg?uid=R164337686&ga=GA1.1.1279898111.1743062049&semt=ais_hybrid&w=740", lesson: 15, students: 215, category: "Advanced" },
+        { title: "Cloud Computing: Building Scalable and Flexible Solutions", image: "https://media.licdn.com/dms/image/v2/D4E12AQF-rRl6ZspBeg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1688453983937?e=2147483647&v=beta&t=vOUNVI8wuirtNybLB-MYsyPjYujzrkM1DSxYdJtJGz4", lesson: 6, students: 198, category: "Advanced" },
+        { title: "Software Testing: Ensuring Quality and Reliability in Software Development", image: "https://img.freepik.com/premium-photo/midsection-software-developers-working-office_1048944-21568565.jpg?uid=R164337686&ga=GA1.1.1279898111.1743062049&semt=ais_hybrid&w=740", lesson: 15, students: 215, category: "Advanced" },
+        { title: "MERN Stack: Full Stack JavaScript Development", image: "https://miro.medium.com/v2/resize:fit:768/1*jyvi6rdhEWdbKbybyuht9w.png", lesson: 33, students: 64, category: "Advanced" },
+        { title: "Python Programming: From Fundamentals to Advanced Concepts", image: "https://miro.medium.com/v2/resize:fit:1400/1*GAhkb5R3_uJdkI2vbIut0w.jpeg", lesson: 6, students: 198, category: "Advanced" },
+        { title: "Java Development: Object-Oriented Programming Mastery", image: "https://media.licdn.com/dms/image/v2/D4E12AQH6m3PPq9TRpA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1710432211600?e=2147483647&v=beta&t=KiJlamdBoHj17vFSqXjoUxhU_osE-o_9CXc_WkJnzrM", lesson: 21, students: 99, category: "Advanced" },
+        { title: "MEAN Stack: Building Modern Web Applications", image: "https://evincedev.com/blog/wp-content/uploads/2017/07/Mean-stack-technology.jpg", lesson: 15, students: 215, category: "Advanced" },
+        { title: "Web Development Fundamentals: HTML, CSS, and JavaScript", image: "https://media.licdn.com/dms/image/v2/D5612AQFMxThwQn7HZg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697274440798?e=2147483647&v=beta&t=QLEHZgio8uRKebsNCrjEdh3rOvVmSUa7dSYgzCPBxBo", lesson: 6, students: 198, category: "Advanced" },
+        { title: "Database Design and Management: SQL and NoSQL", image: "https://img.freepik.com/premium-photo/hand-business-professional-interacting-with-futuristic-sql-database-interface-digital-screen_464863-22405.jpg?w=1380", lesson: 15, students: 215, category: "Advanced" },
     ];
 
-    const navigate=useNavigate()
-
+    const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(cards.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -74,7 +67,7 @@ function Coursecard() {
                                 </div>
                             </div>
                             <div className="px-5 pb-5">
-                                <button onClick={()=>navigate('/Register')} className="w-1/2 lg:w-3/4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-2 rounded-lg transition-all duration-300 flex items-center justify-center">
+                                <button onClick={() => navigate('/Register')} className="w-1/2 lg:w-3/4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-2 rounded-lg transition-all duration-300 flex items-center justify-center">
                                     Start Course
                                     <i className="bi bi-chevron-right ml-2"></i>
                                 </button>
@@ -106,7 +99,7 @@ function Coursecard() {
                         } else {
                             pageNumber = currentPage - 2 + i;
                         }
-                        
+
                         return (
                             <button
                                 key={pageNumber}
