@@ -1,8 +1,40 @@
+import { useState } from 'react';
 import sub from '../assets/sub.svg';
+import confetti from 'canvas-confetti';
+
 
 function Offers() {
+  const [email, setEmail] = useState('');
+  const [isValidEmail, setIsValidEmail] = useState(false);
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    // Simple email validation
+    setIsValidEmail(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
+  };
+
+  const handleSubscribe = () => {
+    if (!isValidEmail) return;
+    
+    // Trigger confetti effect
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#ffffff', '#3b82f6', '#1d4ed8'],
+    });
+    
+    // Here you would typically send the email to your backend
+    console.log('Subscribed with email:', email);
+    
+    // Reset the form
+    setEmail('');
+    setIsValidEmail(false);
+  };
+
   return (
-    <div  data-aos="fade-up" className="flex justify-center items-center my-16 px-4 sm:px-6 lg:px-8">
+    <div data-aos="fade-up" className="flex justify-center items-center my-16 px-4 sm:px-6 lg:px-8">
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-8 px-6 sm:px-10 w-full max-w-6xl rounded-xl relative overflow-hidden shadow-xl">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Image Section */}
@@ -33,9 +65,17 @@ function Offers() {
                 className="flex-grow px-4 py-3 bg-white/90 backdrop-blur-sm outline-none rounded-lg focus:ring-2 focus:ring-white focus:ring-opacity-50"
                 name="email"
                 type="email"
+                value={email}
+                onChange={handleEmailChange}
               />
               <button 
-                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg px-6 py-3 transition-all duration-300 whitespace-nowrap"
+                className={`font-semibold rounded-lg px-6 py-3 transition-all duration-300 whitespace-nowrap ${
+                  isValidEmail 
+                    ? 'bg-white text-blue-600 hover:bg-blue-50 transform hover:scale-105'
+                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                }`}
+                onClick={handleSubscribe}
+                disabled={!isValidEmail}
               >
                 Subscribe
               </button>
