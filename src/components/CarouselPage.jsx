@@ -13,15 +13,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 // import banner5 from '../assets/banner5.svg';
 // import banner1 from '../assets/banner1.svg';
 
-import banner1 from '../assets/HDbanner/banner1.svg'
-import banner2 from '../assets/HDbanner/banner2.svg'
-import banner3 from '../assets/HDbanner/banner3.svg'
-import banner4 from '../assets/HDbanner/banner4.svg'
+import banner1 from '../assets/HDbanner/banner1.webp'
+import banner2 from '../assets/HDbanner/banner2.webp'
+import banner3 from '../assets/HDbanner/banner3.webp'
+import banner4 from '../assets/HDbanner/banner4.webp'
 
-import hmb1 from '../assets/HMbanner/hmb1.svg';
-import hmb2 from '../assets/HMbanner/hmb2.svg';
-import hmb3 from '../assets/HMbanner/hmb3.svg';
-import hmb4 from '../assets/HMbanner/hmb4.svg';
+import hmb1 from '../assets/HMbanner/hmb1.webp';
+import hmb2 from '../assets/HMbanner/hmb2.webp';
+import hmb3 from '../assets/HMbanner/hmb3.webp';
+import hmb4 from '../assets/HMbanner/hmb4.webp';
 
 // You can prepare different banner versions here
 const desktopBanners = [
@@ -41,23 +41,11 @@ const mobileBanners = [
 export default function CarouselPage() {
   const desktopSwiperRef = useRef(null);
   const mobileSwiperRef = useRef(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a loading delay (e.g., fetching data)
-    setTimeout(() => {
-      setLoading(false);
-    }, 500); // Adjust the delay as needed
-  }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
-      {loading ? (
-        // Placeholder Loading State
-        <div className="w-full rounded  animate-pulse">
-          <div className=" h-48 lg:h-auto  rounded"></div>
-        </div>
-      ) : (
+    <div className="flex flex-col items-center justify-center w-full" id="home">
+
         <>
           {/* Desktop Carousel */}
           <div className="w-full hidden lg:block">
@@ -115,7 +103,7 @@ export default function CarouselPage() {
             </Swiper>
           </div>
         </>
-      )}
+
     </div>
   );
 }

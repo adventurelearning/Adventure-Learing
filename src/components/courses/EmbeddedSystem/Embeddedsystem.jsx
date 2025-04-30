@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -16,6 +16,15 @@ import Faq from "./Faq";
 
 const Embeddedsystem = () => {
   const { courseId } = useParams();
+
+  useEffect(() => {
+    // Delay scroll to allow layout/content to fully load
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 100); // you can increase this to 200–300ms if needed
+
+    return () => clearTimeout(scrollTimeout);
+  }, []);
   return (
     <>
       <Banner />

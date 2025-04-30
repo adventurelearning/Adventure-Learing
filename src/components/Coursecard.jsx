@@ -10,7 +10,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 const Coursecard = () => {
   const cards = [
-    {id:"full-stack", title: "Full Stack Development: Art of Building Web Applications", image: course4, lesson: 6, students: 198, category: "Advanced" },
+    {id:"full-stack-development", title: "Full Stack Development: Art of Building Web Applications", image: course4, lesson: 6, students: 198, category: "Advanced" },
     {id:"embedded-system", title: "Embedded Systems: From Basics to Advanced Applications", image: course2, lesson: 21, students: 99, category: "Advanced" },
     {id:"data-science", title: "Data Science: Mastering Data Analysis and Machine Learning", image: course3, lesson: 33, students: 64, category: "Advanced" },
     {id:"data-analytics", title: "Data Analytics: Unlocking Insights from Data", image: course5, lesson: 15, students: 215, category: "Advanced" },
@@ -39,7 +39,7 @@ const Coursecard = () => {
   };
 
   return (
-    <div data-aos="fade-right" data-aos-duration="1000" className="relative overflow-hidden px-5">
+    <div data-aos="fade-right" data-aos-duration="1000" className="relative overflow-hidden px-5 " id='courses'>
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{

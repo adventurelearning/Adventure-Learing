@@ -134,7 +134,7 @@ const PopupForm = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-sm sm:max-w-md bg-white rounded-xl shadow-2xl overflow-hidden"
+            className="relative w-full max-w-sm sm:max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-xl shadow-2xl"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 opacity-90 animate-gradient" />
             <style>{`

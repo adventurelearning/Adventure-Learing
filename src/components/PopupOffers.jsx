@@ -31,7 +31,7 @@ const PopupOffers = ({ onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0  flex items-center justify-center p-4 bg-black bg-opacity-70 overflow-y-auto"   style={{
+          className="fixed inset-0  flex items-center justify-center p-4 bg-gray-700 bg-opacity-50 overflow-y-auto"   style={{
             position: 'fixed', // Removed redundant fixed positioning
             right: '0px', // Adjusted to Tailwind classes
             zIndex: '1200', // Adjusted to Tailwind classes
