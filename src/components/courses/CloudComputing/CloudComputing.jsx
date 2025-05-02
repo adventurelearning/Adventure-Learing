@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -27,7 +27,13 @@ const CloudComputing = () => {
   }, []);
 
   return (
-    <>
+    <>     
+     <Helmet>
+      <title>No.1 Cloud Computing Certification Course – Online & Offline</title>
+      <meta name="description" content="Learn cloud computing with hands-on projects, expert instructors, and real-world deployments. Start your cloud career journey today – enroll now!" />
+      <meta property="og:title" content="Become a Cloud Computing Expert | Adventure" />
+      <meta property="og:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
+    </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -54,13 +60,13 @@ const CloudComputing = () => {
         className="container-fluid rounded-lg mx-auto px-4 bg-white shadow-lg   "
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-        Cloud Computing  Syllabus
+          Cloud Computing  Syllabus
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
       </div>
-     
+
       <div
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
@@ -83,7 +89,7 @@ const CloudComputing = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
         <Faq />
       </div>
       <div

@@ -8,8 +8,7 @@ function ContactAll(){
         <>
        <Connect/>
        <ContactForm/> 
-       <Contact/>
-      
+       <Contact/>    
        
        
         </>

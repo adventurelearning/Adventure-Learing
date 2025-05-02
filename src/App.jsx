@@ -22,6 +22,7 @@ import PopupOffers from "./components/PopupOffers";
 import ChatBox from "./components/chatbot/ChatBox";
 import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -68,32 +69,79 @@ function App() {
   if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
+      <Helmet>
+        <title>
+          Adventure Learning
+        </title>
+        <meta
+          name="title"
+          content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
+        />
+        <meta
+          name="description"
+          content="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
+        />
+
+
+        <meta
+          name="keywords"
+          content="Adventure Learning, IT Training Coimbatore, Software Courses Tamil Nadu, Full Stack Development, Data Science Training, Cloud Computing Courses, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course, Data Analytics Tamil Nadu"
+        />
+
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adventurelearning.in/" />
+        <meta
+          property="og:title"
+          content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
+        />
+        <meta
+          property="og:description"
+          content="Join Adventure Learning in Coimbatore for expert-led IT training in Full Stack Development, Data Science, and more. Learn. Upskill. Succeed."
+        />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.adventurelearning.in/" />
+        <meta
+          property="twitter:title"
+          content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
+        />
+        <meta
+          property="twitter:description"
+          content="Top-rated IT training in Coimbatore, Tamil Nadu. Master Full Stack, Data Science, and more with Adventure Learning."
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
+        />
+      </Helmet>
 
       <ScrollToTop />
-     
       {/* <Whatsapp /> */}
       {/* <ChatWidget /> */}
       <Header />
       {/* <Loading /> */}
       <Navbar />
-      
       <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}
-        <PopupOffers/>  
+        <PopupOffers />
         <PopupForm />
-        <SocialLinks/>      
+        <SocialLinks />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="course">
             <Route path="full-stack-development" element={<Fullstack />} />
             <Route path="software-testing" element={<Software_Testing />} />
-            <Route path="embedded-system" element={<Embeddedsystem />} />                     
+            <Route path="embedded-system" element={<Embeddedsystem />} />
             <Route path="data-science" element={<Datascience />} />
             <Route path="data-analytics" element={<Dataanalytics />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
           </Route>
-
           <Route path="/contact" element={<ContactAll />} />
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
@@ -105,7 +153,6 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/TandC" element={<TandC />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-
         </Routes>
       </Suspense>
       <Footer />

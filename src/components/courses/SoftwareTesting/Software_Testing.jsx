@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -28,6 +28,12 @@ const Software_Testing = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Advanced Software Testing Course – Online & Offline</title>
+        <meta name="description" content="Master software testing with real tools and hands-on projects. Learn automation, manual testing, and performance tools – enroll today!" />
+        <meta property="og:title" content="Become a Software Testing Expert" />
+        <meta property="og:description" content="Learn software testing with real-world tools and live projects. Start your QA career with expert guidance – enroll now" />
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

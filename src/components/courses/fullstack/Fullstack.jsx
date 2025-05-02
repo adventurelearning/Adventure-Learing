@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 import Navbar from "../Navbar";
 import Banner from "./Banner";
 import CourseOverview from "./CourseOverview";
@@ -27,6 +27,31 @@ const Fullstack = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Full Stack Web Development Course | Adventure Learning</title>
+        <meta
+          name="description"
+          content="Learn full stack web development with hands-on projects, expert instructors, and flexible options. Start building real-world Software today - enroll now!"
+        />
+        <meta
+          property="og:title"
+          content="Become a Full Stack Developer - Enroll Now"
+        />
+        <meta
+          property="og:description"
+          content="Master Full-Stack development with real-world projects & expert guidance. Enroll today to start your developer journey!"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.adventurelearning.in/course/full-stack-development"
+        />
+        <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+        <meta
+          property="og:image:alt"
+          content="Full Stack Web Development Course"
+        />
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

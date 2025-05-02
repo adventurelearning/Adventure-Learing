@@ -8,7 +8,7 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-import { Helmet } from "react-helmet";
+
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
@@ -18,13 +18,7 @@ import LiveCourse from "./LiveCourse";
 const WhyChoose = () => {
   return (
     <>
-     <Helmet>
-        <title>Advanced Data Science Certification Course – Online & Offline</title>
-        <meta name="description" content="Learn data science with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now! " />
-        <meta property="og:title" content="Become a Data Science Expert | Adventure " />
-        <meta property="og:description" content="Master data science with practical projects and expert guidance. Enroll today and start your data science journey!" />
 
-      </Helmet>
 
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">

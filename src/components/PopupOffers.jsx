@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import offer from "../assets/offer.svg"; // Replace with your image path
+import offer from "../assets/offer.svg";
+import offermob from "../assets/offermob.svg";
 
 const PopupOffers = ({ onClose }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -31,12 +32,12 @@ const PopupOffers = ({ onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0  flex items-center justify-center p-4 bg-gray-700 bg-opacity-50 overflow-y-auto"   style={{
+          className="fixed inset-0  flex items-center justify-center p-4 bg-gray-700 bg-opacity-50 overflow-y-auto" style={{
             position: 'fixed', // Removed redundant fixed positioning
             right: '0px', // Adjusted to Tailwind classes
             zIndex: '1200', // Adjusted to Tailwind classes
           }}>
-        
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -69,11 +70,18 @@ const PopupOffers = ({ onClose }) => {
             </button>
 
             {/* Offer Image */}
+            {/* Offer Images for Desktop and Mobile */}
             <img
               src={offer}
-              alt="Offer Banner"
-              className="w-full h-auto object-cover opacity-90"
+              alt="Offer Banner Desktop"
+              className="hidden md:block w-full h-auto object-cover opacity-90"
             />
+            <img
+              src={offermob}
+              alt="Offer Banner Mobile"
+              className="block md:hidden w-full h-auto object-cover opacity-90"
+            />
+
           </motion.div>
         </motion.div>
       )}
