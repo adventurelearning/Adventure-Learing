@@ -8,7 +8,7 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-import { Helmet } from "react-helmet";
+
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
@@ -18,12 +18,7 @@ import LiveCourse from "./LiveCourse";
 const WhyChoose = () => {
   return (
     <>
-      <Helmet>
-        <title>No.1 Cloud Computing Certification Course – Online & Offline</title>
-        <meta name="description" content="Learn cloud computing with hands-on projects, expert instructors, and real-world deployments. Start your cloud career journey today – enroll now!" />
-        <meta property="og:title" content="Become a Cloud Computing Expert | Adventure" />
-        <meta property="og:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
-      </Helmet>
+
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">

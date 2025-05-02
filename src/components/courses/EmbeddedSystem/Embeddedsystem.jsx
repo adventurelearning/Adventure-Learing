@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -27,6 +27,16 @@ const Embeddedsystem = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Advanced Embedded Systems Course | Adventure Learning</title>
+        <meta name="description" content="Learn embedded systems with hands-on projects and expert instructors. Start building real-world applications today – enroll now!" />
+        <meta property="og:title" content="Become an Embedded Systems Expert" />
+        <meta property="og:description" content="Master embedded systems with practical projects and expert guidance. Enroll today and start your journey!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adventurelearning.in/course/embedded-system" />
+        <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+        <meta property="og:image:alt" content="Embedded Systems Course" />
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -49,16 +59,16 @@ const Embeddedsystem = () => {
       </div>
 
       <div
-        id="syllabus"        
+        id="syllabus"
       >
         <h3 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-        Embedded Systems Course Syllabus
+          Embedded Systems Course Syllabus
         </h3>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
       </div>
-     
+
       <div
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
@@ -81,7 +91,7 @@ const Embeddedsystem = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
         <Faq />
       </div>
       <div

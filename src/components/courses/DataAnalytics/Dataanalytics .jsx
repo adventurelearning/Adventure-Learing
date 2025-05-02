@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,11 +10,11 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
-const Dataanalytics  = () => {
+const Dataanalytics = () => {
   const { courseId } = useParams();
 
   useEffect(() => {
@@ -27,7 +27,13 @@ const Dataanalytics  = () => {
   }, []);
 
   return (
-    <>
+    <>       
+    <Helmet>
+      <title>Advanced Data Analytics Certification Course – Online & Offline</title>
+      <meta name="description" content="Learn advanced Data Analytics with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now!" />
+      <meta property="og:title" content="Become a Data Analytics Expert | Adventure" />
+      <meta property="og:description" content="Master data analytics with practical projects and expert guidance. Enroll today and start your data analytics journey" />
+    </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -53,13 +59,13 @@ const Dataanalytics  = () => {
         id="syllabus"
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-       Data Analytics Course Syllabus
+          Data Analytics Course Syllabus
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
       </div>
-     
+
       <div
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
@@ -82,7 +88,7 @@ const Dataanalytics  = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
         <Faq />
       </div>
       <div
@@ -99,4 +105,4 @@ const Dataanalytics  = () => {
   );
 };
 
-export default Dataanalytics ;
+export default Dataanalytics;

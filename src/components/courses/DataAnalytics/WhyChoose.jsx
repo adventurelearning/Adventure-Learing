@@ -18,13 +18,7 @@ import LiveCourse from "./LiveCourse";
 const WhyChoose = () => {
   return (
     <>
-       <Helmet>
-            <title>Advanced Data Analytics Certification Course – Online & Offline</title>
-            <meta name="description" content="Learn advanced Data Analytics with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now!" />
-            <meta property="og:title" content="Become a Data Analytics Expert | Adventure" />
-            <meta property="og:description" content="Master data analytics with practical projects and expert guidance. Enroll today and start your data analytics journey" />
-           
-          </Helmet>
+
           <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">
           <Overview />
