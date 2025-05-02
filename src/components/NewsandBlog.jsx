@@ -79,7 +79,7 @@ const NewsandBlog = () => {
     >
       {/* Blog Card - Fixed height on desktop, auto on mobile */}
       <div
-        className="relative bg-white rounded-lg overflow-hidden flex flex-col md:flex-row transition-all duration-300 h-auto md:h-[300px]"
+        className="relative bg-white rounded-lg overflow-hidden flex flex-col md:flex-row transition-all duration-300 h-auto md:h-[230px]"
         style={{
           boxShadow: "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
         }}
