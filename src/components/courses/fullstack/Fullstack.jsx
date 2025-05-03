@@ -12,7 +12,6 @@ import Certificate from "../Certificate";
 import Review from "../Review";
 import WhyChoose from "./WhyChoose";
 import Faq1 from "./Faq1";
-import { Helmet } from "react-helmet";
 
 const Fullstack = () => {
   const { courseId } = useParams();
