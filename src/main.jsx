@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import "aos/dist/aos.css"; // Import AOS CSS globally
 import AOS from "aos"; // Import AOS JavaScript library
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 // Initialize AOS when the app starts
 AOS.init({
@@ -17,11 +18,15 @@ AOS.init({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
     <BrowserRouter>
-    <ErrorBoundary>
-    <App />
-    </ErrorBoundary>     
+      <HelmetProvider>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </HelmetProvider>
     </BrowserRouter>
+
 
   </StrictMode>,
 )

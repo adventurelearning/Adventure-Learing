@@ -8,7 +8,7 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-import { Helmet } from "react-helmet";
+
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
@@ -20,7 +20,7 @@ import LearningPath from "./LearningPath";
 const WhyChoose = () => {
   return (
     <>
-     
+  
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">

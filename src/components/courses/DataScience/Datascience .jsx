@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -28,6 +28,13 @@ const Datascience  = () => {
 
   return (
     <>
+         <Helmet>
+            <title>Advanced Data Science Certification Course – Online & Offline</title>
+            <meta name="description" content="Learn data science with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now! " />
+            <meta property="og:title" content="Become a Data Science Expert | Adventure " />
+            <meta property="og:description" content="Master data science with practical projects and expert guidance. Enroll today and start your data science journey!" />
+    
+          </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

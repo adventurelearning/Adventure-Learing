@@ -8,7 +8,7 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-import { Helmet } from "react-helmet";
+
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
@@ -18,12 +18,7 @@ import LiveCourse from "./LiveCourse";
 const WhyChoose = () => {
   return (
     <>
-       <Helmet>
-        <title>Advanced Software Testing Course – Online & Offline</title>
-        <meta name="description" content="Master software testing with real tools and hands-on projects. Learn automation, manual testing, and performance tools – enroll today!" />
-        <meta property="og:title" content="Become a Software Testing Expert" />
-        <meta property="og:description" content="Learn software testing with real-world tools and live projects. Start your QA career with expert guidance – enroll now" />
-      </Helmet>
+
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">

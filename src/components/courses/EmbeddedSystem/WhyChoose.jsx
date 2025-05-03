@@ -8,7 +8,7 @@ import {
   LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
-import { Helmet } from "react-helmet";
+
 import Overview from "./Overview";
 import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
@@ -18,16 +18,7 @@ import LiveCourse from "./LiveCourse";
 const WhyChoose = () => {
   return (
     <>
-      <Helmet>
-        <title>Advanced Embedded Systems Course | Adventure Learning</title>
-        <meta name="description" content="Learn embedded systems with hands-on projects and expert instructors. Start building real-world applications today – enroll now!" />
-        <meta property="og:title" content="Become an Embedded Systems Expert" />
-        <meta property="og:description" content="Master embedded systems with practical projects and expert guidance. Enroll today and start your journey!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.adventurelearning.in/course/embedded-system" />
-        <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
-        <meta property="og:image:alt" content="Embedded Systems Course" />
-      </Helmet>
+
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">
