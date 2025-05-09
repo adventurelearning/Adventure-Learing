@@ -23,6 +23,7 @@ import ArticlePage2 from "./components/ArticlePage2";
 import ArticlePage3 from "./components/ArticlePage3";
 import Register from "./components/Register";
 import ScrollToTop from "./components/ScrolltoTop";
+import Placement from "./pages/Placement/Placement";
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="cloud-computing" element={<CloudComputing/>}/>              
           </Route>
           <Route path="/contact" element={<ContactAll/>}/>
+          <Route path="/placement" element={<Placement/>}/>
           <Route path="/blogs" element={<AllBlogs/>}/>
           <Route path="/onlinetraining" element={<OnlineTrain/>}/>
           <Route path="/corporate" element={<Corporate/>}/>
