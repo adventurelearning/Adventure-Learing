@@ -1,84 +1,112 @@
 import React from "react";
 import {
-    CodeBracketIcon,
-    UserGroupIcon,
-    BriefcaseIcon,
-    CloudIcon,
-    AcademicCapIcon,
-    LightBulbIcon,
-  } from "@heroicons/react/24/outline";
+  CodeBracketIcon,
+  UserGroupIcon,
+  BriefcaseIcon,
+  CloudIcon,
+  AcademicCapIcon,
+  LightBulbIcon,
+} from "@heroicons/react/24/outline";
 import EnquiryForm from "../EnquiryForm";
+
+import Overview from "./Overview";
+import Overview1 from "./Overview1";
+import Overview2 from "./Overview2";
+import LearningPath from "./LearningPath";
+import LiveCourse from "./LiveCourse";
 
 const WhyChoose = () => {
   return (
-    <div className="container-fluid mx-auto px-4 py-16 bg-gradient-to-br from-blue-50 to-blue-100">
-      <div className="p-3 mx-auto">
-        <h1 className="text-2xl lg:text-3xl  font-semibold text-[#0057D3] text-center mb-6 capitalize">
-          Unlock Your Potential with Our Software Testing Course
-        </h1>
-        <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
-          Join our industry-leading Software Testing program and gain
-          hands-on experience with cutting-edge technologies.
-        </p>
-        <hr className="border-t border-blue-300 w-3/5 mx-auto mb-12" />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-6 text-center">
+    <>
+
+
+      <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
+        <div className="p-3 flex flex-col items-center text-center mx-auto">
+          <Overview />
+          <div className="mt-12">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
+              Career Opportunities After Completing the Software Testing Training
+            </h2>
+          </div>
+          <p className="text-base text-justify px-8 lg:text-lg max-w-4xl text-gray-700 leading-relaxed mb-8">
+            Unlock job opportunities across diverse industries from automotive to smart devices and robotics with in-demand Software Testing skills.
+          </p>
+
+          <div className="bg-gray-50 rounded-xl">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] py-8">
               Why Choose Us?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8">
-              {[
-                {
-                  text: "Master software quality assurance, test automation, and debugging techniques.",
-                  icon: (
-                    <CodeBracketIcon className="h-12 w-12 text-blue-600 mb-4" />
-                  ),
-                },
-                {
-                  text: "Learn from experienced mentors with industry insights.",
-                  icon: (
-                    <UserGroupIcon className="h-12 w-12 text-green-600 mb-4" />
-                  ),
-                },
-                {
-                  text: "Gain hands-on experience with real-world projects.",
-                  icon: (
-                    <BriefcaseIcon className="h-12 w-12 text-purple-600 mb-4" />
-                  ),
-                },
-                {
-                  text: "Access career guidance, resume building, and job placement assistance.",
-                  icon: (
-                    <AcademicCapIcon className="h-12 w-12 text-orange-600 mb-4" />
-                  ),
-                },
-                {
-                  text: "Develop expertise in cloud deployment and API development.",
-                  icon: <CloudIcon className="h-12 w-12 text-blue-600 mb-4" />,
-                },
-                {
-                  text: "Work on collaborative team-based coding exercises.",
-                  icon: (
-                    <LightBulbIcon className="h-12 w-12 text-yellow-600 mb-4" />
-                  ),
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-xl p-4  flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-                >
-                  {item.icon}
-                  <span className="text-md text-gray-800 font-medium">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
+            <div className="flex justify-center ">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl  w-full">
+                {[
+                  {
+                    text: "Industry-Experienced Instructors.",
+                    icon: (
+                      <UserGroupIcon className="h-12 w-12 text-blue-600 mb-4" />
+                    ),
+                  },
+                  {
+                    text: "Real-World Projects.",
+                    icon: (
+                      // <UserGroupIcon className="h-12 w-12 text-green-600 mb-4" />
+                      <i className="bi bi-globe2 h-12 w-12 text-green-600 mb-4 text-4xl"></i>
+                    ),
+                  },
+                  {
+                    text: "Flexible Learning Options (Online & Offline)",
+                    icon: (
+                      // <BriefcaseIcon className="h-12 w-12 text-purple-600 mb-4" />
+
+                      <i className="bi bi-camera-video-fill text-purple-600 mb-4 text-4xl"></i>
+                    ),
+                  },
+                  {
+                    text: "Comprehensive Curriculum ",
+                    icon: (
+                      <AcademicCapIcon className="h-12 w-12 text-orange-600 mb-4" />
+                    ),
+                  },
+                  {
+                    text: "Job Placement Assistance",
+                    icon: (
+                      <BriefcaseIcon className="h-12 w-12 text-blue-600 mb-4" />
+                    ),
+                  },
+                  {
+                    text: "24/7 Access to Resources",
+                    icon: (
+                      <LightBulbIcon className="h-12 w-12 text-yellow-600 mb-4" />
+                    ),
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg w-full h-48 rounded-xl p-6 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+                  >
+                    {item.icon}
+                    <span className="text-md text-gray-800 font-medium">
+                      {item.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <EnquiryForm />
+          <div>
+            <Overview1 />
+          </div>
+          <div>
+            <LearningPath/>
+          </div>
+          <div>
+            <LiveCourse/>
+          </div>       
+          <div>
+            <Overview2 />
+          </div>         
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

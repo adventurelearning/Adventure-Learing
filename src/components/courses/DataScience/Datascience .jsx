@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,13 +10,31 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-
+import { Helmet } from "react-helmet-async";
 import WhyChoose from "./WhyChoose";
+import Faq from "./Faq";
 
 const Datascience  = () => {
   const { courseId } = useParams();
+
+  useEffect(() => {
+    // Delay scroll to allow layout/content to fully load
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, 100); // you can increase this to 200–300ms if needed
+
+    return () => clearTimeout(scrollTimeout);
+  }, []);
+
   return (
     <>
+         <Helmet>
+            <title>Advanced Data Science Certification Course – Online & Offline</title>
+            <meta name="description" content="Learn data science with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now! " />
+            <meta property="og:title" content="Become a Data Science Expert | Adventure " />
+            <meta property="og:description" content="Master data science with practical projects and expert guidance. Enroll today and start your data science journey!" />
+    
+          </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -41,9 +59,9 @@ const Datascience  = () => {
       <div
         id="syllabus"        
       >
-        <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-          Syllabus
-        </h1>
+        <h3 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
+        Data Science Course Syllabus
+        </h3>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
@@ -68,6 +86,11 @@ const Datascience  = () => {
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <Certificate />
+      </div>
+      <div
+        id="FAQ"
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        <Faq />
       </div>
       <div
         id="review"

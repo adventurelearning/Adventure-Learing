@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDownIcon, CodeBracketIcon, CpuChipIcon, GlobeAltIcon, CloudIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
-import img1 from '../../../assets/Course/Coding.gif';
 const AccordionList = ({ items }) => {
   const [openItem, setOpenItem] = useState(null);
 
@@ -11,7 +10,7 @@ const AccordionList = ({ items }) => {
   return (
     <div className="space-y-4">
       {items.map((item, index) => (
-        <div key={index} className="border rounded-md shadow-sm">
+        <div key={index} className="border rounded-md shadow-sm ">
           <div
             className="flex items-center justify-between p-4 cursor-pointer"
             onClick={() => toggleItem(index)}
@@ -137,11 +136,7 @@ const AccordionComponent = () => {
        <div className={`grid grid-cols-1 md:grid-cols-0 gap-4  p-10 rounded-md `}>
          <div className='bg-white rounded-md '>
                 <AccordionList items={accordionItems} />
-         </div>
-         {/* <div className=' bg-inherit   flex items-center justify-center'>
-             <img src={img1} alt="" className='w-96 h-96' />
-         </div> */}
-     
+         </div>   
        </div>
     </div>
   );

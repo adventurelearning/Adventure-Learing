@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import certificte from "../../assets/Course/sample_c.svg";
+import { useLocation } from "react-router-dom";
 
 const Certificate = () => {
+ 
+  const location = useLocation();
+  const [courseTitle, setCourseTitle] = useState("");
+
+  useEffect(() => {
+    const pathParts = location.pathname.split("/");
+    const courseSlug = pathParts[pathParts.length - 1];
+
+    // Convert slug to Title Case
+    const formattedTitle = courseSlug
+      .split("-")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    setCourseTitle(formattedTitle);
+  }, [location.pathname]);
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50 py-12 px-4">
       <div className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-6xl w-full mx-auto transform transition-all duration-500 hover:shadow-3xl hover:-translate-y-2">
@@ -10,8 +27,7 @@ const Certificate = () => {
         <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-l from-pink-500 to-orange-500 rounded-full opacity-20 blur-xl"></div>
 
         <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-black mb-12 text-center tracking-tight">
-          Your <span className="text-[#0057D3] font-dm-sans">Achievement</span>{" "}
-          Recognized
+        {courseTitle} Course Certification
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8 items-center">
@@ -77,17 +93,17 @@ const Certificate = () => {
                 </div>
                 <div className="ml-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Career Acceleration
+                    Recognized by Employers: 
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                      Enhanced promotion opportunities
+                      Validates your full-stack development skills.
                     </li>
-                    <li className="flex items-center">
+                    {/* <li className="flex items-center">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                       Preferred candidate status in hiring
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -113,17 +129,17 @@ const Certificate = () => {
                 </div>
                 <div className="ml-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Skill Verification
+                  Boost Your Career:
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-                      Validated full-stack expertise
+                      Enhance your resume and job prospects.
                     </li>
-                    <li className="flex items-center">
+                    {/* <li className="flex items-center">
                       <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
                       Industry-standard competency proof
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -149,17 +165,17 @@ const Certificate = () => {
                 </div>
                 <div className="ml-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Professional Recognition
+                  Career Ready:
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      Internal advancement opportunities
+                      A strong asset for career growth and opportunities
                     </li>
-                    <li className="flex items-center">
+                    {/* <li className="flex items-center">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                       Demonstrated commitment to growth
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>

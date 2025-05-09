@@ -7,7 +7,7 @@ import register from "../assets/register.gif";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+    phone_number: "",
     email: "",
     courses: "",
     training_mode: "",
@@ -84,12 +84,12 @@ const Register = () => {
     }
 
     const phoneRegex = /^[6-9]\d{9}$/;
-    const cleanedPhone = formData.phone.replace(/\D/g, "");
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
+    const cleanedPhone = formData.phone_number.replace(/\D/g, "");
+    if (!formData.phone_number.trim()) {
+      newErrors.phone_number = "Phone number is required";
       isValid = false;
     } else if (!phoneRegex.test(cleanedPhone)) {
-      newErrors.phone = "Invalid mobile number (Indian format)";
+      newErrors.phone_number = "Invalid mobile number (Indian format)";
       isValid = false;
     }
 
@@ -138,7 +138,7 @@ const Register = () => {
       setSubmitted(true);
       setFormData({
         name: "",
-        phone: "",
+        phone_number: "",
         email: "",
         courses: "",
         training_mode: "",
@@ -232,16 +232,25 @@ const Register = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen  px-4 lg:ml-20 ">
         <div>
+          {/* Form Section */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
             className="bg-white  w-full max-w-lg lg:w-full  relative"
           >
-            {/* Form fields with error messages */}
+            <motion.div variants={itemVariants} className="mb-8">
+              <h2 className="text-3xl font-semibold text-[#0057D3] mb-2">
+                Course Registration
+              </h2>
+              <p className="text-gray-600">
+                Join our professional training programs and start your learning
+                journey today!
+              </p>
+            </motion.div>
+
             <form className="space-y-2" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Name Input */}
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="name"
@@ -259,18 +268,12 @@ const Register = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-1 border ${
-                        errors.name ? "border-red-500" : "border-gray-300"
-                      } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
+                      required
+                      className="w-full px-4 py-1  border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       placeholder="Enter your full name"
                     />
                   </motion.div>
-                  {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                  )}
                 </motion.div>
-
-                {/* Email Input */}
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="email"
@@ -288,18 +291,12 @@ const Register = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-1 border ${
-                        errors.email ? "border-red-500" : "border-gray-300"
-                      } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
+                      required
+                      className="w-full px-4 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       placeholder="Enter your email"
                     />
                   </motion.div>
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                  )}
                 </motion.div>
-
-                {/* Phone Input */}
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="phone"
@@ -313,13 +310,13 @@ const Register = () => {
                     whileFocus={{ scale: 1.01 }}
                   >
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <span className="text-gray-900">+91</span>
+                      <span className="text-gray-500">+91</span>
                     </div>
                     <input
                       type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
+                      id="phone_number"
+                      name="phone_number"
+                      value={formData.phone_number}
                       onChange={(e) => {
                         if (e.target.value.length <= 10) {
                           handleChange(e);
@@ -331,12 +328,13 @@ const Register = () => {
                       placeholder="Enter your number"
                     />
                   </motion.div>
-                  {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                  {errors.phone_number && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.phone_number}
+                    </p>
                   )}
                 </motion.div>
 
-                {/* Courses Dropdown */}
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="courses"
@@ -350,9 +348,8 @@ const Register = () => {
                       name="courses"
                       value={formData.courses}
                       onChange={handleChange}
-                      className={`w-full px-4 py-1 border ${
-                        errors.courses ? "border-red-500" : "border-gray-300"
-                      } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white bg-no-repeat bg-[right_1rem_center] bg-[length:1.5rem] transition-all`}
+                      required
+                      className="w-full px-4 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiYjMzk7IzZCN0I4OSYjMzk7IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+')] bg-no-repeat bg-[right_1rem_center] bg-[length:1.5rem] transition-all"
                     >
                       <option value="">-- Select a course --</option>
                       {courses.map((course) => (
@@ -362,17 +359,11 @@ const Register = () => {
                       ))}
                     </select>
                   </motion.div>
-                  {errors.courses && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.courses}
-                    </p>
-                  )}
                 </motion.div>
               </div>
 
-              {/* Training Mode Radio Buttons */}
               <motion.div variants={itemVariants}>
-                <span className="block text-sm font-medium text-gray-700">
+                <span className="block text-sm font-medium text-gray-700 ">
                   Training Mode <span className="text-red-500">*</span>
                 </span>
                 <div className="space-y-1">
@@ -380,33 +371,28 @@ const Register = () => {
                     <input
                       type="radio"
                       name="training_mode"
-                      value="Online"
-                      checked={formData.training_mode === "Online"}
+                      value="online"
+                      checked={formData.training_mode === "online"}
                       onChange={handleChange}
-                      className="h-4 w-4 text-blue-600 transition-colors"
+                      required
+                      className="h-4 w-4 text-blue-600  transition-colors"
                     />
-                    <span className="ml-3 text-gray-700">Online Training</span>
+                    <span className="ml-3 text-gray-700">OnlineTraining</span>
                   </motion.label>
                   <motion.label className="flex items-center p-2 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
                     <input
                       type="radio"
                       name="training_mode"
-                      value="Offline" // Fixed typo from 'Ofline'
-                      checked={formData.training_mode === "Offline"}
+                      value="offline"
+                      checked={formData.training_mode === "offline"}
                       onChange={handleChange}
-                      className="h-4 w-4 text-blue-600 transition-colors"
+                      className="h-4 w-4 text-blue-600  transition-colors"
                     />
                     <span className="ml-3 text-gray-700">Offline Training</span>
                   </motion.label>
                 </div>
-                {errors.training_mode && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.training_mode}
-                  </p>
-                )}
               </motion.div>
 
-              {/* Message Textarea */}
               <motion.div variants={itemVariants}>
                 <label
                   htmlFor="message"
@@ -430,15 +416,14 @@ const Register = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Submit Button */}
               <motion.div variants={itemVariants}>
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={isLoading}
-                  className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all ${
-                    isLoading ? "bg-blue-400" : "bg-[#0057D3] hover:bg-blue-700"
+                  className={`w-fit py-2 px-6 rounded-lg font-medium text-white transition-all ${
+                    isLoading ? "bg-[#0057D3] text-white" : "bg-[#0057D3] hover:bg-white hover:text-[#0057D3] border hover:border-[#0057D3]"
                   }`}
                 >
                   {isLoading ? (
@@ -480,10 +465,10 @@ const Register = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="hidden lg:block w-full"
+            className="hidden lg:block w-full  "
           >
             <img
-              className="max-w-2xl h-auto object-cover lg:ml-20"
+              className="max-w-2xl  h-auto object-cover lg:ml-20"
               src={register}
               alt="Students learning together"
             />

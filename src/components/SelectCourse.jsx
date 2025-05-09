@@ -1,10 +1,9 @@
 import React from 'react';
 import bulb from '../assets/bulb.png'; 
-
+import { useNavigate } from 'react-router-dom';
 
 function LearningJourneyBanner() {
-
-
+const navigate=useNavigate()
 
   return (
     // <div className=" flex items-center justify-center bg-[#0057D3] text-white h-18 lg:h-24 sm:py-4 px-8 lg:px-16  ">    
@@ -24,11 +23,11 @@ function LearningJourneyBanner() {
               <div className=" relative"> 
               <img src={bulb} alt="Bulb Icon" className="w-36" />
               </div>
-              <span className="lg:text-3xl font-semibold">Start your Learning Journey Today !</span>
+              <span className="lg:text-3xl md:text-3xl font-semibold">Start your Learning Journey Today !</span>
             </div>
             <div>
-            <button className="border border-white py-1 sm:py-2 px-3 sm:px-4 lg:ml-10 lg:mt-2 rounded-md font-semibold text-sm hover:bg-white hover:text-[#0057D3] transition duration-300">
-            <a href='/onlinetraining'>EXPLORE ALL COURSES</a>
+            <button onClick={()=>navigate('/onlinetraining/#courselist')}  className="border border-white py-1 sm:py-2 px-3 sm:px-4 md:ml-10 lg:ml-10 lg:mt-2 rounded-md font-semibold text-sm hover:bg-white hover:text-[#0057D3] transition duration-300">
+            EXPLORE ALL COURSES
             </button>
             </div>
           </div>

@@ -41,7 +41,7 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
 
   return (
-    <nav className="bg-white text-black px-6 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
       {/* Logo */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">
@@ -73,9 +73,9 @@ const Navbar = () => {
             </button>
             <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
               <li>
-                <Link to="/course/full-stack" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
+                <Link to="/course/full-stack-development" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
                 >
-                  Full Stack
+                  Full Stack Development
                 </Link>
               </li>
               <li>
@@ -167,7 +167,7 @@ const Navbar = () => {
       <div className="flex space-x-2  lg:flex">
         <Link
           to="/Register"
-          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
+          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
         >
           Register
         </Link>
@@ -211,7 +211,7 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className="space-y-2 text-lg font-semibold px-6 text-gray-800">
+        <ul className="space-y-2 text-base px-6 text-gray-800 ">
           <li>
             <Link
               to="/"
@@ -236,19 +236,19 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.courses && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
-                    to="/course/full-stack"
-                    className={`block py-2 ${isActiveLink("/course/full-stack")}`}
+                       to="/course/full-stack-development"
+                    className={`block py-2 ${isActiveLink("/course/full-stack-development")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Full Stack
+                    Full Stack Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/course/embedded-system"
+                      to="/course/embedded-system"
                     className={`block py-2 ${isActiveLink("/course/embedded-system")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -257,7 +257,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/data-science"
+                       to="/course/data-science"
                     className={`block py-2 ${isActiveLink("/course/data-science")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -266,7 +266,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/data-analytics"
+                       to="/course/data-analytics"
                     className={`block py-2 ${isActiveLink("/course/data-analytics")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -275,7 +275,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/course/cloud-computing"
+                       to="/course/cloud-computing"
                     className={`block py-2 ${isActiveLink("/course/cloud-computing")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -319,7 +319,7 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.corporate && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/Corporate"
@@ -347,11 +347,11 @@ const Navbar = () => {
               )}
             </div>
             {mobileDropdowns.resources && (
-              <ul className="pl-4 pb-2 space-y-2 text-base font-medium">
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/blogs"
-                    className={`block py-2 ${isActiveLink("/blogs")}`}
+                    className={`block py-2`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Blogs

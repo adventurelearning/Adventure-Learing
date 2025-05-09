@@ -24,9 +24,9 @@ const Trainer = ({ trainer }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">
+      {/* <h2 className="text-2xl font-semibold text-[#0057D3] mb-4">
         Trainer Profile: {trainer.name}
-      </h2>
+      </h2> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {trainer.highlights.map((highlight, index) => {
           const Icon = iconMap[highlight] || null; // Use mapped icon, or null if not found

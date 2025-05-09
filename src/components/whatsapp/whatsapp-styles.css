@@ -3,8 +3,8 @@
     bottom: 40px;
     right: 40px;
     z-index: 1000;
-    width: 70px; /* Set a width to contain absolute children */
-    height: 70px; /* Set a height to contain absolute children */
+    width: 70px; 
+    height: 70px; 
   }
   
   .wave-background {
@@ -161,3 +161,59 @@
       transform: scale(0.9);
     }
   }
+
+
+  .whatsapp-button-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* ← This places the button on the right side */
+    z-index: 1000;
+  }
+  
+  .whatsapp-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 8px 15px #00000033;
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-tooltip {
+    position: absolute;
+    right: 70px; /* Puts tooltip to the left of the button */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #25D366;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .whatsapp-button:hover .hover-tooltip {
+    opacity: 1;
+  }
+  
+  .tooltip-arrow {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #25D366;
+  }
+  
