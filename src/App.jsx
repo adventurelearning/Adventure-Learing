@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import { SiConcourse } from "react-icons/si";
 // Static imports remain
 import ScrollToTop from "./components/ScrolltoTop";
+import Placement from "./pages/Placement/Placement";
 import TandC from "./components/TandC";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 
@@ -142,7 +143,9 @@ function App() {
             <Route path="data-analytics" element={<Dataanalytics />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
           </Route>
+
           <Route path="/contact" element={<ContactAll />} />
+             <Route path="/placement" element={<Placement/>}/>
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
           <Route path="/onlinetraining" element={<OnlineTrain />} />

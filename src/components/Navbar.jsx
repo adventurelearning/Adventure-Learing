@@ -154,6 +154,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/placement"
+              className={`hover:text-[#0057D3] ${isActiveLink("/placement")}`}
+            >
+              Sucess Journey
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className={`hover:text-[#0057D3] ${isActiveLink("/contact")}`}
             >
@@ -359,6 +367,15 @@ const Navbar = () => {
                 </li>
               </ul>
             )}
+          </li>
+          <li>
+          <Link
+              to="/placement"
+              className={`block py-3 ${isActiveLink("/placement")}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Success Journey's
+            </Link>
           </li>
 
           <li>
