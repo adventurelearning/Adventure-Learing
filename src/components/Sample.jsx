@@ -54,7 +54,7 @@ const Sample = () => {
   ];
 
   return (
-    <section className="bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
+    <section data-aos="fade-down" className="bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl  font-semibold text-[#0057D3] mb-4">

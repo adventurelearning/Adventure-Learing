@@ -6,54 +6,46 @@ import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 
 // Import images
-import banner1 from '../assets/banner1.svg';
-import banner2 from '../assets/banner2.svg';
-import banner3 from '../assets/banner3.svg';
-import banner4 from '../assets/banner4.svg';
-import banner5 from '../assets/banner5.svg';
+// import banner1 from '../assets/banner1.svg';
+// import banner2 from '../assets/banner2.svg';
+// import banner3 from '../assets/banner3.svg';
+// import banner4 from '../assets/banner4.svg';
+// import banner5 from '../assets/banner5.svg';
+// import banner1 from '../assets/banner1.svg';
 
-import mb1 from '../assets/mb1.svg';
-import mb2 from '../assets/mb2.svg';
-import mb3 from '../assets/mb3.svg';
-import mb4 from '../assets/mb4.svg';
+import banner1 from '../assets/HDbanner/banner1.webp'
+import banner2 from '../assets/HDbanner/banner2.webp'
+import banner3 from '../assets/HDbanner/banner3.webp'
+import banner4 from '../assets/HDbanner/banner4.webp'
+
+import hmb1 from '../assets/HMbanner/hmb1.webp';
+import hmb2 from '../assets/HMbanner/hmb2.webp';
+import hmb3 from '../assets/HMbanner/hmb3.webp';
+import hmb4 from '../assets/HMbanner/hmb4.webp';
 
 // You can prepare different banner versions here
 const desktopBanners = [
-  { image: banner1, link: '/contact' },
+  { image: banner1, link: '/Register' },
   { image: banner2, link: '/Register' },
-  { image: banner3, link: '/onlinetraining' },
-  { image: banner4, link: '' },
-  // { image: banner5, link: '' },
+  { image: banner3, link: '/Register'},
+  { image: banner4, link: '/Register' }
 ];
 
 const mobileBanners = [
-  { image: mb4, link: '/onlinetraining' },
-  { image: mb1, link: '/contact' },
-  { image: mb2, link: '/Register' },
-  { image: mb3, link: '/onlinetraining' },
-  // { image: mb5, link: '' },
+  { image: hmb1, link: '/Register' },
+  { image: hmb2, link: '/Register' },
+  { image: hmb3, link: '/Register' },
+  { image: hmb4, link: '/Register' },
 ];
 
 export default function CarouselPage() {
   const desktopSwiperRef = useRef(null);
   const mobileSwiperRef = useRef(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a loading delay (e.g., fetching data)
-    setTimeout(() => {
-      setLoading(false);
-    }, 500); // Adjust the delay as needed
-  }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
-      {loading ? (
-        // Placeholder Loading State
-        <div className="w-full rounded bg-gray-100 animate-pulse">
-          <div className="h-48 lg:h-64 bg-gray-300 rounded"></div>
-        </div>
-      ) : (
+    <div className="flex flex-col items-center justify-center w-full" id="home">
+
         <>
           {/* Desktop Carousel */}
           <div className="w-full hidden lg:block">
@@ -111,7 +103,7 @@ export default function CarouselPage() {
             </Swiper>
           </div>
         </>
-      )}
+
     </div>
   );
 }

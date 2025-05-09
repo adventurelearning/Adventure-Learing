@@ -23,6 +23,7 @@ import Youtubehead from "../../components/Youtubehead";
 import Youtubevdo from "../../components/Youtubevdo";
 import NewsandBlog from "../../components/NewsandBlog";
 import Bloghead from "../../components/BlogHead";
+// import Softwares from "../../components/Softwares";
 
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
       <LookingFor />
       <Trendingtech />
       <TrendingtechCards />
+      {/* <Softwares/> */}
       <Logos />
       <SelectCourse />
       <Form />
@@ -41,8 +43,8 @@ const Home = () => {
       <WhyAdventure />
       <Enroll />
       <HiringCompanies />
-      <WebinarEvents />
-      <WebinarImages />     
+      {/* <WebinarEvents />
+      <WebinarImages />      */}
       {/* <NewsandBlogs/> */}
       <Bloghead/>
       <NewsandBlog/>
