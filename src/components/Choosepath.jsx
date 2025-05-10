@@ -1,7 +1,9 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import videoClass from "../assets/virtual-classroom.jpg";
 import close from '../assets/close-up.jpg';
+
 
 function Choosepath() {
   return (
@@ -12,15 +14,14 @@ function Choosepath() {
             "Unlock Your Potential with Our Flexible Classes!"
           </h1>
         </div>
-
         <div className="mt-4 mb-8 sm:mb-12">
           <h4 className="font-normal text-lg text-gray-600 max-w-2xl mx-auto">
             "Choose Between Individual Mentoring or Live Online Training"
           </h4>
         </div>
 
-        <div data-aos="zoom-in" className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 cursor-pointer">
 
+        <div data-aos="zoom-in" className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 cursor-pointer">
           {/* Self-Paced Learning Card */}
           <div className="w-full sm:w-96 md:w-80 lg:w-96 relative rounded-lg shadow-none lg:shadow-xl hover:shadow-2xl overflow-hidden group transition-all duration-300">
             <div className="card w-full h-full">
