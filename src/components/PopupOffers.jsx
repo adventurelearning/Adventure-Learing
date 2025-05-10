@@ -6,9 +6,17 @@ import offermob from "../assets/offermob.svg";
 const PopupOffers = ({ onClose }) => {
   const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 5000); // Adjust delay if needed
-    return () => clearTimeout(timer);
+useEffect(() => {
+    const hasPopupShown = sessionStorage.getItem("popupShown");
+  
+    if (!hasPopupShown) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem("popupShown", "true");
+      }, 5000);
+  
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const containerVariants = {

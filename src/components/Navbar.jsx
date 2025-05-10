@@ -150,15 +150,15 @@ const Navbar = () => {
                   Blogs
                 </Link>
               </li>
-            </ul>
-          </li>
-          <li>
+              <li>
             <Link
               to="/placement"
-              className={`hover:text-[#0057D3] ${isActiveLink("/placement")}`}
+              className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/placement")}`}
             >
-              Sucess Journey
+             Aluminis Sucess Journey
             </Link>
+          </li>
+            </ul>
           </li>
           <li>
             <Link
@@ -196,16 +196,16 @@ const Navbar = () => {
           } z-50 shadow-lg overflow-y-auto`}
       >
 
-        
+
         <div className="flex justify-between items-center px-4 py-4">
-            <Link to="/" className="flex items-center">
-              <img
-                src={logo}
-                alt="Logo"
-                className="w-40 h-auto object-contain logo-img"
-              />
-            </Link>
-        
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-40 h-auto object-contain logo-img"
+            />
+          </Link>
+
           <FaTimes
             className="text-2xl cursor-pointer text-gray-700"
             onClick={() => {
@@ -247,7 +247,7 @@ const Navbar = () => {
               <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
-                       to="/course/full-stack-development"
+                    to="/course/full-stack-development"
                     className={`block py-2 ${isActiveLink("/course/full-stack-development")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -256,7 +256,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                      to="/course/embedded-system"
+                    to="/course/embedded-system"
                     className={`block py-2 ${isActiveLink("/course/embedded-system")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -265,7 +265,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/course/data-science"
+                    to="/course/data-science"
                     className={`block py-2 ${isActiveLink("/course/data-science")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -274,7 +274,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/course/data-analytics"
+                    to="/course/data-analytics"
                     className={`block py-2 ${isActiveLink("/course/data-analytics")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -283,7 +283,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                       to="/course/cloud-computing"
+                    to="/course/cloud-computing"
                     className={`block py-2 ${isActiveLink("/course/cloud-computing")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -365,18 +365,19 @@ const Navbar = () => {
                     Blogs
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/placement"
+                    className={`block py-3 ${isActiveLink("/placement")}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Aluminis Success Journey
+                  </Link>
+                </li>
               </ul>
             )}
           </li>
-          <li>
-          <Link
-              to="/placement"
-              className={`block py-3 ${isActiveLink("/placement")}`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Success Journey's
-            </Link>
-          </li>
+
 
           <li>
             <Link

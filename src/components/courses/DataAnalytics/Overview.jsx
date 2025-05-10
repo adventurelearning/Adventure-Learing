@@ -6,7 +6,7 @@ import EnquiryForm from '../EnquiryForm';
 // FAQ Data (static, reusable)
 const FAQ_ITEMS = [
     {
-        question: 'Unlock Your Potential with Our Embedded Systems Course',
+        question: 'Unlock Your Potential with Our Data Analytics Course',
         answer:
             'Join our industry-leading Data Analytics program and gain hands-on experience with cutting-edge technologies.',
     },

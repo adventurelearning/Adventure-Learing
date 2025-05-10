@@ -5,6 +5,7 @@ import profile2 from '../../assets/download-2.jpg';
 import profile3 from '../../assets/download-3.jpg';
 import HiringCompanies from '../../components/HiringCompanies';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 
 const Placement = () => {
@@ -25,23 +26,23 @@ const Placement = () => {
 
   const alumniData = [
     {
-      name: "Madhesh S",
-      company: "Google",
+      name: "Priya S",
+      company: "Capgemini",
       image: profile1,
       previousRole: "Supervisor",
       currentRole: "Full Stack Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
 
     },
     {
-      name: "Priya R",
-      company: "Microsoft",
+      name: "Madhesh R",
+      company: "Virtusa",
       image: profile2,
       previousRole: "Data Entry",
       currentRole: "Frontend Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Karthik M",
@@ -50,57 +51,74 @@ const Placement = () => {
       previousRole: "Sales Executive",
       currentRole: "Backend Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Deepa S",
-      company: "Meta",
+      company: "Tech Mahindra",
       image: profile1,
       previousRole: "Customer Support",
       currentRole: "UI/UX Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Arjun K",
-      company: "Netflix",
+      company: "Zoho",
       image: "https://xsgames.co/randomusers/avatar.php?g=male",
       previousRole: "Content Moderator",
       currentRole: "React Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Meena V",
-      company: "Apple",
+      company: "Amazon",
       image: "https://xsgames.co/randomusers/avatar.php?g=female",
       previousRole: "Retail Associate",
       currentRole: "iOS Developer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Rahul P",
-      company: "Tesla",
+      company: "SIEMENS",
       image: "https://xsgames.co/randomusers/avatar.php?g=male",
       previousRole: "Mechanic",
       currentRole: "Embedded Systems Engineer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Anjali N",
-      company: "Adobe",
+      company: "Cognizant",
       image: "https://xsgames.co/randomusers/avatar.php?g=female",
       previousRole: "Graphic Designer",
       currentRole: "Product Designer",
       duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/dinakaran-s-4089a5228/",
+      linkedIn: "https://www.linkedin.com/in/",
     }
   ];
 
   return (
     <>
+
+      <Helmet>
+        <title>Career Placement Success | Adventure Learning Alumni</title>
+        <meta
+          name="description"
+          content="See how Adventure Learning alumni successfully transitioned to top tech roles with expert training and placement support."
+        />
+        <meta property="og:title" content="Career Success Stories at Adventure Learning" />
+        <meta
+          property="og:description"
+          content="Explore real alumni journeys – from career transitions to jobs at Google, Microsoft, and more. Start your transformation today!"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adventurelearning.in/placement" />
+        <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+        <meta property="og:image:alt" content="Career Placement at Adventure Learning" />
+      </Helmet>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-7">
         {/* Hero Section */}
         <div className="flex justify-center mb-6 md:mb-16">
@@ -108,7 +126,7 @@ const Placement = () => {
             <img
               src={place1}
               alt="Career placement guidance"
-              className="rounded-xl md:rounded-2xl  w-full h-[200px] sm:h-[300px] md:h-[450px]  duration-500 group-hover:scale-105"
+              className="rounded-xl md:rounded-2xl  w-full h-[300px] sm:h-[400px] md:h-[550px]  duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30 rounded-xl md:rounded-2xl 
               flex flex-col justify-center items-start text-white px-4 sm:px-8 md:px-16 lg:px-24">
@@ -128,8 +146,8 @@ const Placement = () => {
         {/* Stats Section */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
           {[
-            { value: "400+", label: "Hiring partners", sublabel: "Adventure Learners" },
-            { value: "11+ years", label: "Excellence Learn", sublabel: null },
+            { value: "400+", label: "Hiring partners", sublabel: null },
+            { value: "11+ years", label: "Excellence", sublabel: null },
             { value: "100%", label: "Interview Guidance", sublabel: null }
           ].map((stat, index) => (
             <div
@@ -151,7 +169,7 @@ const Placement = () => {
         {/* Alumni Section */}
         <div className="mt-8 md:mt-20 text-center max-w-4xl mx-auto px-2 sm:px-4">
           <h1 className="font-semibold text-lg sm:text-2xl lg:text-3xl mt-3 sm:mt-5 text-[#0057D3]">
-            Our Alumni Journey's
+            Our Alumni Journey
           </h1>
           <p className="text-xs sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-12">
             Discover how our graduates transformed their careers and achieved remarkable success through our comprehensive training and placement support
@@ -163,7 +181,7 @@ const Placement = () => {
           {/* Navigation buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 lg:-translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            className="absolute left-0 lg:ml-[40px] top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 lg:-translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -259,7 +277,7 @@ const Placement = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 lg:translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            className="absolute right-0 lg:mr-[40px] top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 lg:translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
