@@ -152,14 +152,14 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li>
+{/*           <li>
             <Link
               to="/placement"
               className={`hover:text-[#0057D3] ${isActiveLink("/placement")}`}
             >
               Sucess Journey
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/contact"
@@ -368,7 +368,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li>
+{/*           <li>
           <Link
               to="/placement"
               className={`block py-3 ${isActiveLink("/placement")}`}
@@ -376,7 +376,7 @@ const Navbar = () => {
             >
               Success Journey's
             </Link>
-          </li>
+          </li> */}
 
           <li>
             <Link
