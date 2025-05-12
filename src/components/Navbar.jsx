@@ -150,14 +150,14 @@ const Navbar = () => {
                   Blogs
                 </Link>
               </li>
-              <li>
+              {/* <li>
             <Link
               to="/placement"
               className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/placement")}`}
             >
              Alumini Success Journey
             </Link>
-          </li>
+          </li> */}
             </ul>
           </li>
           <li>
@@ -365,7 +365,7 @@ const Navbar = () => {
                     Blogs
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/placement"
                     className={`block py-3 ${isActiveLink("/placement")}`}
@@ -373,7 +373,7 @@ const Navbar = () => {
                   >
                     Alumini Success Journey
                   </Link>
-                </li>
+                </li> */}
               </ul>
             )}
           </li>
