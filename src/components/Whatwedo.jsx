@@ -84,7 +84,7 @@ const Whatwedo = () => {
                         transition={{ duration: 0.3 }}
                         className="space-y-6 px-4 sm:px-0" // Added horizontal padding for mobile
                     >
-                        <div className="flex flex-col gap-4 sm:gap-6"> {/* Smaller gap on mobile */}
+                        <div className="flex flex-col gap-4 sm:gap-4"> {/* Smaller gap on mobile */}
                             {[
                                 { image: group1 },
                                 { image: group2 },
@@ -98,11 +98,11 @@ const Whatwedo = () => {
                                     whileHover={{ scale: 1.02 }}
                                     className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:border-blue-300 transition-all"
                                 >
-                                    <div className="w-full sm:w-[60%] h-14 overflow-hidden"> {/* Full width on mobile, 60% on larger screens */}
+                                    <div className="md:w-[60%] lg:w-[60%] sm:w-[60%] sm:h-10 md:h-12 lg:h-14  overflow-hidden"> {/* Full width on mobile, 60% on larger screens */}
                                         <img
                                             src={item.image}
                                             alt={`group${index + 1}`}
-                                            className="w-full h-full object-cover" // Fixed className typo and made full width
+                                            className="w-full h-full" // Fixed className typo and made full width
                                         />
                                     </div>
                                 </motion.div>

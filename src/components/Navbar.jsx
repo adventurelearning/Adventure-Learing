@@ -155,7 +155,7 @@ const Navbar = () => {
               to="/placement"
               className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/placement")}`}
             >
-             Aluminis Sucess Journey
+             Alumini Success Journey
             </Link>
           </li>
             </ul>
@@ -371,7 +371,7 @@ const Navbar = () => {
                     className={`block py-3 ${isActiveLink("/placement")}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Aluminis Success Journey
+                    Alumini Success Journey
                   </Link>
                 </li>
               </ul>

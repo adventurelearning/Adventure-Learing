@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import place1 from '../../assets/profile2.png';
-import profile1 from '../../assets/download-1.jpg';
-import profile2 from '../../assets/download-2.jpg';
+import profile1 from '../../assets/alumini1.jpeg';
+import profile2 from '../../assets/alumini2.jpeg';
 import profile3 from '../../assets/download-3.jpg';
 import HiringCompanies from '../../components/HiringCompanies';
 import { useNavigate } from 'react-router-dom';
@@ -26,31 +26,31 @@ const Placement = () => {
 
   const alumniData = [
     {
-      name: "Priya S",
-      company: "Capgemini",
+      name: "Y.Innamul Hasan",
+      company: "Digital Mantraaz...",
       image: profile1,
-      previousRole: "Supervisor",
-      currentRole: "Full Stack Developer",
-      duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/",
+      previousRole: "Associate",
+      currentRole: "Frontend Developer",
+      CTC: "3 LPA",
+      linkedIn: "https://www.linkedin.com/in/innamul-hasan-8663b82b8/",
 
     },
     {
-      name: "Madhesh R",
-      company: "Virtusa",
+      name: "A.Antony paulson",
+      company: "Vee Healthtek",
       image: profile2,
-      previousRole: "Data Entry",
-      currentRole: "Frontend Developer",
-      duration: "3 months",
+      previousRole: "Associate",
+      currentRole: "Quality Analyst",
+      CTC: "5 LPA",
       linkedIn: "https://www.linkedin.com/in/",
     },
     {
       name: "Karthik M",
       company: "Amazon",
-      image: profile3,
+      image: profile2,
       previousRole: "Sales Executive",
       currentRole: "Backend Developer",
-      duration: "3 months",
+      CTC: "3 months",
       linkedIn: "https://www.linkedin.com/in/",
     },
     {
@@ -59,45 +59,10 @@ const Placement = () => {
       image: profile1,
       previousRole: "Customer Support",
       currentRole: "UI/UX Developer",
-      duration: "3 months",
+      CTC: "3 months",
       linkedIn: "https://www.linkedin.com/in/",
     },
-    {
-      name: "Arjun K",
-      company: "Zoho",
-      image: "https://xsgames.co/randomusers/avatar.php?g=male",
-      previousRole: "Content Moderator",
-      currentRole: "React Developer",
-      duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/",
-    },
-    {
-      name: "Meena V",
-      company: "Amazon",
-      image: "https://xsgames.co/randomusers/avatar.php?g=female",
-      previousRole: "Retail Associate",
-      currentRole: "iOS Developer",
-      duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/",
-    },
-    {
-      name: "Rahul P",
-      company: "SIEMENS",
-      image: "https://xsgames.co/randomusers/avatar.php?g=male",
-      previousRole: "Mechanic",
-      currentRole: "Embedded Systems Engineer",
-      duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/",
-    },
-    {
-      name: "Anjali N",
-      company: "Cognizant",
-      image: "https://xsgames.co/randomusers/avatar.php?g=female",
-      previousRole: "Graphic Designer",
-      currentRole: "Product Designer",
-      duration: "3 months",
-      linkedIn: "https://www.linkedin.com/in/",
-    }
+
   ];
 
   return (
@@ -119,14 +84,14 @@ const Placement = () => {
         <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
         <meta property="og:image:alt" content="Career Placement at Adventure Learning" />
       </Helmet>
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-7">
+      <div className="">
         {/* Hero Section */}
-        <div className="flex justify-center mb-6 md:mb-16">
+        <div className="flex justify-center mb-6 md:mb-10 ">
           <div className="relative w-full overflow-hidden group">
             <img
               src={place1}
               alt="Career placement guidance"
-              className="rounded-xl md:rounded-2xl  w-full h-[300px] sm:h-[400px] md:h-[550px]  duration-500 group-hover:scale-105"
+              className="  w-full h-[350px] sm:h-[450px] md:h-[600px]  duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30 rounded-xl md:rounded-2xl 
               flex flex-col justify-center items-start text-white px-4 sm:px-8 md:px-16 lg:px-24">
@@ -143,8 +108,86 @@ const Placement = () => {
           </div>
         </div>
 
+
+        <div className="bg-gradient-to-b from-gray-900 to-black mt-[-40px] relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl opacity-70"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-600 rounded-full filter blur-3xl opacity-50"></div>
+          </div>
+
+          <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Left column */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  We would <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">love</span> to know you better
+                </h1>
+                <p className="text-gray-300 text-xl max-w-lg">
+                  Unlock personalized recommendations tailored just for you by sharing your preferences
+                </p>
+
+              </div>
+
+              {/* Right column */}
+              <div className="space-y-8">
+                <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
+                  Why Choose Adventure for Placement?
+                </h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {/* Card 1 */}
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-blue-400/30 shadow-lg hover:shadow-blue-500/20 transition-all duration-500 group">
+                    <div className="w-12 h-12 mb-4 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                      <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-lg text-blue-400 mb-2">Resume Building</h4>
+                    <p className="text-gray-300 text-sm">ATS-optimized resumes crafted to pass automated screening and impress recruiters</p>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-indigo-400/30 shadow-lg hover:shadow-indigo-500/20 transition-all duration-500 group">
+                    <div className="w-12 h-12 mb-4 rounded-lg bg-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/30 transition-colors">
+                      <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-lg text-indigo-400 mb-2">Interview Prep</h4>
+                    <p className="text-gray-300 text-sm">Realistic mock interviews with personalized feedback from industry veterans</p>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-cyan-400/30 shadow-lg hover:shadow-cyan-500/20 transition-all duration-500 group">
+                    <div className="w-12 h-12 mb-4 rounded-lg bg-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/30 transition-colors">
+                      <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-lg text-cyan-400 mb-2">Live Projects</h4>
+                    <p className="text-gray-300 text-sm">Hands-on experience with real-world projects mentored by industry experts</p>
+                  </div>
+                </div>
+
+                   <div className="text-center pt-4">
+                  <button 
+                    onClick={() => navigate('/contact')}
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 group transition-colors cursor-pointer"
+                  >
+                    Talk Our Experts
+                    <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Stats Section */}
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 px-6 ">
           {[
             { value: "400+", label: "Hiring partners", sublabel: null },
             { value: "11+ years", label: "Excellence", sublabel: null },
@@ -181,9 +224,10 @@ const Placement = () => {
           {/* Navigation buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 lg:ml-[40px] top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 lg:-translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            className="absolute left-0 lg:ml-[1px]  top-1/2 -translate-y-1/2 sm:ml-[80px] -translate-x-2 md:-translate-x-8 lg:-translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            style={{ transform: 'translateY(-50%)' }} // Ensures consistent vertical centering
           >
-            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -251,9 +295,9 @@ const Placement = () => {
                           <svg className="w-2 h-2 md:w-3 md:h-3 mr-1 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                           </svg>
-                          Transition:
+                          CTC Package:
                         </span>
-                        <span className="font-medium text-gray-800 text-xs md:text-sm">{alumni.duration}</span>
+                        <span className="font-medium text-gray-800 text-xs md:text-sm">{alumni.CTC}</span>
                       </div>
                     </div>
 
@@ -277,33 +321,13 @@ const Placement = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 lg:mr-[40px] top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 lg:translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            className="absolute right-0 lg:mr-[1px] top-1/2 -translate-y-1/2 sm:mr-[80px] translate-x-2 md:translate-x-8 lg:translate-x-12 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100"
+            style={{ transform: 'translateY(-50%)' }} // Ensures consistent vertical centering
           >
-            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
-
-        {/* Why Adventure Section */}
-        <div className="mt-6 sm:mt-10 text-center space-y-4 sm:space-y-8 px-2 sm:px-4">
-          <h1 className="font-semibold text-lg sm:text-2xl lg:text-3xl mt-3 sm:mt-5 text-[#0057D3]">
-            Why Adventure for Placement?
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 text-gray-700">
-            <div className="bg-white p-3 sm:p-6 rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-              <h4 className="font-semibold text-blue-600 text-base sm:text-xl mb-1 sm:mb-3">Resume Building</h4>
-              <p className="text-xs sm:text-base md:text-lg">ATS-optimized resumes that get noticed</p>
-            </div>
-            <div className="bg-white p-3 sm:p-6 rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-              <h4 className="font-semibold text-blue-600 text-base sm:text-xl mb-1 sm:mb-3">Interview Prep</h4>
-              <p className="text-xs sm:text-base md:text-lg">Mock interviews with industry experts</p>
-            </div>
-            <div className="bg-white p-3 sm:p-6 rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-              <h4 className="font-semibold text-blue-600 text-base sm:text-xl mb-1 sm:mb-3">Live Projects</h4>
-              <p className="text-xs sm:text-base md:text-lg">Practical experience with expert guidance</p>
-            </div>
-          </div>
         </div>
 
         {/* hiring companies */}
@@ -321,8 +345,8 @@ const Placement = () => {
                   {[
                     {
                       name: "Dhanya",
-                      role: "Python Automation Testing",
-                      review: "Celebrating my new certification! I'm happy and thrilled to share my Automation Testing with Selenium Python Completion certificate!",
+                      role: "Data Analytics",
+                      review: "Great course on data analytics, covering data cleaning, visualization, and statistical analysis. Practical exercises enhance problem-solving skills effectively",
                       platform: "linkedin"
                     },
                     {
@@ -335,6 +359,24 @@ const Placement = () => {
                       name: "Gayathri",
                       role: "Full Stack Developer",
                       review: "Highly valid course, Really amazing mentors support, The entire learning path is so good, I have improved my python knowledge in codekata. I would suggest this course to all.",
+                      platform: "google"
+                    },
+                                        {
+                      name: "Karthik",
+                      role: "Embedded system",
+                      review: "Great course on embedded systems, covering microcontrollers, sensors, programming, and real-time applications. Hands-on projects improve practical skills significantly",
+                      platform: "google"
+                    },
+                                        {
+                      name: "Madhesh",
+                      role: "Data Science",
+                      review: "Excellent data science course covering Python, statistics, machine learning, and real-world projects. Great for beginners to build strong foundations.",
+                      platform: "google"
+                    },
+                                        {
+                      name: "Gokul",
+                      role: "Cloud computing",
+                      review: "Comprehensive cloud computing course covering AWS, Azure, deployment, security, and scalability. Hands-on labs offer valuable real-world experience",
                       platform: "google"
                     }
                   ].map((review, index) => (
@@ -401,8 +443,8 @@ const Placement = () => {
                   <div className="flex items-center mb-2 sm:mb-4">
                     <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#0057D3] flex items-center justify-center text-white font-bold text-sm sm:text-lg">JS</div>
                     <div className="ml-2 sm:ml-4">
-                      <h4 className="font-semibold text-sm sm:text-lg">John Smith</h4>
-                      <p className="text-gray-500 text-xs sm:text-sm">Data Science Bootcamp</p>
+                      <h4 className="font-semibold text-sm sm:text-lg">Janani Selvi</h4>
+                      <p className="text-gray-500 text-xs sm:text-sm">Full Stack Development</p>
                     </div>
                   </div>
                   <p className="text-gray-700 italic mb-2 sm:mb-4 text-xs sm:text-base">"The program completely transformed my career. I went from no tech background to a data analyst role in just 6 months!"</p>
@@ -420,7 +462,7 @@ const Placement = () => {
                   <div className="flex items-center mb-2 sm:mb-4">
                     <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#00D749] flex items-center justify-center text-white font-bold text-sm sm:text-lg">MA</div>
                     <div className="ml-2 sm:ml-4">
-                      <h4 className="font-semibold text-sm sm:text-lg">Maria Alvarez</h4>
+                      <h4 className="font-semibold text-sm sm:text-lg">Madhan</h4>
                       <p className="text-gray-500 text-xs sm:text-sm">Web Development Program</p>
                     </div>
                   </div>
@@ -439,11 +481,11 @@ const Placement = () => {
                   <div className="flex items-center mb-2 sm:mb-4">
                     <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#0057D3] flex items-center justify-center text-white font-bold text-sm sm:text-lg">TP</div>
                     <div className="ml-2 sm:ml-4">
-                      <h4 className="font-semibold text-sm sm:text-lg">Taylor Park</h4>
-                      <p className="text-gray-500 text-xs sm:text-sm">UX/UI Design Course</p>
+                      <h4 className="font-semibold text-sm sm:text-lg">Thilaka Priya</h4>
+                      <p className="text-gray-500 text-xs sm:text-sm">Embedded System Course</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 italic mb-2 sm:mb-4 text-xs sm:text-base">"The portfolio I built during the program helped me land my dream job at a top design agency. Worth every penny!"</p>
+                  <p className="text-gray-700 italic mb-2 sm:mb-4 text-xs sm:text-base">"Very useful embedded systems course. Learned about Arduino, UART, I2C, SPI, and C programming. Practical sessions were engaging and insightful."</p>
                   <div className="flex text-yellow-400">
                     {[...Array(4)].map((_, i) => (
                       <svg key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
