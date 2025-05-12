@@ -90,14 +90,17 @@ function Footer() {
                                     </p>
                                 </a>
                             </div>
-                        </div>                     
- 
+                        </div>
+
 
 
                         <div className="flex items-center text-sm">
                             <i className="bi bi-envelope text-xl sm:text-2xl"></i>
+
                             <a
-                                href="mailto:info@adventurelearning.in"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@adventurelearning.in"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="ml-3 sm:ml-5 flex items-center gap-1 hover:text-gray-300"
                             >
                                 info@adventurelearning.in

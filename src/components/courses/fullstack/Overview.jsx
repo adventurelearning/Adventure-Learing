@@ -100,6 +100,7 @@ const FAQ = ({ faqs }) => {
 // Full Section Component
 const Overview = () => {
     return (
+        <>
         <section className="w-full mx-auto px-4 sm:px-6 py-8 bg-blue-100 rounded-xl">
            
             <div className="flex flex-col lg:flex-row items-start justify-end gap-2">
@@ -126,6 +127,7 @@ const Overview = () => {
                 </motion.div>
             </div>
         </section>
+        </>
     );
 };
 

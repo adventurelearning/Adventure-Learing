@@ -19,8 +19,16 @@ const PopupForm = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 3000);
-    return () => clearTimeout(timer);
+    const hasPopupShown = sessionStorage.getItem("popupShown");
+  
+    if (!hasPopupShown) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem("popupShown", "true");
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const courses = [

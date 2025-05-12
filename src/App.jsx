@@ -58,16 +58,16 @@ const Register = lazy(() => import("./components/Register"));
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate initial load delay or wait for real asset load if needed
-    const timer = setTimeout(() => setLoading(false), 1500); // adjust time here
-    return () => clearTimeout(timer);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("load", () => setLoading(false));
-  }, []);
+  // useEffect(() => {
+  //   // Simulate initial load delay or wait for real asset load if needed
+  //   const timer = setTimeout(() => setLoading(false), 1500); // adjust time here
+  //   return () => clearTimeout(timer);
+  // }, []);
+  // useEffect(() => {
+  //   window.addEventListener("load", () => setLoading(false));
+  // }, []);
 
-  if (loading) return <Loading />; // ✅ Show this before the app
+  // if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
       <Helmet>
