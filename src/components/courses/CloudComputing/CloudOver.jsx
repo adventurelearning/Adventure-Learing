@@ -8,6 +8,7 @@ import EnquiryForm from '../EnquiryForm'
 const CloudOver = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
+    const [imagesLoaded, setImagesLoaded] = useState({});
 
     const courseContent = [
         {
@@ -39,6 +40,9 @@ const CloudOver = () => {
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+     const handleImageLoad = (index) => {
+        setImagesLoaded(prev => ({...prev, [index]: true}));
+    };
 
     return (
         <div className="container mx-auto px-4 py-12 max-w-7xl">
@@ -61,11 +65,15 @@ const CloudOver = () => {
                         onMouseLeave={() => setActiveIndex(null)}
                     >
                         <div className={`flex-1 w-full transition-all duration-500 ${activeIndex === index ? 'scale-105' : 'scale-100'}`}>
+                            {!imagesLoaded[index] && (
+                                <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" />
+                            )}
                             <img
                                 src={item.image}
                                 alt={item.question}
-                                className="w-full h-64 md:h-80 rounded-xl object-cover shadow-lg"
+                                className={`w-full h-64 md:h-80 rounded-xl object-cover shadow-lg ${!imagesLoaded[index] ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                                 loading="lazy"
+                                onLoad={() => handleImageLoad(index)}
                             />
                         </div>
                         <div className="flex-1 w-full space-y-4">

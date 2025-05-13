@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import place1 from '../../assets/profile2.png';
 import profile1 from '../../assets/alumini1.jpeg';
 import profile2 from '../../assets/alumini2.jpeg';
-import profile3 from '../../assets/download-3.jpg';
 import HiringCompanies from '../../components/HiringCompanies';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
