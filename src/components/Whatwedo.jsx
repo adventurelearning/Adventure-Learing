@@ -52,7 +52,7 @@ const Whatwedo = () => {
                                 </div>
                                 <p className="text-gray-700 leading-relaxed">
                                     At Adventure Learning, we don't just
-                                    teach—we  <span className='font-semibold text-gray-900'>transform education into meaningful careers.</span>
+                                    teach - we  <span className='font-semibold text-gray-900'>transform education into meaningful careers.</span>
                                     We're crafting  <span className='font-semibold text-gray-900'>intelligent
                                         learning ecosystems </span>that adapt, evolve, and inspire, empowering learners
                                     to thrive in today's dynamic world.
@@ -131,7 +131,7 @@ const Whatwedo = () => {
                             </div>
                             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Who Can Attend This Course</h2>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
                             {[
                                 {
                                     title: "Upskilling Professionals",
@@ -167,7 +167,7 @@ const Whatwedo = () => {
                                 <motion.div
                                     key={index}
                                     whileHover={{ scale: 1.02 }}
-                                    className="items-start p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md"
+                                    className="items-start p-4 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md"
                                 >
                                     <div className="bg-blue-50 p-2 rounded-lg mr-4 w-10">
                                         {item.icon}
@@ -417,12 +417,12 @@ const Whatwedo = () => {
     }
 
     return (
-        <div className="bg-gradient-to-b from-blue-50 to-white">
+        <div className="bg-[#F4F9FF] from-blue-50 to-white">
             <div className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                     {/* Content Section */}
                     <div className="lg:flex-1 bg-white rounded-xl shadow-sm p-6 lg:p-8 border border-gray-100">
-                        <nav className="flex flex-col sm:flex-row gap-1 mb-8 bg-gray-100 p-1 rounded-xl">
+                        <nav className="flex flex-col sm:flex-row gap-1 mb-6 bg-gray-100 p-1 rounded-xl">
                             {[
                                 { id: 'whoweare', label: 'Who We Are', icon: <FiAward className="w-5 h-5" /> },
                                 { id: 'whatwedo', label: 'What We Do', icon: <FiLayers className="w-5 h-5" /> },
