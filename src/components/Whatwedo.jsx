@@ -58,6 +58,16 @@ const Whatwedo = () => {
                                     to thrive in today's dynamic world.
                                 </p>
                             </div>
+                             <div className="flex items-start">
+                                <div className="flex-shrink-0 mt-1">
+                                    <div className="w-3 h-3 rounded-full bg-blue-500 mr-3"></div>
+                                </div>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Inspired by Adventure Learning’s hands-on and industry-aligned approach, I am focused on <span className='font-semibold text-gray-900'>
+                                      building practical skills </span>
+                                      that make me job-ready and relevant in today’s dynamic tech landscape
+                                </p>
+                                </div>
                         </div>
                     </motion.div>
                 );
@@ -79,17 +89,11 @@ const Whatwedo = () => {
                             We provide comprehensive training and educational solutions tailored to meet industry demands.
                             Our programs focus on practical skills development and real-world applications.
                         </p>
+                        <p  className="text-gray-700 leading-relaxed">
+                            We operate in both classroom and online environments, creating flexible learning experiences 
+                            that prepare students for real-world challenges. 
+                        </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                            <motion.div
-                                whileHover={{ y: -5 }}
-                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-md transition-all"
-                            >
-                                <div className="bg-gradient-to-r from-blue-100 to-blue-50 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-blue-600">
-                                    <FiBook className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-3">Industry-Aligned Curriculum</h3>
-                                <p className="text-gray-600">Courses designed with direct input from industry experts to ensure relevance and up-to-date content.</p>
-                            </motion.div>
                             <motion.div
                                 whileHover={{ y: -5 }}
                                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-md transition-all"
@@ -99,16 +103,6 @@ const Whatwedo = () => {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-800 mb-3">Hands-On Learning</h3>
                                 <p className="text-gray-600">Practical projects and real-world scenarios to build job-ready skills with immediate applicability.</p>
-                            </motion.div>
-                            <motion.div
-                                whileHover={{ y: -5 }}
-                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-md transition-all"
-                            >
-                                <div className="bg-gradient-to-r from-blue-100 to-blue-50 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-blue-600">
-                                    <FaChalkboardTeacher className="w-5 h-5" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-3">Expert Mentors</h3>
-                                <p className="text-gray-600">Learn from industry professionals with years of practical experience in their fields.</p>
                             </motion.div>
                             <motion.div
                                 whileHover={{ y: -5 }}
@@ -173,9 +167,9 @@ const Whatwedo = () => {
                                 <motion.div
                                     key={index}
                                     whileHover={{ scale: 1.02 }}
-                                    className="flex items-start p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md"
+                                    className="items-start p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md"
                                 >
-                                    <div className="bg-blue-50 p-2 rounded-lg mr-4">
+                                    <div className="bg-blue-50 p-2 rounded-lg mr-4 w-10">
                                         {item.icon}
                                     </div>
                                     <div>
@@ -765,7 +759,8 @@ const Whatwedo = () => {
                                 </motion.div>
                                 <motion.div variants={itemVariants} className="text-center pt-2">
                                     <p className="text-xs text-gray-500">
-                                        By submitting this form, you agree to our <a href="#" className="text-blue-600 hover:underline">Terms</a> and <a href="#" className="text-blue-600 hover:underline">Privacy Policy</a>.
+                                        By submitting this form, you agree to our <a href="/TandC" className="text-blue-600 hover:underline">Terms</a> and 
+                                        <a href="/PrivacyPolicy" className="text-blue-600 hover:underline">Privacy Policy</a>.
                                     </p>
                                 </motion.div>
                             </form>
