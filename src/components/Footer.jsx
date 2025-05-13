@@ -119,9 +119,8 @@ function Footer() {
                             className="w-48 sm:w-32 lg:w-48 h-auto object-contain logo-footer"
                         />
                         <h4 className="text-xs sm:text-sm mt-2">
-                            As we are a leader in the Technology Development, Training and R&D Services. Our
-                            <span className='sm:block'> responsibility is to empower Education through the knowledge transformation for better Wisdom society.</span>
-                        </h4>
+                           Adventure Learning is one of India’s leading educational technology companies, pioneering <span className='sm:block'>a 100% hands-on, 
+                           experience-based learning model that truly prepares learners for the real world.</span></h4>
                     </div>
                     <div>
                         <h4 className="font-bold text-base sm:text-lg text-white mb-2">Follow us</h4>
