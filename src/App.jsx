@@ -24,6 +24,7 @@ import ChatBox from "./components/chatbot/ChatBox";
 import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
 import { Helmet } from "react-helmet-async";
+import NotFound from "./pages/NotFound/NotFound";
 
 
 
@@ -131,10 +132,11 @@ function App() {
         {" "}
         {/* Wrap Routes with Suspense */}
         <PopupOffers />
-        <PopupForm />
+        {/* <PopupForm /> */}
         <SocialLinks />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="course">
             <Route path="full-stack-development" element={<Fullstack />} />
             <Route path="software-testing" element={<Software_Testing />} />
