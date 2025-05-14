@@ -43,7 +43,7 @@ const EmbeddedOver = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-12 max-w-7xl">
+        <div className="container mx-auto px-4 py-12 max-w-7xl bg-blue-50 rounded-xl">
             <div className="text-center mb-16">
                 <h4 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
                     Advanced Embedded Systems Certification Course
@@ -69,7 +69,7 @@ const EmbeddedOver = () => {
                             <img
                                 src={item.image}
                                 alt={item.question}
-                                className={`w-full h-64 md:h-80 rounded-xl object-cover shadow-lg ${!imagesLoaded[index] ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                                className={`w-[90%] m-7 h-64 md:h-60 rounded-xl object-cover shadow-lg ${!imagesLoaded[index] ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                                 loading="lazy"
                                 onLoad={() => handleImageLoad(index)}
                             />

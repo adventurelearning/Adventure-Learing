@@ -13,7 +13,7 @@ useEffect(() => {
       const timer = setTimeout(() => {
         setShowPopup(true);
         sessionStorage.setItem("popupShown", "true");
-      }, 5000);
+      }, 2000);
   
       return () => clearTimeout(timer);
     }
