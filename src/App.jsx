@@ -26,8 +26,6 @@ import SocialLinks from "./components/SocialLinks";
 import { Helmet } from "react-helmet-async";
 import NotFound from "./pages/NotFound/NotFound";
 
-
-
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
 const AllBlogs = lazy(() => import("./pages/Resources/AllBlogs"));
@@ -72,9 +70,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>
-          Adventure Learning
-        </title>
+        <title>Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu</title>
         <meta
           name="title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -84,12 +80,10 @@ function App() {
           content="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
         />
 
-
         <meta
           name="keywords"
-          content="Adventure Learning, IT Training Coimbatore, Software Courses Tamil Nadu, Full Stack Development, Data Science Training, Cloud Computing Courses, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course, Data Analytics Tamil Nadu"
+          content="Adventure Learning Coimbatore, web Development Coimbatore, internship Courses Tamil Nadu, Full Stack Development, Data Science, Cloud Computing, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course,best python Course"
         />
-
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.adventurelearning.in/" />
@@ -107,7 +101,10 @@ function App() {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.adventurelearning.in/" />
+        <meta
+          property="twitter:url"
+          content="https://www.adventurelearning.in/"
+        />
         <meta
           property="twitter:title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -147,7 +144,7 @@ function App() {
           </Route>
 
           <Route path="/contact" element={<ContactAll />} />
-             <Route path="/placement" element={<Placement/>}/>
+          <Route path="/placement" element={<Placement />} />
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
           <Route path="/onlinetraining" element={<OnlineTrain />} />
