@@ -69,7 +69,7 @@ function App() {
   // if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu</title>
         <meta
           name="title"
@@ -117,7 +117,7 @@ function App() {
           property="twitter:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-      </Helmet>
+      </Helmet> */}
 
       <ScrollToTop />
       {/* <Whatsapp /> */}
