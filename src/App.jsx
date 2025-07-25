@@ -23,7 +23,7 @@ import PopupOffers from "./components/PopupOffers";
 import ChatBox from "./components/chatbot/ChatBox";
 import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound";
 
 // Lazy load components
@@ -69,24 +69,21 @@ function App() {
   // if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
-      {/* <Helmet>
-        <title>Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu</title>
-        <meta
-          name="title"
-          content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
-        />
+      <Helmet
+        titleTemplate="%s | Adventure Learning"
+        defaultTitle="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
+      >
         <meta
           name="description"
           content="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
         />
-
         <meta
           name="keywords"
           content="Adventure Learning Coimbatore, web Development Coimbatore, internship Courses Tamil Nadu, Full Stack Development, Data Science, Cloud Computing, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course,best python Course"
         />
-
+        
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.adventurelearning.in/" />
+        <meta property="og:url" content="https://www.adventurelearning.co.in/" />
         <meta
           property="og:title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -99,12 +96,9 @@ function App() {
           property="og:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-
+        
         <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://www.adventurelearning.in/"
-        />
+        <meta property="twitter:url" content="https://www.adventurelearning.co.in/" />
         <meta
           property="twitter:title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -117,7 +111,7 @@ function App() {
           property="twitter:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-      </Helmet> */}
+      </Helmet>
 
       <ScrollToTop />
       {/* <Whatsapp /> */}

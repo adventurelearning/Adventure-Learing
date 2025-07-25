@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -28,12 +28,45 @@ const CloudComputing = () => {
 
   return (
     <>     
-     <Helmet>
-      <title>No.1 Cloud Computing Certification Course – Online & Offline</title>
-      <meta name="description" content="Learn cloud computing with hands-on projects, expert instructors, and real-world deployments. Start your cloud career journey today – enroll now!" />
-      <meta property="og:title" content="Become a Cloud Computing Expert | Adventure" />
-      <meta property="og:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
-    </Helmet>
+    <Helmet>
+  <title>No.1 Cloud Computing Certification Course – Online & Offline</title>
+  <meta name="description" content="Learn cloud computing with hands-on projects, expert instructors, and real-world deployments. Start your cloud career journey today – enroll now!" />
+  
+  {/* Keywords Meta Tag */}
+  <meta name="keywords" content="
+    cloud computing course, 
+    AWS certification, 
+    Azure training, 
+    Google Cloud course, 
+    cloud computing certification, 
+    best cloud computing course, 
+    cloud engineer training, 
+    DevOps with cloud, 
+    cloud computing classes, 
+    online cloud course, 
+    offline cloud training, 
+    cloud computing institute, 
+    cloud infrastructure course, 
+    cloud security training, 
+    cloud architect certification,
+    Adventure Learning cloud course,
+    cloud computing in Coimbatore,
+    best IT training for cloud
+  " />
+
+  {/* Open Graph/Facebook Meta Tags */}
+  <meta property="og:title" content="Become a Cloud Computing Expert | Adventure" />
+  <meta property="og:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adventurelearning.co.in/cloud-computing-course" />
+  <meta property="og:image" content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg" />
+
+  {/* Twitter Card Meta Tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Become a Cloud Computing Expert | Adventure" />
+  <meta name="twitter:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
+  <meta name="twitter:image" content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg" />
+</Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

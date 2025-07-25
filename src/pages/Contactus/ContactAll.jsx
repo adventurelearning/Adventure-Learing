@@ -1,7 +1,7 @@
 import Connect from "../../components/Connect";
 import Contact from "../../components/Contact";
 import ContactForm from "../../components/ContactForm";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 function ContactAll() {
     return (

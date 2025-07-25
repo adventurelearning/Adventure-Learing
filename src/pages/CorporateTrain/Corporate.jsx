@@ -5,7 +5,7 @@ import LearnerToExpert from "../../components/LearnertoExpert";
 import SpecialLearners from "../../components/SpecialLearners";
 import UpskillForm from "../../components/UpskillForm";
 import WhyAdventureLearning from "../../components/WhyAdventureLearning";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 function Corporate() {
     return (

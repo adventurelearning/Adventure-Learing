@@ -5,7 +5,7 @@ import Offers from "../../components/Offers";
 import Sample from "../../components/Sample";
 import StudentTraining from "../../components/StudentsTraining";
 import TrainingSteps from "../../components/TrainingSteps";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 
 function OnlineTrain() {

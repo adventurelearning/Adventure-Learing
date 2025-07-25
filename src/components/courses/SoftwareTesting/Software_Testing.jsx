@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -28,12 +28,102 @@ const Software_Testing = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Advanced Software Testing Course – Online & Offline</title>
-        <meta name="description" content="Master software testing with real tools and hands-on projects. Learn automation, manual testing, and performance tools – enroll today!" />
-        <meta property="og:title" content="Become a Software Testing Expert" />
-        <meta property="og:description" content="Learn software testing with real-world tools and live projects. Start your QA career with expert guidance – enroll now" />
-      </Helmet>
+     <Helmet>
+  <title>Software Testing Certification Course – Manual & Automation | Adventure Learning</title>
+  <meta 
+    name="description" 
+    content="Become a certified QA Engineer in 4 months with our Software Testing course in Coimbatore. Learn Selenium, JMeter, TestNG with real projects and placement support." 
+  />
+  
+  {/* Primary Keywords */}
+  <meta name="keywords" content="
+    software testing course in Coimbatore,
+    QA certification Tamil Nadu,
+    Selenium automation training,
+    manual testing course,
+    performance testing with JMeter,
+    software testing internship,
+    Adventure Learning QA courses,
+    TestNG framework training,
+    API testing course,
+    mobile app testing,
+    test automation engineer program,
+    QA placement program,
+    ISTQB preparation course,
+    cucumber BDD framework,
+    Postman API testing,
+    online testing classes,
+    offline QA training center,
+    software testing job guarantee course
+  " />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="Software Testing Certification | QA Engineer Course | Adventure Learning" />
+  <meta property="og:description" content="4-month Software Testing training covering manual and automation testing (Selenium, JMeter). 80+ hours of hands-on testing projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adventurelearning.co.in/course/software-testing" />
+  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg" />
+  <meta property="og:image:alt" content="Software Testing Certification Training" />
+  <meta property="og:site_name" content="Adventure Learning" />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QA Engineer Certification | Software Testing Course" />
+  <meta name="twitter:description" content="Become job-ready in 4 months with our Software Testing certification. Learn Selenium, JMeter, TestNG and build testing portfolio!" />
+  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg" />
+  <meta name="twitter:site" content="@AdventureLearn" />
+
+  {/* Canonical */}
+  <link rel="canonical" href="https://www.adventurelearning.co.in/course/software-testing" />
+
+  {/* Structured Data (JSON-LD) */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Software Testing Certification (Manual & Automation)",
+        "description": "Comprehensive QA training covering manual testing, Selenium WebDriver, JMeter, TestNG and API testing with real projects",
+        "provider": {
+          "@type": "Organization",
+          "name": "Adventure Learning",
+          "sameAs": "https://www.adventurelearning.co.in"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["online", "offline"],
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "India"
+            }
+          },
+          "startDate": "2023-11-01",
+          "endDate": "2028-02-28"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "category": "certificate"
+        },
+        "teaches": [
+          "Manual Testing",
+          "Selenium WebDriver",
+          "JMeter",
+          "TestNG",
+          "API Testing",
+          "Mobile Testing",
+          "Test Automation",
+          "Bug Tracking Systems"
+        ]
+      }
+    `}
+  </script>
+</Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

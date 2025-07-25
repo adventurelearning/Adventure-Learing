@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -29,12 +29,87 @@ const Datascience  = () => {
   return (
     <>
          <Helmet>
-            <title>Advanced Data Science Certification Course – Online & Offline</title>
-            <meta name="description" content="Learn data science with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now! " />
-            <meta property="og:title" content="Become a Data Science Expert | Adventure " />
-            <meta property="og:description" content="Master data science with practical projects and expert guidance. Enroll today and start your data science journey!" />
-    
-          </Helmet>
+  <title>Advanced Data Science Certification Course – Online & Offline | Adventure Learning</title>
+  <meta name="description" content="Master Data Science with Python, ML & AI in Coimbatore. 6-month certification with real projects, industry mentorship, and placement assistance. Enroll now!" />
+  
+  {/* Primary Keywords */}
+  <meta name="keywords" content="
+    data science course in Coimbatore,
+    best data science certification Tamil Nadu,
+    machine learning course,
+    AI training program,
+    Python for data science,
+    data scientist certification,
+    advanced analytics course,
+    big data training,
+    data science internship,
+    Adventure Learning data courses,
+    artificial intelligence classes,
+    predictive modeling course,
+    statistical analysis training,
+    data science with R programming,
+    online data science classes,
+    offline data science training center,
+    data science placement program,
+    scikit-learn and TensorFlow training
+  " />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="Data Science Certification Course | Adventure Learning Coimbatore" />
+  <meta property="og:description" content="Become a certified Data Scientist with Python, Machine Learning & AI training. 100+ hours of hands-on projects with industry datasets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adventurelearning.co.in/course/data-science" />
+  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop3-B_c6pLOB.svg" />
+  <meta property="og:site_name" content="Adventure Learning" />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Science Certification | Adventure Learning" />
+  <meta name="twitter:description" content="Professional Data Science training with Python, ML & AI. Start your career as Data Scientist in 6 months with placement support!" />
+  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop3-B_c6pLOB.svg" />
+  <meta name="twitter:site" content="@AdventureLearn" />
+
+  {/* Canonical */}
+  <link rel="canonical" href="https://www.adventurelearning.co.in/course/data-science" />
+
+  {/* Structured Data (JSON-LD) */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Advanced Data Science Certification",
+        "description": "Comprehensive Data Science training covering Python, Machine Learning, AI and Big Data with real-world projects",
+        "provider": {
+          "@type": "Organization",
+          "name": "Adventure Learning",
+          "sameAs": "https://www.adventurelearning.co.in"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["online", "offline"],
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "India"
+            }
+          },
+          "startDate": "2023-11-01",
+          "endDate": "2024-04-30"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "category": "certificate"
+        }
+      }
+    `}
+  </script>
+</Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

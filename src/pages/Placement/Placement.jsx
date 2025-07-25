@@ -4,7 +4,7 @@ import profile1 from '../../assets/alumini1.jpeg';
 import profile2 from '../../assets/alumini2.jpeg';
 import HiringCompanies from '../../components/HiringCompanies';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 
 const Placement = () => {
