@@ -9,7 +9,7 @@ const data = [
       metaTitle: "Future of IoT Trends 2025 | Adventure Learning",
       metaDescription: "Discover how 5G, AI, and edge computing are revolutionizing IoT in 2025. Adventure Learning provides cutting-edge insights into emerging IoT technologies.",
       keywords: "IoT trends 2025, 5G IoT, AI in IoT, edge computing, blockchain IoT, Adventure Learning technologies",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/future-of-iot-trends"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/future-of-iot-trends"
     },
     content: `
   The Internet of Things (IoT) is no longer a futuristic concept; it is a tangible reality that is rapidly permeating every aspect of our lives and industries. From the convenience of smart home devices that automate daily routines to the sophisticated industrial IoT (IIoT) applications that optimize manufacturing processes, the influence of connected devices is undeniable. As we look ahead, several key trends and technological advancements are poised to redefine the IoT landscape, making it smarter, more efficient, and more secure.
@@ -99,7 +99,7 @@ const data = [
       metaTitle: "Full Stack Development Trends 2025 | Adventure Learning",
       metaDescription: "Learn why full stack development skills are crucial in 2025. Adventure Learning explores the benefits of versatile developers in modern tech teams.",
       keywords: "full stack development 2025, full stack trends, JavaScript frameworks, cloud development, Adventure Learning tech courses",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/full-stack-development-trends"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/full-stack-development-trends"
     },
     content: `
   The landscape of web development is constantly evolving, driven by technological advancements and the ever-increasing demands of digital experiences. In 2025, the role of the Full Stack Developer is more critical than ever. These professionals possess the unique ability to navigate both the client-side (front-end) and the server-side (back-end) of web applications, making them invaluable assets to modern tech teams. The rising prominence of full-stack development is not merely a trend; it reflects a fundamental shift in how web applications are conceived, developed, and deployed. The complexity of modern web applications, with their intricate user interfaces, robust server-side logic, and seamless data integration, necessitates developers who can see the entire picture and contribute across all layers of the technology stack.
@@ -190,7 +190,7 @@ const data = [
       metaTitle: "Embedded Systems in Industry 4.0 | Adventure Learning",
       metaDescription: "Discover how embedded systems powered by AI and IoT are revolutionizing industrial automation. Adventure Learning provides expert insights into smart manufacturing.",
       keywords: "embedded systems, industrial automation, IoT in manufacturing, edge computing, AI in industry, Adventure Learning industrial tech",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/embedded-systems-automation"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/embedded-systems-automation"
     },
     content: `
   Embedded systems have long been the backbone of industrial automation, providing the crucial real-time control and monitoring capabilities that underpin modern manufacturing, energy production, and logistics. These specialized computer systems, designed for specific tasks within larger mechanical or electronic systems, are now undergoing a significant transformation driven by the convergence of the Internet of Things (IoT), Artificial Intelligence (AI), and edge computing. As industries strive for greater efficiency, flexibility, and intelligence in their operations, the future of embedded systems in industrial automation is poised for exciting advancements.
@@ -281,7 +281,7 @@ const data = [
       metaTitle: "Data Science in Healthcare 2025 | Adventure Learning",
       metaDescription: "Explore how data science is revolutionizing healthcare with predictive analytics and personalized medicine. Adventure Learning covers cutting-edge medical tech innovations.",
       keywords: "data science healthcare, predictive analytics medicine, AI in healthcare, personalized treatment, medical data analysis, Adventure Learning health tech",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/data-science-healthcare"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/data-science-healthcare"
     },
     content: `
   In 2025, data science is poised to redefine healthcare, influencing everything from patient care to medical research. By analyzing vast amounts of data, healthcare professionals can make more informed decisions, deliver personalized treatments, and improve overall patient outcomes. The healthcare industry generates massive amounts of data, including electronic health records, medical images, genomic data, and data from wearable devices. Data science provides the tools and techniques to extract meaningful insights from this data, leading to significant advancements in healthcare.
@@ -372,7 +372,7 @@ const data = [
       metaTitle: "Cloud Computing Trends 2025 | Adventure Learning",
       metaDescription: "Discover the latest trends in cloud infrastructure including hybrid cloud, edge computing, and serverless architectures. Adventure Learning provides expert cloud insights.",
       keywords: "cloud computing 2025, hybrid cloud solutions, edge computing, serverless architecture, cloud-native development, Adventure Learning cloud courses",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/cloud-computing-trends"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/cloud-computing-trends"
     },
     content: `
   Cloud infrastructure is continuously evolving, driving change across industries and enabling businesses to scale efficiently. As we look toward the future, several key trends and innovations are poised to shape the cloud landscape. These include:
@@ -463,7 +463,7 @@ const data = [
       metaTitle: "Business Data Analytics Strategies | Adventure Learning",
       metaDescription: "Learn how data analytics is transforming business decision-making and strategy. Adventure Learning provides insights into data-driven business growth.",
       keywords: "business data analytics, data-driven decisions, customer insights, predictive analytics, business intelligence, Adventure Learning analytics courses",
-      canonicalUrl: "https://adventurelearning.co.in/Blogs/subblogs/data-analytics-business"
+      canonicalUrl: "https://www.adventurelearning.co.in/Blogs/subblogs/data-analytics-business"
     },
     content: `
   In today’s data-driven world, businesses must leverage data analytics to stay ahead of the competition. By analyzing vast amounts of data, companies can make more informed decisions, optimize their operations, and drive growth. Here’s how data analytics is shaping modern business strategies:
