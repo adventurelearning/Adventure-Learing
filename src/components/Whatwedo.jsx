@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import API from "../service/API";
 import { FiBook, FiCode, FiUser, FiCheckCircle, FiAward, FiBriefcase, FiLayers, FiSettings, FiMonitor } from 'react-icons/fi';
 import { FaGraduationCap, FaChalkboardTeacher, FaLaptopCode } from 'react-icons/fa';
+import { toast as T, ToastContainer } from 'react-toastify';
 
 const Whatwedo = () => {
     const [activeSection, setActiveSection] = useState('whoweare');
@@ -322,7 +323,7 @@ const Whatwedo = () => {
                 success: <b>Registration successful!</b>,
                 error: <b>Registration failed. Please try again.</b>,
             });
-
+            T.success("Registration successful!");
             setSubmitted(true);
             setFormData({
                 name: "",
@@ -334,7 +335,9 @@ const Whatwedo = () => {
             });
             
         } catch (error) {
+            T.warning(`${ error.response.data.message}`);
             console.error("Registration error:", error);
+
         } finally {
             setIsLoading(false);
         }
@@ -343,6 +346,12 @@ const Whatwedo = () => {
     if (submitted) {
         return (
             <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-white">
+                 <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+             />
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -418,6 +427,12 @@ const Whatwedo = () => {
 
     return (
         <div className="bg-[#F4F9FF] from-blue-50 to-white">
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+             />
             <div className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                     {/* Content Section */}

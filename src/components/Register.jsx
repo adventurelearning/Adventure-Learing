@@ -3,8 +3,9 @@ import { toast } from "react-hot-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import API from "../service/API";
 import register from "../assets/register.gif";
-
+import { toast as T , ToastContainer } from "react-toastify";
 const Register = () => {
+  const [message, setMessage] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     phone_number: "",
@@ -136,6 +137,7 @@ const Register = () => {
       });
 
       setSubmitted(true);
+      T.success("Registration successful!");
       setFormData({
         name: "",
         phone_number: "",
@@ -145,7 +147,9 @@ const Register = () => {
         message: "",
       });
     } catch (error) {
-      console.error("Registration error:", error);
+       T.warning(`${ error.response.data.message}`);
+      console.error("Registration error:", error.response);
+     
     } finally {
       setIsLoading(false);
     }
@@ -154,6 +158,7 @@ const Register = () => {
   if (submitted) {
     return (
       <div className="flex items-center justify-center min-h-screen">
+       
         <motion.div
           initial="hidden"
           animate="visible"
@@ -210,6 +215,14 @@ const Register = () => {
 
   return (
     <div>
+       <ToastContainer 
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        />
       <div className="bg-gradient-to-b from-blue-200 to-white py-8 md:py-10 rounded-md text-center">
         <h1
           data-aos="fade-down"
