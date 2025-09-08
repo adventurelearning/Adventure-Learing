@@ -26,18 +26,18 @@ import hmb3 from '../assets/HMbanner/hmb3.webp';
 import hmb4 from '../assets/HMbanner/hmb4.webp';
 
 // You can prepare different banner versions here
-const desktopBanners = [
-  { image: '../../../public/banner/adventure learning in coimbatore.webp', link: '/Register' },
-  { image: '../../../public/banner/full stack development course in coimbatore.webp', link: '/Register' },
-  { image: '../../../public/banner/Professional Courses with Placement Support.webp', link: '/Register'},
-  { image: '../../../public/banner/top it training institute in coimbatore with placement.webp', link: '/Register' }
-];
 // const desktopBanners = [
 //   { image: '../../../public/banner/adventure learning in coimbatore.webp', link: '/Register' },
-//   { image: banner2, link: '/Register' },
-//   { image: banner3, link: '/Register'},
-//   { image: banner4, link: '/Register' }
+//   { image: '../../../public/banner/full stack development course in coimbatore.webp', link: '/Register' },
+//   { image: '../../../public/banner/Professional Courses with Placement Support.webp', link: '/Register'},
+//   { image: '../../../public/banner/top it training institute in coimbatore with placement.webp', link: '/Register' }
 // ];
+const desktopBanners = [
+  { image: banner1, link: '/Register' },
+  { image: banner2, link: '/Register' },
+  { image: banner3, link: '/Register'},
+  { image: banner4, link: '/Register' }
+];
 
 const mobileBanners = [
   { image: hmb1, link: '/Register' },
