@@ -27,58 +27,72 @@ const Fullstack = () => {
 
   return (
     <>
-     <Helmet>
-  <title>Full Stack Web Development Certification – MERN Stack Course | Adventure Learning</title>
-  <meta 
-    name="description" 
-    content="Become a Full Stack Developer in 6 months with our MERN stack course in Coimbatore. Learn React, Node.js, MongoDB with real projects and placement support. Enroll now!" 
-  />
-  
-  {/* Primary Keywords */}
-  <meta name="keywords" content="
-    full stack development course in Coimbatore,
-    MERN stack certification Tamil Nadu,
-    React.js training program,
-    Node.js developer course,
-    MongoDB database training,
-    full stack web development,
-    frontend backend course,
-    web developer certification,
-    JavaScript full stack course,
-    full stack developer internship,
-    Adventure Learning coding courses,
-    web development placement program,
-    full stack with React and Node,
-    Express.js framework training,
-    REST API development course,
-    online full stack classes,
-    offline coding bootcamp,
-    software development career course
-  " />
+      <Helmet>
+        <title>
+          Full Stack Web Development Certification – MERN Stack Course |
+          Adventure Learning
+        </title>
+        <meta
+          name="description"
+          content="Join Adventure Learning’s Full Stack Development Course in Coimbatore. Learn front-end & back-end with 100% placement support. Enroll today!"
+        />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Full Stack Developer Certification | MERN Stack Course | Adventure Learning" />
-  <meta property="og:description" content="6-month Full Stack Developer training with MERN stack (React, Node, MongoDB). 100+ hours of hands-on projects with industry mentorship." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.adventurelearning.co.in/course/full-stack-development" />
-  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg" />
-  <meta property="og:image:alt" content="Full Stack Developer MERN Stack Training" />
-  <meta property="og:site_name" content="Adventure Learning" />
-  <meta property="og:locale" content="en_IN" />
+        {/* Primary Keywords */}
+        <meta
+          name="keywords"
+          content="React JS full stack .MERN stack developer .full stack developer. AI / ML integration in full stack apps.python coaching near me"
+        />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Full Stack Developer Course | MERN Stack Training" />
-  <meta name="twitter:description" content="Become job-ready in 6 months with our Full Stack Developer certification. Learn React, Node.js, MongoDB and build portfolio projects!" />
-  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg" />
-  <meta name="twitter:site" content="@AdventureLearn" />
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Full Stack Developer Certification | MERN Stack Course | Adventure Learning"
+        />
+        <meta
+          property="og:description"
+          content="6-month Full Stack Developer training with MERN stack (React, Node, MongoDB). 100+ hours of hands-on projects with industry mentorship."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.adventurelearning.co.in/course/full-stack-development"
+        />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Full Stack Developer MERN Stack Training"
+        />
+        <meta property="og:site_name" content="Adventure Learning" />
+        <meta property="og:locale" content="en_IN" />
 
-  {/* Canonical */}
-  <link rel="canonical" href="https://www.adventurelearning.co.in/course/full-stack-development" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Full Stack Developer Course | MERN Stack Training"
+        />
+        <meta
+          name="twitter:description"
+          content="Become job-ready in 6 months with our Full Stack Developer certification. Learn React, Node.js, MongoDB and build portfolio projects!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg"
+        />
+        <meta name="twitter:site" content="@AdventureLearn" />
 
-  {/* Structured Data (JSON-LD) */}
-  <script type="application/ld+json">
-    {`
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://www.adventurelearning.co.in/course/full-stack-development"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
       {
         "@context": "https://schema.org",
         "@type": "Course",
@@ -120,8 +134,8 @@ const Fullstack = () => {
         ]
       }
     `}
-  </script>
-</Helmet>
+        </script>
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

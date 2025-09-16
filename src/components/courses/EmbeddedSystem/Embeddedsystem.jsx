@@ -29,7 +29,7 @@ const Embeddedsystem = () => {
     <>
       <Helmet>
   <title>Advanced Embedded Systems Certification Course – Online & Offline | Adventure Learning</title>
-  <meta name="description" content="Master Embedded Systems with ARM, RTOS & IoT in Coimbatore. 6-month certification with hardware kits, industry projects, and placement assistance. Enroll now!" />
+  <meta name="description" content="Master Embedded Systems & IoT at Adventure Learning, Coimbatore. Hands-on training with 100% placement support. Start your embedded career today!" />
   
   {/* Primary Keywords */}
   <meta name="keywords" content="
