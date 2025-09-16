@@ -71,7 +71,7 @@ function App() {
     <>
       <Helmet
         titleTemplate="%s | Adventure Learning"
-        defaultTitle="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
+        defaultTitle="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
       >
         <meta
           name="description"
