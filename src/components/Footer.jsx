@@ -72,9 +72,9 @@ function Footer() {
                                     className="block hover:text-gray-300"
                                 >
                                     <p>
-                                        No:121/4, 7th Street,
-                                        <span className="block">Tatabad, Gandhipuram,</span>
-                                        Coimbatore, Tamil Nadu - 641012.
+                                       BACKSIDE 76/1, Bus Stop, 76/A1,
+                                        <span className="block">Peelamedu, Sri Nagar, Hope College,</span>
+                                        Coimbatore, Tamil Nadu - 641004.
                                     </p>
                                 </a>
                                 <a
@@ -103,7 +103,7 @@ function Footer() {
                                 rel="noopener noreferrer"
                                 className="ml-3 sm:ml-5 flex items-center gap-1 hover:text-gray-300"
                             >
-                                info@adventurelearning.in
+                                info@adventurelearning.co.in
                             </a>
                         </div>
                     </div>
