@@ -10,7 +10,7 @@ function ContactAll() {
                 <title>Contact Us | Get in Touch with Adventure Learning</title>
                 <meta
                     name="description"
-                    content="Have questions about our courses or need guidance? Contact Adventure Learning's expert team for support, inquiries, or collaboration opportunities."
+                    content="Get in touch with Adventure Learning, Coimbatore. Contact us for IT courses, training details, admissions, and placement support. We’re here to help you"
                 />
                 <meta
                     property="og:title"

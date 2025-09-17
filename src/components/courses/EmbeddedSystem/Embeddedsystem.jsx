@@ -33,24 +33,7 @@ const Embeddedsystem = () => {
   
   {/* Primary Keywords */}
   <meta name="keywords" content="
-    embedded systems course in Coimbatore,
-    best embedded systems certification Tamil Nadu,
-    ARM microcontroller training,
-    RTOS programming course,
-    embedded C programming,
-    IoT development training,
-    embedded systems internship,
-    Adventure Learning embedded courses,
-    PCB design course,
-    device driver development,
-    real-time systems training,
-    embedded Linux programming,
-    online embedded systems classes,
-    offline embedded training center,
-    embedded systems placement program,
-    STM32 microcontroller course,
-    automotive embedded systems,
-    industrial automation training
+   Edge AI embedded systems .AI inference on edge devices .AI chips for embedded systems .Edge AI embedded systems course in Coimbatore .AI powered embedded systems training 
   " />
 
   {/* Open Graph / Facebook */}

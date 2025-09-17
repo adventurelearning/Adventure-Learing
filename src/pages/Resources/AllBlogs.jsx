@@ -7,7 +7,7 @@ function AllBlogs() {
         <title>Educational Blogs on Tech Courses | Career Tips & Insights</title>
         <meta
           name="description"
-          content="Read expert-written blogs on full stack development, data science, cloud computing, and more. Stay updated with industry trends, tips, and career guides."
+          content="Explore Adventure Learning’s blogs on IT courses, career tips, data science, cloud, full stack & more. Stay updated with the latest tech trends & insights"
         />
         <meta
           property="og:title"

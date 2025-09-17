@@ -27,46 +27,58 @@ const CloudComputing = () => {
   }, []);
 
   return (
-    <>     
-    <Helmet>
-  <title>No.1 Cloud Computing Certification Course – Online & Offline</title>
-  <meta name="description" content="Learn cloud computing with hands-on projects, expert instructors, and real-world deployments. Start your cloud career journey today – enroll now!" />
-  
-  {/* Keywords Meta Tag */}
-  <meta name="keywords" content="
-    cloud computing course, 
-    AWS certification, 
-    Azure training, 
-    Google Cloud course, 
-    cloud computing certification, 
-    best cloud computing course, 
-    cloud engineer training, 
-    DevOps with cloud, 
-    cloud computing classes, 
-    online cloud course, 
-    offline cloud training, 
-    cloud computing institute, 
-    cloud infrastructure course, 
-    cloud security training, 
-    cloud architect certification,
-    Adventure Learning cloud course,
-    cloud computing in Coimbatore,
-    best IT training for cloud
-  " />
+    <>
+      <Helmet>
+        <title>
+          No.1 Cloud Computing Certification Course – Online & Offline
+        </title>
+        <meta
+          name="description"
+          content="Join Cloud Computing Course at Adventure Learning, Coimbatore. Learn AWS, Azure & Google Cloud with real projects and 100% placement support. Build your career in Cloud Computing today!"
+        />
 
-  {/* Open Graph/Facebook Meta Tags */}
-  <meta property="og:title" content="Become a Cloud Computing Expert | Adventure" />
-  <meta property="og:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.adventurelearning.co.in/cloud-computing-course" />
-  <meta property="og:image" content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg" />
+        {/* Keywords Meta Tag */}
+        <meta
+          name="keywords"
+          content="
+    Cloud Computing Course in Coimbatore .AWS Certification Training in Coimbatore . Microsoft Azure Course with Placement . Career Opportunities in Cloud Computing India .Affordable Cloud Computing Course Tamil Nadu .Serverless Computing Course 2025
+  "
+        />
 
-  {/* Twitter Card Meta Tags */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Become a Cloud Computing Expert | Adventure" />
-  <meta name="twitter:description" content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems" />
-  <meta name="twitter:image" content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg" />
-</Helmet>
+        {/* Open Graph/Facebook Meta Tags */}
+        <meta
+          property="og:title"
+          content="Become a Cloud Computing Expert | Adventure"
+        />
+        <meta
+          property="og:description"
+          content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.adventurelearning.co.in/cloud-computing-course"
+        />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg"
+        />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Become a Cloud Computing Expert | Adventure"
+        />
+        <meta
+          name="twitter:description"
+          content="Master cloud computing with real projects and expert guidance. Learn AWS, Azure, and DevOps to build scalable, secure systems"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adventurelearning.co.in/images/cloud-computing-course.jpg"
+        />
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -93,7 +105,7 @@ const CloudComputing = () => {
         className="container-fluid rounded-lg mx-auto px-4 bg-white shadow-lg   "
       >
         <h1 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-          Cloud Computing  Syllabus
+          Cloud Computing Syllabus
         </h1>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
@@ -122,7 +134,8 @@ const CloudComputing = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
+      >
         <Faq />
       </div>
       <div

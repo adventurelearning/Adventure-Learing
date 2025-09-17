@@ -30,28 +30,11 @@ const Dataanalytics = () => {
     <>       
  <Helmet>
   <title>Advanced Data Analytics Certification Course – Online & Offline | Adventure Learning</title>
-  <meta name="description" content="Master data analytics with our certification course in Coimbatore. Learn Python, SQL, Tableau & Power BI through hands-on projects with industry experts. Enroll now!" />
+  <meta name="description" content="Build a career in Data Analytics with Adventure Learning, Coimbatore. Learn Excel, SQL, Python & BI tools with real projects. Start your data analytics career today!" />
   
   {/* Primary Keywords */}
   <meta name="keywords" content="
-    data analytics course in Coimbatore,
-    best data analytics certification,
-    data analyst training Tamil Nadu,
-    Tableau certification course,
-    Power BI training Coimbatore,
-    Python for data analysis,
-    SQL training for analysts,
-    data visualization course,
-    advanced analytics program,
-    data science fundamentals,
-    business analytics certification,
-    Adventure Learning data courses,
-    data analytics internship program,
-    machine learning for analysts,
-    statistical analysis training,
-    Excel data analysis course,
-    online data analytics classes,
-    offline data training center
+    Data Analytics course in Coimbatore .Best Data Analytics training institute in Tamil Nadu .Python for Data Analytics course Coimbatore . Affordable Data . Hands-on Data Analytics projects for beginners .Excel and Power BI training with Data Analytics
   " />
 
   {/* Open Graph / Facebook */}

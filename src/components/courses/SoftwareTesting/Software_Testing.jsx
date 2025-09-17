@@ -28,58 +28,74 @@ const Software_Testing = () => {
 
   return (
     <>
-     <Helmet>
-  <title>Software Testing Certification Course – Manual & Automation | Adventure Learning</title>
-  <meta 
-    name="description" 
-    content="Become a certified QA Engineer in 4 months with our Software Testing course in Coimbatore. Learn Selenium, JMeter, TestNG with real projects and placement support." 
-  />
-  
-  {/* Primary Keywords */}
-  <meta name="keywords" content="
-    software testing course in Coimbatore,
-    QA certification Tamil Nadu,
-    Selenium automation training,
-    manual testing course,
-    performance testing with JMeter,
-    software testing internship,
-    Adventure Learning QA courses,
-    TestNG framework training,
-    API testing course,
-    mobile app testing,
-    test automation engineer program,
-    QA placement program,
-    ISTQB preparation course,
-    cucumber BDD framework,
-    Postman API testing,
-    online testing classes,
-    offline QA training center,
-    software testing job guarantee course
-  " />
+      <Helmet>
+        <title>
+          Software Testing Certification Course – Manual & Automation |
+          Adventure Learning
+        </title>
+        <meta
+          name="description"
+          content="Advance your career with Software Testing Certification at Adventure Learning, Coimbatore. Learn Manual & Automation Testing with 100% placement support. Start your Software Testing career today!"
+        />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Software Testing Certification | QA Engineer Course | Adventure Learning" />
-  <meta property="og:description" content="4-month Software Testing training covering manual and automation testing (Selenium, JMeter). 80+ hours of hands-on testing projects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.adventurelearning.co.in/course/software-testing" />
-  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg" />
-  <meta property="og:image:alt" content="Software Testing Certification Training" />
-  <meta property="og:site_name" content="Adventure Learning" />
-  <meta property="og:locale" content="en_IN" />
+        {/* Primary Keywords */}
+        <meta
+          name="keywords"
+          content="
+   Software Testing course in Coimbatore. Manual Testing and Automation Testing course . Software Testing with placement support . Top Automation Testing tools 2025 . Beginner to Advanced Software Testing course
+  "
+        />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="QA Engineer Certification | Software Testing Course" />
-  <meta name="twitter:description" content="Become job-ready in 4 months with our Software Testing certification. Learn Selenium, JMeter, TestNG and build testing portfolio!" />
-  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg" />
-  <meta name="twitter:site" content="@AdventureLearn" />
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Software Testing Certification | QA Engineer Course | Adventure Learning"
+        />
+        <meta
+          property="og:description"
+          content="4-month Software Testing training covering manual and automation testing (Selenium, JMeter). 80+ hours of hands-on testing projects."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.adventurelearning.co.in/course/software-testing"
+        />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Software Testing Certification Training"
+        />
+        <meta property="og:site_name" content="Adventure Learning" />
+        <meta property="og:locale" content="en_IN" />
 
-  {/* Canonical */}
-  <link rel="canonical" href="https://www.adventurelearning.co.in/course/software-testing" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="QA Engineer Certification | Software Testing Course"
+        />
+        <meta
+          name="twitter:description"
+          content="Become job-ready in 4 months with our Software Testing certification. Learn Selenium, JMeter, TestNG and build testing portfolio!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop6-CYEe4v-X.svg"
+        />
+        <meta name="twitter:site" content="@AdventureLearn" />
 
-  {/* Structured Data (JSON-LD) */}
-  <script type="application/ld+json">
-    {`
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://www.adventurelearning.co.in/course/software-testing"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
       {
         "@context": "https://schema.org",
         "@type": "Course",
@@ -122,8 +138,8 @@ const Software_Testing = () => {
         ]
       }
     `}
-  </script>
-</Helmet>
+        </script>
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -145,9 +161,7 @@ const Software_Testing = () => {
         <TrainerProfile />
       </div>
 
-      <div
-        id="syllabus"
-      >
+      <div id="syllabus">
         <h1 className="text-2xl lg:text-3xl font-semibold  text-[#0057D3] p-6  text-center">
           Software Testing Course Syllabus
         </h1>
@@ -178,7 +192,8 @@ const Software_Testing = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
+      >
         <Faq />
       </div>
       <div
