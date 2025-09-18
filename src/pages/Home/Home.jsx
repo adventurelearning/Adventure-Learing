@@ -23,6 +23,7 @@ import Youtubehead from "../../components/Youtubehead";
 import Youtubevdo from "../../components/Youtubevdo";
 import NewsandBlog from "../../components/NewsandBlog";
 import Bloghead from "../../components/BlogHead";
+import Whatwedo from "../../components/Whatwedo";
 // import Softwares from "../../components/Softwares";
 
 
@@ -30,13 +31,14 @@ const Home = () => {
   return (
     <div>
       <CarouselPage />
-      <LookingFor />
+      {/* <LookingFor /> */}
+      <Whatwedo />
       <Trendingtech />
       <TrendingtechCards />
       {/* <Softwares/> */}
       <Logos />
       <SelectCourse />
-      <Form />
+      {/* <Form /> */}
       <Courses />      
       {/* <Course_Link />      */}
       <Coursecard />      

@@ -8,7 +8,7 @@ function Footer() {
     const navigate = useNavigate();
 
     return (
-        <footer className="bg-[#0057D3] text-white py-4 mt-10 sm:mt-10">
+        <footer className="bg-gradient-to-b from-[#0057D3]  to-[#0A1D39] text-white py-4 mt-10 sm:mt-10">
             <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
                 {/* Explore Section */}
                 <div>
@@ -72,9 +72,9 @@ function Footer() {
                                     className="block hover:text-gray-300"
                                 >
                                     <p>
-                                        No:121/4, 7th Street,
-                                        <span className="block">Tatabad, Gandhipuram,</span>
-                                        Coimbatore, Tamil Nadu - 641012.
+                                       BACKSIDE 76/1, Bus Stop, 76/A1,
+                                        <span className="block">Peelamedu, Sri Nagar, Hope College,</span>
+                                        Coimbatore, Tamil Nadu - 641004.
                                     </p>
                                 </a>
                                 <a
@@ -90,17 +90,20 @@ function Footer() {
                                     </p>
                                 </a>
                             </div>
-                        </div>                     
- 
+                        </div>
+
 
 
                         <div className="flex items-center text-sm">
                             <i className="bi bi-envelope text-xl sm:text-2xl"></i>
+
                             <a
-                                href="mailto:info@adventurelearning.in"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@adventurelearning.in"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="ml-3 sm:ml-5 flex items-center gap-1 hover:text-gray-300"
                             >
-                                info@adventurelearning.in
+                                info@adventurelearning.co.in
                             </a>
                         </div>
                     </div>
@@ -116,9 +119,8 @@ function Footer() {
                             className="w-48 sm:w-32 lg:w-48 h-auto object-contain logo-footer"
                         />
                         <h4 className="text-xs sm:text-sm mt-2">
-                            As we are a leader in the Technology Development, Training and R&D Services. Our
-                            <span className='sm:block'> responsibility is to empower Education through the knowledge transformation for better Wisdom society.</span>
-                        </h4>
+                           Adventure Learning is one of India’s leading educational technology companies, pioneering <span className='sm:block'>a 100% hands-on, 
+                           experience-based learning model that truly prepares learners for the real world.</span></h4>
                     </div>
                     <div>
                         <h4 className="font-bold text-base sm:text-lg text-white mb-2">Follow us</h4>

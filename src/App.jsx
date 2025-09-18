@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import { SiConcourse } from "react-icons/si";
 // Static imports remain
 import ScrollToTop from "./components/ScrolltoTop";
+import Placement from "./pages/Placement/Placement";
 import TandC from "./components/TandC";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 
@@ -22,9 +23,8 @@ import PopupOffers from "./components/PopupOffers";
 import ChatBox from "./components/chatbot/ChatBox";
 import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
-import { Helmet } from "react-helmet-async";
-
-
+import { Helmet } from "react-helmet";
+import NotFound from "./pages/NotFound/NotFound";
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
@@ -57,40 +57,33 @@ const Register = lazy(() => import("./components/Register"));
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate initial load delay or wait for real asset load if needed
-    const timer = setTimeout(() => setLoading(false), 1500); // adjust time here
-    return () => clearTimeout(timer);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("load", () => setLoading(false));
-  }, []);
+  // useEffect(() => {
+  //   // Simulate initial load delay or wait for real asset load if needed
+  //   const timer = setTimeout(() => setLoading(false), 1500); // adjust time here
+  //   return () => clearTimeout(timer);
+  // }, []);
+  // useEffect(() => {
+  //   window.addEventListener("load", () => setLoading(false));
+  // }, []);
 
-  if (loading) return <Loading />; // ✅ Show this before the app
+  // if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
-      <Helmet>
-        <title>
-          Adventure Learning
-        </title>
-        <meta
-          name="title"
-          content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
-        />
+      <Helmet
+        titleTemplate="%s | Adventure Learning"
+        defaultTitle="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
+      >
         <meta
           name="description"
           content="Adventure Learning offers top IT training in Coimbatore, Tamil Nadu. Learn Full Stack Development, Data Science, Cloud Computing, and more."
         />
-
-
         <meta
           name="keywords"
-          content="Adventure Learning, IT Training Coimbatore, Software Courses Tamil Nadu, Full Stack Development, Data Science Training, Cloud Computing Courses, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course, Data Analytics Tamil Nadu"
+          content="Adventure Learning Coimbatore, web Development Coimbatore, internship Courses Tamil Nadu, Full Stack Development, Data Science, Cloud Computing, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course,best python Course"
         />
-
-
+        
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.adventurelearning.in/" />
+        <meta property="og:url" content="https://www.adventurelearning.co.in/" />
         <meta
           property="og:title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -103,9 +96,9 @@ function App() {
           property="og:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-
+        
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.adventurelearning.in/" />
+        <meta property="twitter:url" content="https://www.adventurelearning.co.in/" />
         <meta
           property="twitter:title"
           content="Adventure Learning | Best IT Training in Coimbatore, Tamil Nadu"
@@ -130,10 +123,11 @@ function App() {
         {" "}
         {/* Wrap Routes with Suspense */}
         <PopupOffers />
-        <PopupForm />
+        {/* <PopupForm /> */}
         <SocialLinks />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="course">
             <Route path="full-stack-development" element={<Fullstack />} />
             <Route path="software-testing" element={<Software_Testing />} />
@@ -142,7 +136,9 @@ function App() {
             <Route path="data-analytics" element={<Dataanalytics />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
           </Route>
+
           <Route path="/contact" element={<ContactAll />} />
+          <Route path="/placement" element={<Placement />} />
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
           <Route path="/onlinetraining" element={<OnlineTrain />} />

@@ -14,6 +14,7 @@ import Overview1 from "./Overview1";
 import Overview2 from "./Overview2";
 import LearningPath from "./LearningPath";
 import LiveCourse from "./LiveCourse";
+import DsOver from "./DsOver";
 
 const WhyChoose = () => {
   return (
@@ -23,7 +24,8 @@ const WhyChoose = () => {
 
       <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
         <div className="p-3 flex flex-col items-center text-center mx-auto">
-          <Overview />
+          {/* <Overview /> */}
+          <DsOver />
           <div className="mt-12">
             <h2 className="text-2xl  lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
             Career Opportunities After Completing the Data Science Course
