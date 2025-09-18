@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Navbar";
@@ -10,11 +10,11 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
-const Datascience  = () => {
+const Datascience = () => {
   const { courseId } = useParams();
 
   useEffect(() => {
@@ -28,13 +28,104 @@ const Datascience  = () => {
 
   return (
     <>
-         <Helmet>
-            <title>Advanced Data Science Certification Course – Online & Offline</title>
-            <meta name="description" content="Learn data science with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now! " />
-            <meta property="og:title" content="Become a Data Science Expert | Adventure " />
-            <meta property="og:description" content="Master data science with practical projects and expert guidance. Enroll today and start your data science journey!" />
-    
-          </Helmet>
+      <Helmet>
+        <title>
+          Advanced Data Science Certification Course – Online & Offline |
+          Adventure Learning
+        </title>
+        <meta
+          name="description"
+          content="Learn Data Science with Python, ML & AI at Adventure Learning, Coimbatore. Hands-on projects + 100% placement support. Build your career in Data Science today!"
+        />
+
+        {/* Primary Keywords */}
+        <meta
+          name="keywords"
+          content="
+   Data Science course in Coimbatore . Best Data Science training institute in Tamil Nadu . Python for Data Science training Coimbatore .AI and Data Science career opportunities 2025 .Affordable Data Science certification Coimbatore
+  "
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Data Science Certification Course | Adventure Learning Coimbatore"
+        />
+        <meta
+          property="og:description"
+          content="Become a certified Data Scientist with Python, Machine Learning & AI training. 100+ hours of hands-on projects with industry datasets."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.adventurelearning.co.in/course/data-science"
+        />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop3-B_c6pLOB.svg"
+        />
+        <meta property="og:site_name" content="Adventure Learning" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Data Science Certification | Adventure Learning"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional Data Science training with Python, ML & AI. Start your career as Data Scientist in 6 months with placement support!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop3-B_c6pLOB.svg"
+        />
+        <meta name="twitter:site" content="@AdventureLearn" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://www.adventurelearning.co.in/course/data-science"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Advanced Data Science Certification",
+        "description": "Comprehensive Data Science training covering Python, Machine Learning, AI and Big Data with real-world projects",
+        "provider": {
+          "@type": "Organization",
+          "name": "Adventure Learning",
+          "sameAs": "https://www.adventurelearning.co.in"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["online", "offline"],
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "India"
+            }
+          },
+          "startDate": "2023-11-01",
+          "endDate": "2024-04-30"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "category": "certificate"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />
@@ -56,17 +147,15 @@ const Datascience  = () => {
         <TrainerProfile />
       </div>
 
-      <div
-        id="syllabus"        
-      >
+      <div id="syllabus">
         <h3 className="text-2xl lg:w-3xl font-semibold  text-[#0057D3] p-6  text-center">
-        Data Science Course Syllabus
+          Data Science Course Syllabus
         </h3>
         <hr className="border-t-1 border-[#0057D3] mx-auto w-1/2 lg:w-1/4  " />
         <AccordionComponent />
         {/* <CourseSyllabus /> */}
       </div>
-     
+
       <div
         id="batches"
         className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
@@ -89,7 +178,8 @@ const Datascience  = () => {
       </div>
       <div
         id="FAQ"
-        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50" >  
+        className="container-fluid rounded shadow-lg my-2 mx-auto px-4 bg-slate-50"
+      >
         <Faq />
       </div>
       <div
@@ -106,4 +196,4 @@ const Datascience  = () => {
   );
 };
 
-export default Datascience ;
+export default Datascience;

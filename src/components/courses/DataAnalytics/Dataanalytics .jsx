@@ -10,7 +10,7 @@ import CourseSyllabus from "./CourseSyllabus";
 import Batch from "./Batch";
 import Certificate from "../Certificate";
 import Review from "../Review";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
 
@@ -28,12 +28,63 @@ const Dataanalytics = () => {
 
   return (
     <>       
-    <Helmet>
-      <title>Advanced Data Analytics Certification Course – Online & Offline</title>
-      <meta name="description" content="Learn advanced Data Analytics with hands-on projects, expert instructors, and real-world datasets. Start your journey today – enroll now!" />
-      <meta property="og:title" content="Become a Data Analytics Expert | Adventure" />
-      <meta property="og:description" content="Master data analytics with practical projects and expert guidance. Enroll today and start your data analytics journey" />
-    </Helmet>
+ <Helmet>
+  <title>Advanced Data Analytics Certification Course – Online & Offline | Adventure Learning</title>
+  <meta name="description" content="Build a career in Data Analytics with Adventure Learning, Coimbatore. Learn Excel, SQL, Python & BI tools with real projects. Start your data analytics career today!" />
+  
+  {/* Primary Keywords */}
+  <meta name="keywords" content="
+    Data Analytics course in Coimbatore .Best Data Analytics training institute in Tamil Nadu .Python for Data Analytics course Coimbatore . Affordable Data . Hands-on Data Analytics projects for beginners .Excel and Power BI training with Data Analytics
+  " />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="Data Analytics Certification Course | Adventure Learning Coimbatore" />
+  <meta property="og:description" content="Become a certified data analyst with our comprehensive training in Python, SQL, Tableau & Power BI. Hands-on projects with real datasets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adventurelearning.co.in/course/data-analytics" />
+  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop4-Bwbmsjsp.svg" />
+  <meta property="og:site_name" content="Adventure Learning" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Analytics Certification | Adventure Learning" />
+  <meta name="twitter:description" content="Professional data analytics training with Python, SQL & BI tools. Start your career as a data analyst in 6 months!" />
+  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop4-Bwbmsjsp.svg" />
+
+  {/* Canonical */}
+  <link rel="canonical" href="https://www.adventurelearning.co.in/course/data-analytics" />
+
+  {/* Structured Data (JSON-LD) - Recommended Addition */}
+ <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Advanced Data Analytics Certification",
+        "description": "Comprehensive data analytics training covering Python, SQL, Tableau and Power BI with real-world projects",
+        "provider": {
+          "@type": "Organization",
+          "name": "Adventure Learning",
+          "sameAs": "https://www.adventurelearning.co.in"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        },
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Coimbatore",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "India"
+          }
+        }
+      }
+    `}
+  </script>
+</Helmet>
       <Banner />
       <WhyChoose />
       <Navbar />

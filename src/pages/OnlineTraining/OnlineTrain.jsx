@@ -5,7 +5,7 @@ import Offers from "../../components/Offers";
 import Sample from "../../components/Sample";
 import StudentTraining from "../../components/StudentsTraining";
 import TrainingSteps from "../../components/TrainingSteps";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 
 function OnlineTrain() {
@@ -16,7 +16,11 @@ function OnlineTrain() {
                 <title>Online Training & Courses | Learn Anywhere, Anytime</title>
                 <meta
                     name="description"
-                    content="Explore a wide range of online courses including Full Stack Development, Data Science, and more. Learn from industry experts at your own pace – start today!"
+                    content="Adventure Learning, Coimbatore offers online & offline IT training in Full Stack, Data Science, Cloud, Python & more"
+                />
+                <meta
+                    name="keywords"
+                    content="Best Online Training Institute in Coimbatore . Online IT Courses with Placement Support . Online Software Training Courses for Freshers . Online Full Stack Development Training . Python & Java Online Training with Certification . "
                 />
                 <meta
                     property="og:title"

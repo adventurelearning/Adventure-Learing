@@ -14,7 +14,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2021/05/30/21/47/dots-6297146_1280.jpg",
-          link: "1",
+          link: "future-of-iot-trends-2025",
         },
       ],
     },
@@ -29,7 +29,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2024/06/14/12/15/developer-8829735_1280.jpg",
-          link: "2",
+          link: "full-stack-development-trends-2025",
         },
       ],
     },
@@ -44,7 +44,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2023/04/27/21/25/circuit-7955446_1280.png",
-          link: "3",
+          link: "embedded-systems-automation",
         },
       ],
     },
@@ -59,7 +59,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2024/01/29/22/47/ai-generated-8540912_1280.jpg",
-          link: "4",
+          link: "data-science-healthcare",
         },
       ],
     },
@@ -74,7 +74,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2024/01/29/22/47/ai-generated-8540922_1280.jpg",
-          link: "5",
+          link: "cloud-computing-trends",
         },
       ],
     },
@@ -89,7 +89,7 @@ const Blogs = () => {
           readTime: "37 min read",
           imageSrc:
             "https://cdn.pixabay.com/photo/2023/10/09/07/23/industry-8303482_960_720.jpg",
-          link: "6",
+          link: "data-analytics-business",
         },
       ],
     },

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import Navbar from "../Navbar";
 import Banner from "./Banner";
 import CourseOverview from "./CourseOverview";
@@ -28,29 +28,113 @@ const Fullstack = () => {
   return (
     <>
       <Helmet>
-        <title>Full Stack Web Development Course | Adventure Learning</title>
+        <title>
+          Full Stack Web Development Certification – MERN Stack Course |
+          Adventure Learning
+        </title>
         <meta
           name="description"
-          content="Learn full stack web development with hands-on projects, expert instructors, and flexible options. Start building real-world Software today - enroll now!"
+          content="Join Adventure Learning’s Full Stack Development Course in Coimbatore. Learn front-end & back-end with 100% placement support. Enroll today!"
         />
+
+        {/* Primary Keywords */}
+        <meta
+          name="keywords"
+          content="React JS full stack .MERN stack developer .full stack developer. AI / ML integration in full stack apps.python coaching near me"
+        />
+
+        {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Become a Full Stack Developer - Enroll Now"
+          content="Full Stack Developer Certification | MERN Stack Course | Adventure Learning"
         />
         <meta
           property="og:description"
-          content="Master Full-Stack development with real-world projects & expert guidance. Enroll today to start your developer journey!"
+          content="6-month Full Stack Developer training with MERN stack (React, Node, MongoDB). 100+ hours of hands-on projects with industry mentorship."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.adventurelearning.in/course/full-stack-development"
+          content="https://www.adventurelearning.co.in/course/full-stack-development"
         />
-        <meta property="og:image" content="/assets/logo-dark-BujUEHab.svg" />
+        <meta
+          property="og:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg"
+        />
         <meta
           property="og:image:alt"
-          content="Full Stack Web Development Course"
+          content="Full Stack Developer MERN Stack Training"
         />
+        <meta property="og:site_name" content="Adventure Learning" />
+        <meta property="og:locale" content="en_IN" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Full Stack Developer Course | MERN Stack Training"
+        />
+        <meta
+          name="twitter:description"
+          content="Become job-ready in 6 months with our Full Stack Developer certification. Learn React, Node.js, MongoDB and build portfolio projects!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adventurelearning.co.in/assets/BanDesktop1-sxNQvGmv.svg"
+        />
+        <meta name="twitter:site" content="@AdventureLearn" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://www.adventurelearning.co.in/course/full-stack-development"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Full Stack Web Development Certification (MERN Stack)",
+        "description": "Comprehensive training in React.js, Node.js, Express.js and MongoDB with real-world projects and portfolio development",
+        "provider": {
+          "@type": "Organization",
+          "name": "Adventure Learning",
+          "sameAs": "https://www.adventurelearning.co.in"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": ["online", "offline"],
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "India"
+            }
+          },
+          "startDate": "2023-11-01",
+          "endDate": "2024-04-30"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "category": "certificate"
+        },
+        "teaches": [
+          "React.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "REST APIs",
+          "JavaScript ES6+",
+          "Git/GitHub"
+        ]
+      }
+    `}
+        </script>
       </Helmet>
       <Banner />
       <WhyChoose />

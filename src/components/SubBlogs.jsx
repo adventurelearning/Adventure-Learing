@@ -1,12 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import data from './data';
 import { AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SubBlogs = () => {
   const { id } = useParams();
-  const blogId = parseInt(id, 10);
+  const blogId = id;
   const blogContent = data.find(blog => blog.id === blogId);
 
   const parsedContent = blogContent?.content
@@ -30,7 +31,6 @@ const SubBlogs = () => {
   };
 
   const renderLine = (line, index) => {
-    // 1. Title line: **Title Text**
     if (/^\*\*.*\*\*$/.test(line)) {
       const headingText = line.replace(/\*\*/g, '').trim();
       return (
@@ -44,7 +44,6 @@ const SubBlogs = () => {
       );
     }
 
-    // 2. Subtitle + content: * **Subtitle**: Content
     if (/^\*\s+\*\*.*\*\*:\s+/.test(line)) {
       const subtitleMatch = line.match(/^\*\s+\*\*(.*?)\*\*:\s+(.*)/);
       const subtitle = subtitleMatch?.[1]?.trim();
@@ -59,17 +58,15 @@ const SubBlogs = () => {
             {subtitle}
           </motion.h3>
           <motion.p
-  className="ml-8 mr-8 leading-relaxed text-justify"
-  variants={itemVariants}
->
-  {content}
-</motion.p>
-
+            className="ml-8 mr-8 leading-relaxed text-justify"
+            variants={itemVariants}
+          >
+            {content}
+          </motion.p>
         </div>
       );
     }
 
-    // 3. Bullet point: * Something (not subtitle format)
     if (/^\*\s(?!\*\*).*/.test(line)) {
       return (
         <motion.li
@@ -82,7 +79,6 @@ const SubBlogs = () => {
       );
     }
 
-    // 4. Regular paragraph
     return (
       <motion.p
         key={index}
@@ -95,59 +91,84 @@ const SubBlogs = () => {
   };
 
   return (
-    <motion.div
-      className="max-w-5xl mx-auto px-4 py-10"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      {blogContent ? (
-        <>
-          <motion.h1
-            className="text-2xl lg:text-3xl font-bold text-center text-[#0057D3] mb-6"
-            variants={itemVariants}
-          >
-            {blogContent.Title}
-          </motion.h1>
-
-          <motion.img
-            src={blogContent.image}
-            alt="blog-img"
-            className="w-full h-96 object-cover rounded-lg shadow-md mb-8"
-            variants={itemVariants}
-          />
-
-          <motion.p
-            className="text-lg text-gray-600 mb-6 text-center font-medium leading-relaxed"
-            variants={itemVariants}
-          >
-            {blogContent.Subtitle}
-          </motion.p>
-
-          <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg space-y-4 text-justify"
-            variants={containerVariants}
-          >
-            {parsedContent && parsedContent.map((line, idx) => renderLine(line, idx))}
-          </motion.div>
-
-          <motion.div
-            className="mt-10 p-6 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-lg shadow-md"
-            variants={itemVariants}
-          >
-            <h3 className="text-2xl font-semibold text-[#0057D3] mb-2 ">Conclusion</h3>
-            <p className="ml-8 leading-relaxed text-justify">
-              {blogContent.conclusion || 'No conclusion provided.'}
-            </p>
-          </motion.div>
-        </>
-      ) : (
-        <div className="text-center mt-20">
-          <AlertCircle className="w-10 h-10 mx-auto text-gray-500 mb-2" />
-          <p className="text-xl text-gray-600">Blog content not found.</p>
-        </div>
+    <>
+      {blogContent && (
+            <Helmet prioritizeSeoTags>
+          <title>{blogContent.Title}</title>
+          <meta name="description" content={blogContent.seo.metaDescription} />
+          <meta name="keywords" content={blogContent.seo.keywords} />
+          <link rel="canonical" href={blogContent.seo.canonicalUrl} />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={blogContent.seo.metaTitle} />
+          <meta property="og:description" content={blogContent.seo.metaDescription} />
+          <meta property="og:image" content={blogContent.image} />
+          <meta property="og:url" content={blogContent.seo.canonicalUrl} />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={blogContent.seo.metaTitle} />
+          <meta name="twitter:description" content={blogContent.seo.metaDescription} />
+          <meta name="twitter:image" content={blogContent.image} />
+        </Helmet>
       )}
-    </motion.div>
+    
+
+      <motion.div
+        className="max-w-5xl mx-auto px-4 py-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {blogContent ? (
+          <>
+            <motion.h1
+              className="text-2xl lg:text-3xl font-bold text-center text-[#0057D3] mb-6"
+              variants={itemVariants}
+            >
+              {blogContent.Title}
+            </motion.h1>
+
+            <motion.img
+              src={blogContent.image}
+              alt="blog-img"
+              className="w-full h-96 object-cover rounded-lg shadow-md mb-8"
+              variants={itemVariants}
+            />
+
+            <motion.p
+              className="text-lg text-gray-600 mb-6 text-center font-medium leading-relaxed"
+              variants={itemVariants}
+            >
+              {blogContent.Subtitle}
+            </motion.p>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg space-y-4 text-justify"
+              variants={containerVariants}
+            >
+              {parsedContent && parsedContent.map((line, idx) => renderLine(line, idx))}
+            </motion.div>
+
+            <motion.div
+              className="mt-10 p-6 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-lg shadow-md"
+              variants={itemVariants}
+            >
+              <h3 className="text-2xl font-semibold text-[#0057D3] mb-2 ">Conclusion</h3>
+              <p className="ml-8 leading-relaxed text-justify">
+                {blogContent.conclusion || 'No conclusion provided.'}
+              </p>
+            </motion.div>
+          </>
+        ) : (
+          <div className="text-center mt-20">
+            <AlertCircle className="w-10 h-10 mx-auto text-gray-500 mb-2" />
+            <p className="text-xl text-gray-600">Blog content not found.</p>
+          </div>
+        )}
+      </motion.div>
+    </>
   );
 };
 
