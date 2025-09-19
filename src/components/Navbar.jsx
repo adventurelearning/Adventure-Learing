@@ -174,12 +174,12 @@ const Navbar = () => {
               <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
             </button>
             <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-              {/* <li>
+              <li>
                 <Link to="/downloadcertificate" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Blogs")}`}
                 >
-                 Certificates Download
+                Download e-Certificate
                 </Link>
-              </li> */}
+              </li>
                <li>
                 <Link to="/verifycertificate" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Blogs")}`}
                 >

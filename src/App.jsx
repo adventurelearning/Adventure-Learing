@@ -24,6 +24,7 @@ import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound";
 import SmoothScrollWrapper from "./components/SmoothScrollWrapper";
 import VerifyCertificate from "./components/certificate/VerifyCertificate";
+import DownloadCertificate from "./components/certificate/DownloadCertificate";
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
@@ -134,6 +135,7 @@ function App() {
             <Route path="/TandC" element={<TandC />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/verifycertificate" element={<VerifyCertificate />} />
+            <Route path="/downloadcertificate" element={<DownloadCertificate />} />
           </Routes>
         </Suspense>
         <Footer />
