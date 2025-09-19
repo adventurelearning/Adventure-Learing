@@ -140,7 +140,7 @@ function App() {
           <Route path="/contact" element={<ContactAll />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="/blogs" element={<AllBlogs />} />
-          <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
+          <Route path="/subblogs/:id" element={<SubBlogs />} />
           <Route path="/onlinetraining" element={<OnlineTrain />} />
           <Route path="/corporate" element={<Corporate />} />
           <Route path="/article1" element={<ArticlePage1 />} />
