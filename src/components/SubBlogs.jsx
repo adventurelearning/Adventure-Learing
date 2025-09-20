@@ -56,19 +56,29 @@ const GET_BLOG_POST_BY_LINK = gql`
 `;
 
 const GET_ALL_BLOG_POSTS = gql`
-  query GetAllBlogPosts {
-    blogPosts(status: "published") {
-      id
-      title
-      shortDescription
-      link
-      photo
-      topic
-      createdAt
-      likes
+  query GetBlogPosts($trending: Boolean, $topic: String, $status: String) {
+    blogPosts(trending: $trending, topic: $topic, status: $status) {
+      posts {
+        id
+        title
+        shortDescription
+        link
+        photo
+        topic
+        trending
+        order
+        status
+        createdAt
+        likes
+      }
+      topics {
+        id
+        topic
+      }
     }
   }
 `;
+
 
 const LIKE_BLOG_POST = gql`
   mutation LikeBlogPost($id: ID!) {
@@ -7856,7 +7866,7 @@ const likedAnimation={
   };
 
   // Filter related blogs by topic from all available blogs
-  const relatedBlogs = allBlogsData?.blogPosts?.filter(blog =>
+  const relatedBlogs = allBlogsData?.blogPosts?.posts.filter(blog =>
     blog.topic === blogPost.topic && blog.id !== blogPost.id
   ) || [];
 
