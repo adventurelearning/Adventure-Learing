@@ -10,20 +10,27 @@ import Lottie from 'lottie-react';
 const GET_BLOG_POSTS = gql`
   query GetBlogPosts($trending: Boolean, $topic: String, $status: String) {
     blogPosts(trending: $trending, topic: $topic, status: $status) {
-      id
-      title
-      shortDescription
-      link
-      photo
-      topic
-      trending
-      order
-      status
-      createdAt
-      likes
+      posts {
+        id
+        title
+        shortDescription
+        link
+        photo
+        topic
+        trending
+        order
+        status
+        createdAt
+        likes
+      }
+      topics {
+        id
+        topic
+      }
     }
   }
 `;
+
 
 const GET_BLOG_TOPICS = gql`
   query GetBlogTopics {
@@ -7688,12 +7695,13 @@ const Blogs = () => {
     ],
     "markers": []
 }
-  const { loading, error, data, refetch } = useQuery(GET_BLOG_POSTS, {
-    variables: { status: "published" }
-  });
-  
-  const { data: topicsData } = useQuery(GET_BLOG_TOPICS);
-  const topics = ['All', ...(topicsData ? topicsData.blogTopics.map(t => t.topic) : [])];
+ const { loading, error, data, refetch } = useQuery(GET_BLOG_POSTS, {
+  variables: { status: "published" },
+});
+
+  const blogPosts = data?.blogPosts?.posts || [];
+const topics = ['All', ...(data?.blogPosts?.topics.map(t => t.topic) || [])];
+
   
   const [likeBlogPost] = useMutation(LIKE_BLOG_POST, {
     onCompleted: (data) => {
@@ -7746,7 +7754,6 @@ const Blogs = () => {
     </div>
   );
 
-  const blogPosts = data.blogPosts || [];
   
   const trendingPosts = blogPosts
     .filter(post => post.trending)
@@ -7773,8 +7780,8 @@ const Blogs = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Adventure Learning Blog
-          </h1>
+Discover Trending Blog Categories         
+ </h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             Explore the latest trends, insights, and knowledge to enhance your learning journey
           </p>
