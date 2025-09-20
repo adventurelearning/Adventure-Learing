@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gql } from '@apollo/client';
 import { useQuery, useMutation } from "@apollo/client/react";
 import { useParams, Link } from 'react-router-dom';
@@ -84,7 +84,22 @@ const SubBlogs = () => {
   const [localLikes, setLocalLikes] = useState({});
   const [showLikedFeedback, setShowLikedFeedback] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
+ const [animationData, setAnimationData] = useState(null);
 
+  // Load animation data with fallback
+  useEffect(() => {
+    try {
+      // First try to use the imported animation
+      setAnimationData(likedAnimation);
+    } catch (error) {
+      console.warn('Could not import animation, trying to fetch:', error);
+      // Fallback to fetching from public directory
+      fetch('/liked.json')
+        .then(response => response.json())
+        .then(data => setAnimationData(data))
+        .catch(err => console.error('Error loading animation:', err));
+    }
+  }, []);
   const isObjectId = /^[0-9a-fA-F]{24}$/.test(id);
 
   const { loading, error, data } = useQuery(
@@ -261,7 +276,7 @@ const SubBlogs = () => {
           >
             <div className="bg-white bg-opacity-90 rounded-full p-2 shadow-2xl">
               <Lottie
-                animationData={likedAnimation}
+                animationData={animationData}
                 loop={false}
                 style={{ width: 200, height: 200 }}
                 onComplete={() => setTimeout(() => setShowLikedFeedback(false), 100)}

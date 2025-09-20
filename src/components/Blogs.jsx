@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gql } from '@apollo/client';
 import { useQuery, useMutation } from "@apollo/client/react";
 import { Link } from 'react-router-dom';
@@ -49,14 +49,30 @@ const Blogs = () => {
   const [selectedTopic, setSelectedTopic] = useState('All');
   const [localLikes, setLocalLikes] = useState({});
   const [showLikedFeedback, setShowLikedFeedback] = useState({});
-  
+  const [animationData, setAnimationData] = useState(null);
+
+  // Load animation data with fallback
+  useEffect(() => {
+    try {
+      // First try to use the imported animation
+      setAnimationData(likedAnimation);
+    } catch (error) {
+      console.warn('Could not import animation, trying to fetch:', error);
+      // Fallback to fetching from public directory
+      fetch('/liked.json')
+        .then(response => response.json())
+        .then(data => setAnimationData(data))
+        .catch(err => console.error('Error loading animation:', err));
+    }
+  }, []);
+
   const { loading, error, data, refetch } = useQuery(GET_BLOG_POSTS, {
     variables: { status: "published" }
   });
-  
+
   const { data: topicsData } = useQuery(GET_BLOG_TOPICS);
   const topics = ['All', ...(topicsData ? topicsData.blogTopics.map(t => t.topic) : [])];
-  
+
   const [likeBlogPost] = useMutation(LIKE_BLOG_POST, {
     onCompleted: (data) => {
       setLocalLikes(prev => ({
@@ -72,16 +88,16 @@ const Blogs = () => {
   const handleLike = (postId, currentLikes) => {
     // Show feedback for this specific post
     setShowLikedFeedback(prev => ({ ...prev, [postId]: true }));
-    
+
     // Update local likes count optimistically
     setLocalLikes(prev => ({
       ...prev,
       [postId]: (prev[postId] || currentLikes) + 1
     }));
-    
+
     // Execute mutation
     likeBlogPost({ variables: { id: postId } });
-    
+
     // Hide feedback after animation completes
     setTimeout(() => {
       setShowLikedFeedback(prev => ({ ...prev, [postId]: false }));
@@ -109,12 +125,12 @@ const Blogs = () => {
   );
 
   const blogPosts = data.blogPosts || [];
-  
+
   const trendingPosts = blogPosts
     .filter(post => post.trending)
     .sort((a, b) => b.order - a.order)
     .slice(0, 2);
-  
+
   const otherPosts = blogPosts
     .filter(post => !post.trending || !trendingPosts.includes(post))
     .filter(post => selectedTopic === 'All' || post.topic === selectedTopic)
@@ -131,7 +147,7 @@ const Blogs = () => {
         <title>Blog Posts | Adventure Learning</title>
         <meta name="description" content="Explore our latest blog posts on technology, programming, and industry trends." />
       </Helmet>
-      
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -148,11 +164,10 @@ const Blogs = () => {
               <button
                 key={topic}
                 onClick={() => setSelectedTopic(topic)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedTopic === topic 
-                    ? 'bg-blue-600 text-white shadow-md' 
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${selectedTopic === topic
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
               >
                 {topic}
               </button>
@@ -169,14 +184,13 @@ const Blogs = () => {
                 <span className="text-sm text-red-600 font-medium">Hot Topics</span>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {trendingPosts.map((post, index) => (
-                <div 
-                  key={post.id} 
-                  className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${
-                    index === 0 ? 'md:col-span-2' : ''
-                  }`}
+                <div
+                  key={post.id}
+                  className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${index === 0 ? 'md:col-span-2' : ''
+                    }`}
                 >
                   <div className="relative">
                     <img
@@ -189,7 +203,7 @@ const Blogs = () => {
                         Trending
                       </span>
                     </div>
-                    <button 
+                    <button
                       onClick={() => handleLike(post.id, post.likes)}
                       className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors"
                       aria-label="Like this post"
@@ -204,19 +218,19 @@ const Blogs = () => {
                             transition={{ type: "spring", stiffness: 500, damping: 20 }}
                             className="absolute -inset-4 flex items-center justify-center pointer-events-none"
                           >
-                            <Lottie 
-                              animationData={likedAnimation} 
-                              loop={false} 
+                            <Lottie
+                              animationData={animationData}
+                              loop={false}
                               style={{ width: 60, height: 60 }}
                             />
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      
-                      <svg 
-                        className="w-5 h-5 text-blue-500 relative z-10" 
-                        fill="currentColor" 
-                        viewBox="0 0 20 20" 
+
+                      <svg
+                        className="w-5 h-5 text-blue-500 relative z-10"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
@@ -227,14 +241,14 @@ const Blogs = () => {
                     <span className="text-sm text-blue-600 font-semibold">
                       {post.topic.toUpperCase()}
                     </span>
-                    <h3 
+                    <h3
                       className={`font-bold mt-2 ${index === 0 ? 'text-2xl' : 'text-xl'}`}
                       dangerouslySetInnerHTML={{ __html: post.title }}
                     />
                     <p className="text-sm text-gray-500 mt-2">
                       By Adventure Learning · {formatDate(post.createdAt)} · 5 min read
                     </p>
-                    <p 
+                    <p
                       className="text-gray-600 mt-3 line-clamp-2"
                       dangerouslySetInnerHTML={{ __html: post.shortDescription }}
                     />
@@ -267,7 +281,7 @@ const Blogs = () => {
               ({otherPosts.length} article{otherPosts.length !== 1 ? 's' : ''})
             </span>
           </h2>
-          
+
           {otherPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherPosts.map((post) => (
@@ -281,7 +295,7 @@ const Blogs = () => {
                       alt={post.title}
                       className="w-full h-48 object-cover"
                     />
-                    <button 
+                    <button
                       onClick={() => handleLike(post.id, post.likes)}
                       className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors "
                       aria-label="Like this post"
@@ -296,19 +310,19 @@ const Blogs = () => {
                             transition={{ type: "spring", stiffness: 500, damping: 20 }}
                             className="absolute -inset-4 flex items-center justify-center pointer-events-none"
                           >
-                            <Lottie 
-                              animationData={likedAnimation} 
-                              loop={false} 
+                            <Lottie
+                              animationData={animationData}
+                              loop={false}
                               style={{ width: 60, height: 60 }}
                             />
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      
-                      <svg 
-                        className="w-5 h-5 text-gray-400 hover:text-blue-500 relative z-10" 
-                        fill="currentColor" 
-                        viewBox="0 0 20 20" 
+
+                      <svg
+                        className="w-5 h-5 text-gray-400 hover:text-blue-500 relative z-10"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
@@ -319,14 +333,14 @@ const Blogs = () => {
                     <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded-full self-start">
                       {post.topic}
                     </span>
-                    <h3 
+                    <h3
                       className="text-lg font-bold mt-3 mb-2 line-clamp-2"
                       dangerouslySetInnerHTML={{ __html: post.title }}
                     />
                     <p className="text-sm text-gray-500 mb-3">
                       By Adventure Learning · {formatDate(post.createdAt)}
                     </p>
-                    <p 
+                    <p
                       className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow"
                       dangerouslySetInnerHTML={{ __html: post.shortDescription }}
                     />
@@ -358,7 +372,7 @@ const Blogs = () => {
               </svg>
               <p className="text-gray-600">No blog posts available in this category.</p>
               {selectedTopic !== 'All' && (
-                <button 
+                <button
                   onClick={() => setSelectedTopic('All')}
                   className="mt-4 text-blue-600 hover:underline font-medium"
                 >
