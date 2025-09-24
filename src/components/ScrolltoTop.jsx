@@ -1,15 +1,16 @@
-// src/components/ScrollToTop.js
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // or "auto"
-    });
+    // Use Lenis if available, otherwise fallback to native scroll
+    if (window.lenisInstance) {
+      window.lenisInstance.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
