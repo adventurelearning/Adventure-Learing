@@ -24,7 +24,7 @@ const DownloadCertificate = () => {
     setError('');
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/certificates/student-login`, loginData);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}certificates/student-login`, loginData);
       setIsLoggedIn(true);
       setCertificate(response.data.certificate);
       // Set default filename with student's name
