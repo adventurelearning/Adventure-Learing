@@ -25,6 +25,7 @@ import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
 import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound";
+import NavbarLinks from "./components/NavbarLinks";
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
@@ -119,6 +120,7 @@ function App() {
       <Header />
       {/* <Loading /> */}
       <Navbar />
+      {/* <NavbarLinks/> */}
       <Suspense fallback={<Loading />}>
         {" "}
         {/* Wrap Routes with Suspense */}

@@ -13,6 +13,8 @@ import Review from "../Review";
 import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
+import CourseFeatures from "../fullstack/CourseFeatures";
+import DataAnalyticsCourse from "./DataAnalyticsCourse";
 
 const Dataanalytics = () => {
   const { courseId } = useParams();
@@ -86,6 +88,8 @@ const Dataanalytics = () => {
   </script>
 </Helmet>
       <Banner />
+      <CourseFeatures/>
+      <DataAnalyticsCourse/>
       <WhyChoose />
       <Navbar />
       <div

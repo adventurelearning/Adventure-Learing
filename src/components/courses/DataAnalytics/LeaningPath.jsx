@@ -25,12 +25,12 @@ const data = [
 
 const LearningPath = () => {
   return (
-    <div className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-6 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="px-4 sm:px-6 lg:px-8 py-6 max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4">
-              Data Analytics Training Learning Path
+            <h3 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+              <span className="text-[#0057D3]">Data Analytics</span> Training Learning Path
             </h3>
             <p className="text-gray-600 text-lg mb-6 max-w-3xl mx-auto">
               This course is perfect for anyone interested in data analytics, 

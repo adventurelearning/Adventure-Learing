@@ -1,6 +1,6 @@
 import React from "react";
-import BanDesktop4 from "../../../assets/cdbanner/DATA ANALYTICS.webp";
-import BanMobile4 from "../../../assets/cmbanner/BanMobile4.svg";
+import BanDesktop4 from "../../../assets/cdbanner/BanDesktop4.webp";
+import BanMobile4 from "../../../assets/cmbanner/BanMobile4.webp";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
