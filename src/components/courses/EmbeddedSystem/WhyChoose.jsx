@@ -15,31 +15,31 @@ import Overview2 from "./Overview2";
 import LearningPath from "./LearningPath";
 import LiveCourse from "./LiveCourse";
 import EmbeddedOver from "./EmbeddedOver";
+import EmbeddedDevelopment from "./EmbeddedDevelopment";
 
 const WhyChoose = () => {
   return (
     <>
 
 
-      <div className="container-fluid mx-auto  lg:px-4 lg:py-4 bg-white">
-        <div className="p-3 flex flex-col items-center text-center mx-auto">
+     
           {/* <Overview /> */}
-          <EmbeddedOver />
-          <div className="mt-12">
+          {/* <EmbeddedOver /> */}
+          {/* <div className="mt-12">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4 tracking-tight leading-snug">
               Career Opportunities After Completing the Embedded Systems Training
             </h2>
           </div>
           <p className="text-base text-justify px-8  lg:text-lg max-w-4xl text-gray-700 leading-relaxed mb-8">
             Unlock job opportunities across diverse industries — from automotive to smart devices and robotics — with in-demand embedded system skills.
-          </p>
+          </p> */}
 
-          <div className="bg-gray-50 rounded-xl">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] py-8">
-              Why Choose Us?
+          <div className="bg-blue-100 rounded-xl p-5">
+            <h2 className="text-2xl lg:text-3xl text-center font-semibold text-black py-8">
+              Why <span className="text-[#0057D3]"> Choose </span> Us?
             </h2>
-            <div className="flex justify-center ">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl  w-full">
+             <div className="flex justify-center ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl  w-full">
                 {[
                   {
                     text: "Industry-Experienced Instructors.",
@@ -95,19 +95,21 @@ const WhyChoose = () => {
             </div>
           </div>
           <div>
+            <EmbeddedDevelopment/>
+          </div>
+          <div>
             <Overview1 />
           </div>
           <div>
-            <LearningPath/>
+            <LearningPath />
           </div>
           <div>
-            <LiveCourse/>
-          </div>       
+            <LiveCourse />
+          </div>
           <div>
             <Overview2 />
-          </div>         
-        </div>
-      </div>
+          </div>
+       
     </>
   );
 };

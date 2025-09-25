@@ -3,6 +3,35 @@
 @tailwind utilities;
 
 
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide {
+  animation: slide 3s ease-in-out forwards;
+}
+
+.clip-logo-shape {
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+
+
+
 .logo-img{
   filter: invert(35%) sepia(55%) saturate(500%) hue-rotate(176deg) brightness(100%) contrast(200%);
 }
@@ -79,3 +108,69 @@
   .stack{
     z-index: 999;
   }
+
+  /* search bar */
+  
+   .typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #3b82f6;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    90% { width: 100%; }
+    100% { width: 0; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #3b82f6; }
+  }
+
+  /* Hide animation when input is focused */
+  input:focus + .typing-placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+
+  /*Register button*/
+  .register-button {
+  position: relative;
+  background: linear-gradient(to bottom, #0057D3, #1e7cff);
+  /* Subtle vertical gradient */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  /* Slightly more pronounced shadow */
+  border: 1px solid rgba(0, 87, 211, 0.2);
+  /* Subtle border */
+  overflow: hidden;
+  /* Clip the shine effect */
+}
+
+.register-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  /* Slightly less aggressive skew */
+  animation: shine 2.5s infinite linear;
+  /* Faster animation */
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}

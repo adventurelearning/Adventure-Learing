@@ -8,7 +8,7 @@ const FeatureCard = ({ number, title, description }) => {
           {number}
         </div>
         <div>
-          <h3 className="text-xl font-semibold mb-2 text-blue-800">
+          <h3 className="text-xl font-semibold mb-2 text-black">
             {title}
           </h3>
           <p className="text-gray-700">{description}</p>
@@ -62,8 +62,8 @@ const Overview2 = () => {
     <section className="py-16 px-6 sm:px-6 lg:px-12 bg-gray-50 mt-10 rounded-lg">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl  font-semibold text-[#0057D3] lg:text-3xl">
-          What You Get in the Full Stack Development Course
+          <h2 className="text-3xl  font-semibold text-black lg:text-3xl">
+          What You Get in the <span className="text-[#0057D3]"> Full Stack Development </span> Course
           </h2>        
         </div>
 

@@ -13,6 +13,9 @@ import Review from "../Review";
 import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
+import CourseFeatures from "../fullstack/CourseFeatures";
+import DataScienceCourse from "./DataScienceCourse";
+
 
 const Datascience = () => {
   const { courseId } = useParams();
@@ -127,6 +130,8 @@ const Datascience = () => {
         </script>
       </Helmet>
       <Banner />
+      <CourseFeatures/>
+      <DataScienceCourse/>
       <WhyChoose />
       <Navbar />
       <div

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import logo from "../assets/logo-dark.svg";
-import { FaBars, FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaChevronUp, FaTimes,FaChevronRight} from "react-icons/fa";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,21 +42,22 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
 
   return (
-    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+    <nav className="bg-white  text-black px-4 py-2 font-poppins flex items-center justify-between sticky top-0 left-0 w-full z-40 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
       {/* Logo */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">
           <img
             src={logo}
             alt="Logo"
-            className="w-40 lg:w-32 lg:h-16 xl:w-40 xl:h-14 2xl:w-56 2xl:h-16 object-contain logo-img"
+            className="w-40 lg:w-48  object-contain logo-img"
           />
         </Link>
       </div>
 
+
       {/* Desktop Nav Links - Now hidden on tablet (md) */}
-      <div className="hidden lg:flex space-x-6 justify-center">
-        <ul className="flex space-x-6">
+      <div className="hidden lg:flex space-x-6 justify-center font-family-poppins text-sm ">
+        <ul className="flex space-x-10">
           <li>
             <Link
               to="/"
@@ -67,49 +69,76 @@ const Navbar = () => {
 
           {/* Courses Dropdown */}
           <li className="relative group">
+            {/* Main Dropdown Trigger */}
             <button className="hover:text-[#0057D3] flex items-center">
               Courses
               <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
             </button>
-            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-              <li>
-                <Link to="/course/full-stack-development" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
-                >
-                  Full Stack Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/embedded-system" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/embedded-system")}`}
-                >
-                  Embedded System
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/data-science" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-science")}`}
-                >
-                  Data Science
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/data-analytics" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-analytics")}`}
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/cloud-computing" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/cloud-computing")}`}
-                >
-                  Cloud Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/software-testing" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/software-testing")}`}
-                >
-                  Software Testing
-                </Link>
+
+            {/* First-level Dropdown */}
+            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-56 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+              <li className="relative group/item">
+                {/* Recommended Courses with right arrow */}
+                <span className="flex justify-between items-center px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] cursor-pointer">
+                  Recommended Courses
+                  <FaChevronRight className="ml-2 text-xs" />
+                </span>
+
+                {/* Second-level Dropdown */}
+                <ul className="absolute left-full top-0 ml-1 z-50 text-sm bg-white py-2 w-56 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover/item:opacity-100 invisible group-hover/item:visible transition-all duration-300">
+                  <li>
+                    <Link
+                      to="/course/full-stack-development"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
+                    >
+                      Full Stack Development
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/embedded-system"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/embedded-system")}`}
+                    >
+                      Embedded System
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/data-science"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-science")}`}
+                    >
+                      Data Science
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/data-analytics"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-analytics")}`}
+                    >
+                      Data Analytics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/cloud-computing"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/cloud-computing")}`}
+                    >
+                      Cloud Computing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/software-testing"
+                      className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/software-testing")}`}
+                    >
+                      Software Testing
+                    </Link>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
+
           {/* Other links */}
           <li>
             <Link
@@ -201,13 +230,20 @@ const Navbar = () => {
 
       {/* register buttons for desktop - Now hidden on tablet (md) */}
       <div className="flex space-x-2  lg:flex">
-        <Link
+        {/* <Link
           to="/Register"
-          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
+          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] f hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-2 hover:bg-white text-white hover:border rounded-md  lg:rounded-lg font-poppins cursor-pointer text-center transition-colors duration-300"
         >
           Register
-        </Link>
+        </Link> */}
+          <Link
+            to="/Register"
+            className="register-button hidden lg:inline-block px-5 py-2 rounded-lg text-sm font-poppins text-white border border-transparent transition-all"
+          >
+            Register
+          </Link>
       </div>
+      
 
       {/* Hamburger Icon - Now visible from tablet (md) up to desktop (lg) */}
       <div className="lg:hidden flex items-center" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

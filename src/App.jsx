@@ -22,9 +22,11 @@ import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
 import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound";
+
 import SmoothScrollWrapper from "./components/SmoothScrollWrapper";
 import VerifyCertificate from "./components/certificate/VerifyCertificate";
 import DownloadCertificate from "./components/certificate/DownloadCertificate";
+
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));

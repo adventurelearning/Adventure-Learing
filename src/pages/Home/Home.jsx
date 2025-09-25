@@ -33,29 +33,29 @@ const Home = () => {
       <CarouselPage />
       {/* <LookingFor /> */}
       <Whatwedo />
-      <Trendingtech />
+      {/* <Trendingtech /> */}
+      <SelectCourse />
+      <Courses />
       <TrendingtechCards />
       {/* <Softwares/> */}
       <Logos />
-      <SelectCourse />
       {/* <Form /> */}
-      <Courses />      
       {/* <Course_Link />      */}
-      <Coursecard />      
+      {/* <Coursecard />       */}
       <WhyAdventure />
       <Enroll />
       <HiringCompanies />
       {/* <WebinarEvents />
       <WebinarImages />      */}
       {/* <NewsandBlogs/> */}
-      <Bloghead/>
-      <NewsandBlog/>
+      <Bloghead />
+      <NewsandBlog />
       <Achievements />
-      <Youtubehead/>
-      <Youtubevdo/>
+      <Youtubehead />
+      <Youtubevdo />
       <Testimonial />
       <TestimonialReview />
-      <Subscription />      
+      <Subscription />
     </div>
   );
 };
