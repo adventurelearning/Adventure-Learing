@@ -7,6 +7,15 @@ import "aos/dist/aos.css"; // Import AOS CSS globally
 import AOS from "aos"; // Import AOS JavaScript library
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx'
 import { HelmetProvider } from 'react-helmet-async'
+import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloProvider } from "@apollo/client/react";
+import { HttpLink } from '@apollo/client'
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: `${import.meta.env.VITE_BACKEND_URL}/graphql`,
+  }),
+})
 
 // Initialize AOS when the app starts
 AOS.init({
@@ -22,7 +31,9 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <HelmetProvider>
         <ErrorBoundary>
-          <App />
+          <ApolloProvider client={client}>
+            <App />
+          </ApolloProvider>
         </ErrorBoundary>
       </HelmetProvider>
     </BrowserRouter>
