@@ -14,11 +14,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 // import banner1 from '../assets/banner1.svg';
 
 import banner1 from '../assets/HDbanner/full banner1.svg'
-import banner2 from '../assets/HDbanner/full banner8.svg'
+import banner2 from '../assets/HDbanner/full banner2.svg'
 import banner3 from '../assets/HDbanner/full banner3.svg'
 import banner4 from '../assets/HDbanner/full banner4.svg'
-import banner5 from '../assets/HDbanner/full banner5.png'
-import banner6 from '../assets/HDbanner/full banner6.svg'
+import banner5 from '../assets/HDbanner/full banner5.svg'
+import banner6 from '../assets/HDbanner/full banner6.png'
 
 
 
@@ -35,12 +35,13 @@ import hmb3 from '../assets/HMbanner/hmb3.webp';
 //   { image: '../../../public/banner/top it training institute in coimbatore with placement.webp', link: '/Register' }
 // ];
 const desktopBanners = [
+  { image: banner5, link: '/Register' },
   { image: banner2, link: '/Register' },
   { image: banner3, link: '/Register' },
   { image: banner1, link: '/Register' },
   { image: banner4, link: '/Register' },
   { image: banner6, link: '/Register' },
-  { image: banner5, link: '/Register' },
+
 
   // { image: banner4, link: '/Register'},
 
@@ -64,7 +65,7 @@ export default function CarouselPage() {
 
       <>
         {/* Desktop Carousel */}
-        <div className="w-full hidden lg:block">
+        <div className="w-full  hidden lg:block">
           <Swiper
             ref={desktopSwiperRef}
             modules={[Pagination, Autoplay]}
@@ -75,7 +76,7 @@ export default function CarouselPage() {
               delay: 3000,
               disableOnInteraction: false,
             }}
-            className="w-full lg:h-[680px] md:h-[720px]"
+            className="w-full "
           >
             {desktopBanners.map((img, index) => (
               <SwiperSlide key={index}>
@@ -83,7 +84,7 @@ export default function CarouselPage() {
                   <img
                     src={img.image}
                     alt={`Desktop Slide ${index + 1}`}
-                    className="w-full  object-cover rounded"
+                    className="w-full  object-cover"
                   />
                 </a>
               </SwiperSlide>
