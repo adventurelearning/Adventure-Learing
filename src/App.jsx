@@ -73,7 +73,7 @@ function App() {
           name="keywords"
           content="Adventure Learning Coimbatore, web Development Coimbatore, internship Courses Tamil Nadu, Full Stack Development, Data Science, Cloud Computing, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course,best python Course"
         />
-        
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.adventurelearning.co.in/" />
         <meta
@@ -88,7 +88,7 @@ function App() {
           property="og:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-        
+
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.adventurelearning.co.in/" />
         <meta
@@ -107,8 +107,12 @@ function App() {
 
       <SmoothScrollWrapper> {/* Wrap your entire app with Lenis */}
         <ScrollToTop />
-        <Header />
-        <Navbar />
+        <div className="sticky top-0 z-50">
+          <Header />
+        </div>
+        <div className="sticky top-0 left-0 z-50 lg:sticky lg:top-[54px] lg:z-40 md:shadow-md"> {/* Adjust top according to Header height */}
+          <Navbar />
+        </div>
         <Suspense fallback={<Loading />}>
           <PopupOffers />
           <SocialLinks />
@@ -127,7 +131,7 @@ function App() {
             <Route path="/contact" element={<ContactAll />} />
             <Route path="/placement" element={<Placement />} />
             <Route path="/blogs" element={<AllBlogs />} />
-             <Route path="/subblogs/:id" element={<SubBlogs />} />
+            <Route path="/subblogs/:id" element={<SubBlogs />} />
             <Route path="/onlinetraining" element={<OnlineTrain />} />
             <Route path="/corporate" element={<Corporate />} />
             <Route path="/article1" element={<ArticlePage1 />} />

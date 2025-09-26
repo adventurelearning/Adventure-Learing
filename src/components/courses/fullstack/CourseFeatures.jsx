@@ -20,10 +20,10 @@ const CourseFeatures = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center px-2">
+    <div className="flex items-center justify-center ">
         
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 w-full ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 w-full md:ml-20 ">
         {details.map((feature, index) => (
           <div
             key={index}
