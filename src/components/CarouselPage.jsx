@@ -37,9 +37,9 @@ import hmb3 from '../assets/HMbanner/hmb3.webp';
 const desktopBanners = [
   { image: banner5, link: '/Register' },
   { image: banner2, link: '/Register' },
-  { image: banner3, link: '/Register' },
-  { image: banner1, link: '/Register' },
+  { image: banner3, link: '/Register' },  
   { image: banner4, link: '/Register' },
+  { image: banner1, link: '/Register' },
   { image: banner6, link: '/Register' },
 
 

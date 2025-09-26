@@ -42,7 +42,7 @@ function Logos() {
         </div> */}
       </div>
 
-      <div className="w-full overflow-hidden py-5 pb-5">
+      <div className="w-full overflow-hidden py-5 ">
         <div className="flex w-max animate-marquee lg:space-x-20 space-x-4">
           {[...tools, ...tools].map((tool, index) => (
             <div

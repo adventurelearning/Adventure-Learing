@@ -21,8 +21,8 @@ function Companies() {
   ];
 
   const stats = [
-    { icon: "bi-person-circle", value: "35.1k", label: "Students", color: "text-purple-600" },
-    { icon: "bi-book", value: "12k", label: "Certified Instructor", color: "text-blue-600" },
+    { icon: "bi-person-circle", value: "1500+", label: "Students", color: "text-purple-600" },
+    { icon: "bi-book", value: "20+", label: "Certified Instructor", color: "text-blue-600" },
     // { icon: "bi-globe2", value: "72", label: "Country Language", color: "text-red-600" },
     { icon: "bi-check2-circle", value: "99.9%", label: "Success Rate", color: "text-green-600" },
     { icon: "bi-building-gear", value: "57", label: "Trusted Companies", color: "text-yellow-600" },
