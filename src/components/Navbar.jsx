@@ -197,6 +197,34 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
+           <li className="relative group">
+            <button className="hover:text-[#0057D3] flex items-center ">
+             Certificates
+              <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
+            </button>
+            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+              <li>
+                <Link to="/downloadcertificate" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Blogs")}`}
+                >
+                Download e-Certificate
+                </Link>
+              </li>
+               <li>
+                <Link to="/verifycertificate" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Blogs")}`}
+                >
+                  Certificates Verify
+                </Link>
+              </li>
+              {/* <li>
+            <Link
+              to="/placement"
+              className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/placement")}`}
+            >
+             Alumini Success Journey
+            </Link>
+          </li> */}
+            </ul>
+          </li>
         </ul>
       </div>
 
@@ -423,6 +451,33 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
+          </li>
+
+          <li className="border-b border-gray-100">
+            <div
+              className="flex justify-between items-center py-3 cursor-pointer"
+              onClick={() => toggleMobileDropdown('resources')}
+            >
+              <span>Certificate</span>
+              {mobileDropdowns.resources ? (
+                <FaChevronUp className="text-sm" />
+              ) : (
+                <FaChevronDown className="text-sm" />
+              )}
+            </div>
+            {mobileDropdowns.resources && (
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
+                <li>
+                  <Link
+                    to="/verifycertificate"
+                    className={`block py-2`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Verify Certificate
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
         </ul>
       </div>
