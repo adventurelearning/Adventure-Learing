@@ -10,7 +10,8 @@ const Navbar = () => {
   const [mobileDropdowns, setMobileDropdowns] = useState({
     courses: false,
     corporate: false,
-    resources: false
+    resources: false,
+    Certificates: false
   });
   const dropdownRefs = useRef([]);
   const location = useLocation();
@@ -39,7 +40,7 @@ const Navbar = () => {
     }));
   };
 
- const isActiveLink = (path) => {
+  const isActiveLink = (path) => {
     return location.pathname === path ? "text-[#0057D3] font-semibold" : "";
   };
 
@@ -263,7 +264,8 @@ const Navbar = () => {
               setMobileDropdowns({
                 courses: false,
                 corporate: false,
-                resources: false
+                resources: false,
+                Certificates: false
               });
             }}
           />
@@ -442,29 +444,40 @@ const Navbar = () => {
           <li className="border-b border-gray-100">
             <div
               className="flex justify-between items-center py-3 cursor-pointer"
-              onClick={() => toggleMobileDropdown('resources')}
+              onClick={() => toggleMobileDropdown('Certificates')}
             >
               <span>Certificate</span>
-              {mobileDropdowns.resources ? (
+              {mobileDropdowns.Certificates ? (
                 <FaChevronUp className="text-sm" />
               ) : (
                 <FaChevronDown className="text-sm" />
               )}
             </div>
-            {mobileDropdowns.resources && (
+
+            {mobileDropdowns.Certificates && (
               <ul className="pl-4 pb-2 space-y-2 text-sm">
                 <li>
                   <Link
                     to="/verifycertificate"
-                    className={`block py-2`}
+                    className="block py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Verify Certificate
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/downloadcertificate"
+                    className="block py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Download e-Certificate
+                  </Link>
+                </li>
               </ul>
             )}
           </li>
+
         </ul>
       </div>
     </nav>
