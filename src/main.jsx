@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <HelmetProvider>
         <ErrorBoundary>
-          <App />
+          {/* <App />/ */}
         </ErrorBoundary>
       </HelmetProvider>
     </BrowserRouter>
