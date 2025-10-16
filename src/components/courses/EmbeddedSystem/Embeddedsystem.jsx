@@ -13,6 +13,8 @@ import Review from "../Review";
 import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
+import CourseFeatures from "../fullstack/CourseFeatures";
+import EmbeddedCourse from "./EmbeddedCourse";
 
 const Embeddedsystem = () => {
   const { courseId } = useParams();
@@ -28,37 +30,37 @@ const Embeddedsystem = () => {
   return (
     <>
       <Helmet>
-  <title>Advanced Embedded Systems Certification Course – Online & Offline | Adventure Learning</title>
-  <meta name="description" content="Master Embedded Systems & IoT at Adventure Learning, Coimbatore. Hands-on training with 100% placement support. Start your embedded career today!" />
-  
-  {/* Primary Keywords */}
-  <meta name="keywords" content="
+        <title>Advanced Embedded Systems Certification Course – Online & Offline | Adventure Learning</title>
+        <meta name="description" content="Master Embedded Systems & IoT at Adventure Learning, Coimbatore. Hands-on training with 100% placement support. Start your embedded career today!" />
+
+        {/* Primary Keywords */}
+        <meta name="keywords" content="
    Edge AI embedded systems .AI inference on edge devices .AI chips for embedded systems .Edge AI embedded systems course in Coimbatore .AI powered embedded systems training 
   " />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Embedded Systems Certification Course | Adventure Learning Coimbatore" />
-  <meta property="og:description" content="Become certified in Embedded Systems with ARM, RTOS & IoT. Hands-on training with development kits and industry projects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.adventurelearning.co.in/course/embedded-system" />
-  <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop2-BiQWYf56.svg" />
-  <meta property="og:image:alt" content="Embedded Systems Training with Hardware Kits" />
-  <meta property="og:site_name" content="Adventure Learning" />
-  <meta property="og:locale" content="en_IN" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Embedded Systems Certification Course | Adventure Learning Coimbatore" />
+        <meta property="og:description" content="Become certified in Embedded Systems with ARM, RTOS & IoT. Hands-on training with development kits and industry projects." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adventurelearning.co.in/course/embedded-system" />
+        <meta property="og:image" content="https://www.adventurelearning.co.in/assets/BanDesktop2-BiQWYf56.svg" />
+        <meta property="og:image:alt" content="Embedded Systems Training with Hardware Kits" />
+        <meta property="og:site_name" content="Adventure Learning" />
+        <meta property="og:locale" content="en_IN" />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Embedded Systems Certification | Adventure Learning" />
-  <meta name="twitter:description" content="Professional Embedded Systems training with ARM, RTOS & IoT. Start your career in embedded engineering in 6 months!" />
-  <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop2-BiQWYf56.svg" />
-  <meta name="twitter:site" content="@AdventureLearn" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Embedded Systems Certification | Adventure Learning" />
+        <meta name="twitter:description" content="Professional Embedded Systems training with ARM, RTOS & IoT. Start your career in embedded engineering in 6 months!" />
+        <meta name="twitter:image" content="https://www.adventurelearning.co.in/assets/BanDesktop2-BiQWYf56.svg" />
+        <meta name="twitter:site" content="@AdventureLearn" />
 
-  {/* Canonical */}
-  <link rel="canonical" href="https://www.adventurelearning.co.in/course/embedded-system" />
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.adventurelearning.co.in/course/embedded-system" />
 
-  {/* Structured Data (JSON-LD) */}
-  <script type="application/ld+json">
-    {`
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
       {
         "@context": "https://schema.org",
         "@type": "Course",
@@ -91,9 +93,11 @@ const Embeddedsystem = () => {
         }
       }
     `}
-  </script>
-</Helmet>
+        </script>
+      </Helmet>
       <Banner />
+      <CourseFeatures />
+      <EmbeddedCourse/>
       <WhyChoose />
       <Navbar />
       <div

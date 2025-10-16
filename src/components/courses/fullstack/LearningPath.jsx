@@ -25,12 +25,12 @@ const data = [
 
 const LearningPath = () => {
   return (
-    <div className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className=" bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="px-4 sm:px-6 lg:px-8 py-6 max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl lg:text-3xl font-semibold text-[#0057D3] mb-4">
-              Full Stack Web Development Learning Path
+            <h3 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+              Full Stack <span className="text-[#0057D3]"> Web Development </span>  Learning  Path
             </h3>
             <p className="text-gray-600 text-lg mb-6 max-w-3xl mx-auto">
               This course is perfect for anyone interested in Full Stack Web Development, whether you're a beginner or looking to advance your skills.
@@ -39,7 +39,7 @@ const LearningPath = () => {
 
           {/* Desktop table view */}
           <div className="overflow-x-auto hidden sm:block">
-            <div className="min-w-[640px] px-4 sm:px-6 lg:px-8 pb-8">
+            <div className=" px-4 sm:px-6 lg:px-8 pb-8">
               <table className="w-full rounded-lg overflow-hidden border-collapse">
                 <thead className="bg-gradient-to-r from-[#0057D3] to-[#00A3FF] text-white">
                   <tr>

@@ -13,6 +13,8 @@ import Review from "../Review";
 import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
+import CourseFeatures from "../fullstack/CourseFeatures";
+import SoftwareTestingCourse from "./SoftwareTestingCourse";
 
 const Software_Testing = () => {
   const { courseId } = useParams();
@@ -141,6 +143,8 @@ const Software_Testing = () => {
         </script>
       </Helmet>
       <Banner />
+      <CourseFeatures/>
+      <SoftwareTestingCourse/>
       <WhyChoose />
       <Navbar />
       <div

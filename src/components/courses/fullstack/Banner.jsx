@@ -1,6 +1,6 @@
 import React from "react";
-import BanDesktop1 from "../../../assets/cdbanner/full Stack Development Certification Course.webp";
-import BanMobile1 from "../../../assets/cmbanner/BanMobile1.svg";
+import BanDesktop1 from "../../../assets/cdbanner/BanDesktop1.webp";
+import BanMobile1 from "../../../assets/cmbanner/BanMobile1.webp";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {

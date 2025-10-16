@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import logo from "../assets/logo-dark.svg";
-import { FaBars, FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaChevronUp, FaTimes, FaChevronRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +10,8 @@ const Navbar = () => {
   const [mobileDropdowns, setMobileDropdowns] = useState({
     courses: false,
     corporate: false,
-    resources: false
+    resources: false,
+    Certificates: false
   });
   const dropdownRefs = useRef([]);
   const location = useLocation();
@@ -38,28 +40,30 @@ const Navbar = () => {
     }));
   };
 
-  const isActiveLink = (path) => location.pathname === path ? "text-[#0057D3] font-semibold" : "text-black";
+  const isActiveLink = (path) => {
+    return location.pathname === path ? "text-[#0057D3] font-semibold" : "";
+  };
 
   return (
-    <nav className="bg-white  text-black px-4 py-2 font-sans flex items-center justify-between sticky top-0 left-0 w-full z-50 shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
-      {/* Logo */}
+    <nav className="sticky top-0 left-0 z-50 bg-white text-black px-4 py-1 font-poppins flex items-center justify-between shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+      {/* Logo (left) */}
       <div className="text-4xl font-semibold flex items-center">
         <Link to="/">
           <img
             src={logo}
             alt="Logo"
-            className="w-40 lg:w-32 lg:h-16 xl:w-40 xl:h-14 2xl:w-56 2xl:h-16 object-contain logo-img"
+            className="w-40 object-contain moblogo-img block lg:hidden"
           />
         </Link>
       </div>
 
-      {/* Desktop Nav Links - Now hidden on tablet (md) */}
-      <div className="hidden lg:flex space-x-6 justify-center">
-        <ul className="flex space-x-6">
+      {/* Desktop Nav Links (centered) */}
+      <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 font-sans text-[15px] font-medium text-gray-700">
+        <ul className="flex space-x-8 items-center">
           <li>
             <Link
               to="/"
-              className={`transition-transform duration-300 transform hover:-translate-y-1 hover:text-[#0057D3] ${isActiveLink("/")}`}
+              className={`hover:text-[#0057D3] transition-colors duration-200 py-2 ${isActiveLink("/")}`}
             >
               Home
             </Link>
@@ -67,119 +71,166 @@ const Navbar = () => {
 
           {/* Courses Dropdown */}
           <li className="relative group">
-            <button className="hover:text-[#0057D3] flex items-center">
+            {/* Main Dropdown Trigger */}
+            <button className="hover:text-[#0057D3] flex items-center transition-colors duration-200 py-2">
               Courses
-              <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
+              <FaChevronDown className="ml-2 text-xs group-hover:rotate-180 transition-transform duration-200" />
             </button>
-            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
-              <li>
-                <Link to="/course/full-stack-development" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/full-stack")}`}
-                >
-                  Full Stack Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/embedded-system" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/embedded-system")}`}
-                >
-                  Embedded System
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/data-science" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-science")}`}
-                >
-                  Data Science
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/data-analytics" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/data-analytics")}`}
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/cloud-computing" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/cloud-computing")}`}
-                >
-                  Cloud Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/course/software-testing" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/course/software-testing")}`}
-                >
-                  Software Testing
-                </Link>
+
+            {/* First-level Dropdown */}
+            <ul className="absolute z-50 text-sm bg-white mt-0 py-3 w-56 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+              <li className="relative group/item">
+                {/* Recommended Courses with right arrow */}
+                <span className="flex justify-between items-center px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] cursor-pointer text-gray-600">
+                  Recommended Courses
+                  <FaChevronRight className="ml-2 text-xs" />
+                </span>
+
+                {/* Second-level Dropdown */}
+                <ul className="absolute left-full top-0 ml-1 z-50 text-sm bg-white py-3 w-56 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover/item:opacity-100 invisible group-hover/item:visible transition-all duration-300">
+                  <li>
+                    <Link
+                      to="/course/full-stack-development"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/full-stack")}`}
+                    >
+                      Full Stack Development
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/embedded-system"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/embedded-system")}`}
+                    >
+                      Embedded System
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/data-science"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/data-science")}`}
+                    >
+                      Data Science
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/data-analytics"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/data-analytics")}`}
+                    >
+                      Data Analytics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/cloud-computing"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/cloud-computing")}`}
+                    >
+                      Cloud Computing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/course/software-testing"
+                      className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/course/software-testing")}`}
+                    >
+                      Software Testing
+                    </Link>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
+
           {/* Other links */}
           <li>
             <Link
               to="/onlinetraining"
-              className={`hover:text-[#0057D3] ${isActiveLink("/onlinetraining")}`}
+              className={`hover:text-[#0057D3] transition-colors duration-200 py-2 ${isActiveLink("/onlinetraining")}`}
             >
-              Online Training
+              OnlineTraining
             </Link>
           </li>
 
           {/* Corporate Dropdown */}
           <li className="relative group">
-            <button className="hover:text-[#0057D3] flex items-center">
+            <button className="hover:text-[#0057D3] flex items-center transition-colors duration-200 py-2">
               Corporate
-              <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
+              <FaChevronDown className="ml-2 text-xs group-hover:rotate-180 transition-transform duration-200" />
             </button>
-            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+            <ul className="absolute z-50 text-sm bg-white mt-0 py-3 w-48 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
               <li>
-                <Link to="/Corporate" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Corporate")}`}
+                <Link to="/Corporate" className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/Corporate")}`}
                 >
                   Corporate Training
                 </Link>
               </li>
             </ul>
-
           </li>
 
           {/* Resources Dropdown */}
           <li className="relative group">
-            <button className="hover:text-[#0057D3] flex items-center ">
+            <button className="hover:text-[#0057D3] flex items-center transition-colors duration-200 py-2">
               Resources
-              <FaChevronDown className="ml-2 text-sm group-hover:rotate-180 transition-transform duration-200" />
+              <FaChevronDown className="ml-2 text-xs group-hover:rotate-180 transition-transform duration-200" />
             </button>
-            <ul className="absolute z-50 text-sm bg-white mt-2 py-2 w-48 rounded-md shadow-lg border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+            <ul className="absolute z-50 text-sm bg-white mt-0 py-3 w-48 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
               <li>
-                <Link to="/Blogs" className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/Blogs")}`}
+                <Link to="/Blogs" className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/Blogs")}`}
                 >
                   Blogs
                 </Link>
               </li>
-              {/* <li>
-            <Link
-              to="/placement"
-              className={`block px-4 py-2 hover:bg-blue-50 hover:text-[#0057D3] transition-colors ${isActiveLink("/placement")}`}
-            >
-             Alumini Success Journey
-            </Link>
-          </li> */}
             </ul>
           </li>
+
+          <li className="relative group">
+            <button className="hover:text-[#0057D3] flex items-center transition-colors duration-200 py-2">
+              Certificates
+              <FaChevronDown className="ml-2 text-xs group-hover:rotate-180 transition-transform duration-200" />
+            </button>
+            <ul className="absolute z-50 text-sm bg-white mt-0 py-3 w-48 rounded-lg shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+              <li>
+                <Link to="/downloadcertificate" className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/Blogs")}`}
+                >
+                  Download e-Certificate
+                </Link>
+              </li>
+              <li>
+                <Link to="/verifycertificate" className={`block px-4 py-3 hover:bg-blue-50 hover:text-[#0057D3] transition-colors text-gray-600 ${isActiveLink("/Blogs")}`}
+                >
+                  Certificates Verify
+                </Link>
+              </li>
+            </ul>
+          </li>
+
           <li>
             <Link
               to="/contact"
-              className={`hover:text-[#0057D3] ${isActiveLink("/contact")}`}
+              className={`hover:text-[#0057D3] transition-colors duration-200 py-2 ${isActiveLink("/contact")}`}
             >
-              Contact Us
+              ContactUs
             </Link>
           </li>
         </ul>
       </div>
 
       {/* register buttons for desktop - Now hidden on tablet (md) */}
-      <div className="flex space-x-2  lg:flex">
+      <div className="hidden lg:flex">
+        {/* <Link
+          to="/Register"
+          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] f hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-2 hover:bg-white text-white hover:border rounded-md  lg:rounded-lg font-poppins cursor-pointer text-center transition-colors duration-300"
+        >
+          Register
+        </Link> */}
         <Link
           to="/Register"
-          className="border hover:border-blue-700 text-[14px] bg-[#0057D3] hover:text-[#0057D3] px-4 py-2 ml-20 md:ml-96 lg:ml-0 lg:px-5 lg:py-3 hover:bg-white text-white hover:border rounded-md  lg:rounded-3xl font-semibold cursor-pointer text-center transition-colors duration-300"
+          className="register-button hidden lg:inline-block px-5 py-1 rounded-lg text-base  font-poppins text-white border border-transparent transition-all"
         >
           Register
         </Link>
       </div>
+
 
       {/* Hamburger Icon - Now visible from tablet (md) up to desktop (lg) */}
       <div className="lg:hidden flex items-center" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -213,7 +264,8 @@ const Navbar = () => {
               setMobileDropdowns({
                 courses: false,
                 corporate: false,
-                resources: false
+                resources: false,
+                Certificates: false
               });
             }}
           />
@@ -388,6 +440,44 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
+
+          <li className="border-b border-gray-100">
+            <div
+              className="flex justify-between items-center py-3 cursor-pointer"
+              onClick={() => toggleMobileDropdown('Certificates')}
+            >
+              <span>Certificate</span>
+              {mobileDropdowns.Certificates ? (
+                <FaChevronUp className="text-sm" />
+              ) : (
+                <FaChevronDown className="text-sm" />
+              )}
+            </div>
+
+            {mobileDropdowns.Certificates && (
+              <ul className="pl-4 pb-2 space-y-2 text-sm">
+                <li>
+                  <Link
+                    to="/verifycertificate"
+                    className="block py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Verify Certificate
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/downloadcertificate"
+                    className="block py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Download e-Certificate
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
         </ul>
       </div>
     </nav>

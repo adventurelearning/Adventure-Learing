@@ -24,6 +24,7 @@ import Youtubevdo from "../../components/Youtubevdo";
 import NewsandBlog from "../../components/NewsandBlog";
 import Bloghead from "../../components/BlogHead";
 import Whatwedo from "../../components/Whatwedo";
+import CourseFeatures from "../../components/courses/fullstack/CourseFeatures";
 // import Softwares from "../../components/Softwares";
 
 
@@ -31,31 +32,32 @@ const Home = () => {
   return (
     <div>
       <CarouselPage />
+      {/* <CourseFeatures/> */}
       {/* <LookingFor /> */}
       <Whatwedo />
-      <Trendingtech />
+      {/* <Trendingtech /> */}
+      <SelectCourse />
+      <Courses />
       <TrendingtechCards />
       {/* <Softwares/> */}
       <Logos />
-      <SelectCourse />
       {/* <Form /> */}
-      <Courses />      
       {/* <Course_Link />      */}
-      <Coursecard />      
+      {/* <Coursecard />       */}
       <WhyAdventure />
       <Enroll />
+      <Bloghead />
+      <NewsandBlog />
       <HiringCompanies />
       {/* <WebinarEvents />
       <WebinarImages />      */}
-      {/* <NewsandBlogs/> */}
-      <Bloghead/>
-      <NewsandBlog/>
+      {/* <NewsandBlogs/> */}      
       <Achievements />
-      <Youtubehead/>
-      <Youtubevdo/>
+      <Youtubehead />
+      <Youtubevdo />
       <Testimonial />
       <TestimonialReview />
-      <Subscription />      
+      <Subscription />
     </div>
   );
 };

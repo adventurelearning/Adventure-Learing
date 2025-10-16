@@ -12,6 +12,11 @@ import Certificate from "../Certificate";
 import Review from "../Review";
 import WhyChoose from "./WhyChoose";
 import Faq1 from "./Faq1";
+import CourseFeatures from "./CourseFeatures";
+import WebDevelopmentCourse from "./WebDevelopmentCourse";
+import AccountingServices from "./FullStackDevelopment";
+import FullStackDevelopment from "./FullStackDevelopment";
+import Features from "./features";
 
 const Fullstack = () => {
   const { courseId } = useParams();
@@ -137,7 +142,10 @@ const Fullstack = () => {
         </script>
       </Helmet>
       <Banner />
+      <CourseFeatures/>
+      <WebDevelopmentCourse/>
       <WhyChoose />
+      {/* <Features/> */}      
       <Navbar />
       <div
         id="course"

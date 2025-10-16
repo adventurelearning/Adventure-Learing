@@ -433,7 +433,7 @@ const Whatwedo = () => {
                 hideProgressBar={false}
                 newestOnTop={false}
              />
-            <div className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
+            <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                     {/* Content Section */}
                     <div className="lg:flex-1 bg-white rounded-xl shadow-sm p-6 lg:p-8 border border-gray-100">

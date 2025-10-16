@@ -3,19 +3,19 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+
+
+
 import Footer from "./components/Footer";
 import "@fontsource/poppins";
 import Home from "./pages/Home/Home";
 import { SiConcourse } from "react-icons/si";
-// Static imports remain
 import ScrollToTop from "./components/ScrolltoTop";
 import Placement from "./pages/Placement/Placement";
 import TandC from "./components/TandC";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-
 import SubBlogs from "./components/SubBlogs";
-
-import Loading from "./components/Loading/Loading"; // Create a simple Loading component
+import Loading from "./components/Loading/Loading";
 import Whatsapp from "./components/whatsapp/Whatsapp";
 import InitialLoader from "./components/Initialloader";
 import PopupForm from "./components/PopupForm";
@@ -25,6 +25,11 @@ import ChatWidget from "./components/chatbot/ChatWidget";
 import SocialLinks from "./components/SocialLinks";
 import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound";
+
+import SmoothScrollWrapper from "./components/SmoothScrollWrapper";
+import VerifyCertificate from "./components/certificate/VerifyCertificate";
+import DownloadCertificate from "./components/certificate/DownloadCertificate";
+
 
 // Lazy load components
 const ContactAll = lazy(() => import("./pages/Contactus/ContactAll"));
@@ -57,16 +62,6 @@ const Register = lazy(() => import("./components/Register"));
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // Simulate initial load delay or wait for real asset load if needed
-  //   const timer = setTimeout(() => setLoading(false), 1500); // adjust time here
-  //   return () => clearTimeout(timer);
-  // }, []);
-  // useEffect(() => {
-  //   window.addEventListener("load", () => setLoading(false));
-  // }, []);
-
-  // if (loading) return <Loading />; // ✅ Show this before the app
   return (
     <>
       <Helmet
@@ -81,7 +76,7 @@ function App() {
           name="keywords"
           content="Adventure Learning Coimbatore, web Development Coimbatore, internship Courses Tamil Nadu, Full Stack Development, Data Science, Cloud Computing, Embedded Systems Coimbatore, Best IT Institute, Corporate Training Coimbatore, Software Testing Course,best python Course"
         />
-        
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.adventurelearning.co.in/" />
         <meta
@@ -96,7 +91,7 @@ function App() {
           property="og:image"
           content="https://www.adventurelearning.in/assets/images/adventure-learning-og-image.jpg"
         />
-        
+
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.adventurelearning.co.in/" />
         <meta
@@ -113,45 +108,48 @@ function App() {
         />
       </Helmet>
 
-      <ScrollToTop />
-      {/* <Whatsapp /> */}
-      {/* <ChatWidget /> */}
-      <Header />
-      {/* <Loading /> */}
-      <Navbar />
-      <Suspense fallback={<Loading />}>
-        {" "}
-        {/* Wrap Routes with Suspense */}
-        <PopupOffers />
-        {/* <PopupForm /> */}
-        <SocialLinks />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="course">
-            <Route path="full-stack-development" element={<Fullstack />} />
-            <Route path="software-testing" element={<Software_Testing />} />
-            <Route path="embedded-system" element={<Embeddedsystem />} />
-            <Route path="data-science" element={<Datascience />} />
-            <Route path="data-analytics" element={<Dataanalytics />} />
-            <Route path="cloud-computing" element={<CloudComputing />} />
-          </Route>
+      <SmoothScrollWrapper> {/* Wrap your entire app with Lenis */}
+        <ScrollToTop />
+        <div className="sticky top-0 z-50">
+          <Header />
+        </div>
+        <div className="sticky top-0 left-0 z-50 lg:sticky lg:top-[54px] lg:z-40 md:shadow-md"> {/* Adjust top according to Header height */}
+          <Navbar />
+        </div>
+        <Suspense fallback={<Loading />}>
+          <PopupOffers />
+          <SocialLinks />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="course">
+              <Route path="full-stack-development" element={<Fullstack />} />
+              <Route path="software-testing" element={<Software_Testing />} />
+              <Route path="embedded-system" element={<Embeddedsystem />} />
+              <Route path="data-science" element={<Datascience />} />
+              <Route path="data-analytics" element={<Dataanalytics />} />
+              <Route path="cloud-computing" element={<CloudComputing />} />
+            </Route>
 
-          <Route path="/contact" element={<ContactAll />} />
-          <Route path="/placement" element={<Placement />} />
-          <Route path="/blogs" element={<AllBlogs />} />
-          <Route path="/Blogs/subblogs/:id" element={<SubBlogs />} />
-          <Route path="/onlinetraining" element={<OnlineTrain />} />
-          <Route path="/corporate" element={<Corporate />} />
-          <Route path="/article1" element={<ArticlePage1 />} />
-          <Route path="/Article2" element={<ArticlePage2 />} />
-          <Route path="/Article3" element={<ArticlePage3 />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/TandC" element={<TandC />} />
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-        </Routes>
-      </Suspense>
-      <Footer />
+            <Route path="/contact" element={<ContactAll />} />
+            <Route path="/placement" element={<Placement />} />
+            <Route path="/blogs" element={<AllBlogs />} />
+            <Route path="/subblogs/:id" element={<SubBlogs />} />
+            <Route path="/onlinetraining" element={<OnlineTrain />} />
+            <Route path="/corporate" element={<Corporate />} />
+            <Route path="/article1" element={<ArticlePage1 />} />
+            <Route path="/Article2" element={<ArticlePage2 />} />
+            <Route path="/Article3" element={<ArticlePage3 />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/TandC" element={<TandC />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/verifycertificate" element={<VerifyCertificate />} />
+            <Route path="/downloadcertificate" element={<DownloadCertificate />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </SmoothScrollWrapper>
+
     </>
   );
 }

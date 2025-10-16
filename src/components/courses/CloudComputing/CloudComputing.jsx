@@ -13,6 +13,8 @@ import Review from "../Review";
 import { Helmet } from "react-helmet";
 import WhyChoose from "./WhyChoose";
 import Faq from "./Faq";
+import CourseFeatures from "../fullstack/CourseFeatures";
+import CloudComputingCourse from "./CloudComputingCourse";
 
 const CloudComputing = () => {
   const { courseId } = useParams();
@@ -80,6 +82,8 @@ const CloudComputing = () => {
         />
       </Helmet>
       <Banner />
+      <CourseFeatures/>
+      <CloudComputingCourse/>
       <WhyChoose />
       <Navbar />
       <div

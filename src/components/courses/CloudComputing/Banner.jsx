@@ -1,6 +1,6 @@
 import React from "react";
-import BanDesktop5 from "../../../assets/cdbanner/CLOUD COMPUTUING.webp";
-import BanMobile5 from "../../../assets/cmbanner/BanMobile5.svg";
+import BanDesktop5 from "../../../assets/cdbanner/BanDesktop5.webp";
+import BanMobile5 from "../../../assets/cmbanner/BanMobile5.webp";
 
 import { useNavigate } from "react-router-dom";
 
