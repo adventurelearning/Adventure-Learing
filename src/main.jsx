@@ -29,7 +29,7 @@ createRoot(document.getElementById("root")).render(
       <HelmetProvider>
         <ErrorBoundary>
           <ApolloProvider client={client}>
-            {/* <App /> */}
+            <App /> 
           </ApolloProvider>
         </ErrorBoundary>
       </HelmetProvider>
