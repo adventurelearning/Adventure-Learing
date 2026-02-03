@@ -28,8 +28,7 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <HelmetProvider>
         <ErrorBoundary>
-          <ApolloProvider client={client}>
-            // <App /> 
+          <ApolloProvider client={client} >
           </ApolloProvider>
         </ErrorBoundary>
       </HelmetProvider>
